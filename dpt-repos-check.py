@@ -1,13 +1,22 @@
 import logging
 import sys
 from collections import defaultdict
+from datetime import timedelta
 
 import gitlab
+import requests_cache
 from debian.deb822 import Deb822
 
 __version__ = '0.1.3'
 
 logging.basicConfig(format='%(asctime)s %(message)s', stream=sys.stdout, level=logging.DEBUG)
+
+# TODO: remove, this is only for development
+requests_cache.install_cache(
+    'dpt_repos_check_cache',
+    cache_control=False,
+    expire_after=timedelta(days=7)
+)
 
 # 9360 is the group_id for python-team/packages subgroup, it could be automatically obtained
 # from https://salsa.debian.org/api/v4/groups/python-team/subgroups/ but meh
