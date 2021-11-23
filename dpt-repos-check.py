@@ -87,7 +87,7 @@ for group_project in group_projects:
     d_watch = str(project.repository_raw_blob(d_watch_id)).lower()
 
     if 'pypi.python.org' in d_watch or 'pypi.debian.net' in d_watch:
-        violations[project.name].append('Warning: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html')
+        violations[project.name].append('WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html')
 
 for pkg, viols in violations.items():
     print(pkg)
