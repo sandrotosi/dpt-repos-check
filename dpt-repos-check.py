@@ -1,3 +1,5 @@
+import logging
+import sys
 from collections import defaultdict
 
 import gitlab
@@ -5,10 +7,13 @@ from debian.deb822 import Deb822
 
 __version__ = '0.1.3'
 
+logging.basicConfig(format='%(asctime)s %(message)s', stream=sys.stdout, level=logging.DEBUG)
+
 # 9360 is the group_id for python-team/packages subgroup, it could be automatically obtained
 # from https://salsa.debian.org/api/v4/groups/python-team/subgroups/ but meh
 GROUPID = 9360
 
+logging.info("Gather DPT projects from Salsa")
 salsa = gitlab.Gitlab('https://salsa.debian.org/')
 group = salsa.groups.get(GROUPID)
 # group_projects = group.projects.list(all=True, order_by='name', sort='asc')  TODO: uncomment
@@ -30,7 +35,7 @@ violations = defaultdict(list)
 
 for group_project in group_projects:
     project = salsa.projects.get(group_project.id)
-    print(f"CHECKING {project.name}...")
+    logging.info(f"CHECKING {project.name}...")
 
     # Branches checks
 
