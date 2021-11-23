@@ -3,7 +3,7 @@ from collections import defaultdict
 import gitlab
 from debian.deb822 import Deb822
 
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 
 # 9360 is the group_id for python-team/packages subgroup, it could be automatically obtained
 # from https://salsa.debian.org/api/v4/groups/python-team/subgroups/ but meh
@@ -24,7 +24,6 @@ violations = defaultdict(list)
 # TODO: latest upload to archive is in the git repo
 # TODO: check for packages no longer in debian but with repo still in the team
 # TODO: check for packages referring the team in maint/upl but with no repo in the team
-# TODO: packages using pypi (check upstream/metadata if it uses github and suggest to use that)
 # TODO: verify webhooks are set (FIRST: print whhich ones are set, as i guess there's more than kgb or tagpending?) https://salsa.debian.org/python-team/packages/astroid/-/hooks +
 #       https://salsa.debian.org/python-team/packages/sqlmodel/-/hooks
 #       --> requires auth! project.hooks.list()
@@ -81,6 +80,14 @@ for group_project in sorted(group_projects, key=lambda p: p.attributes['name']):
         violations[project.name].append(f'ERROR: Vcs-Browser field {vcs_browser} doesnt match the repo url {project.web_url}')
     if (vcs_git := d_control['Vcs-Git']) != project.http_url_to_repo:
         violations[project.name].append(f'ERROR: Vcs-Git field {vcs_git} doesnt match the repo url {project.http_url_to_repo}')
+
+    # debian/watch checks
+
+    d_watch_id = [d['id'] for d in project.repository_tree(path='debian') if d['name'] == 'watch'][0]
+    d_watch = str(project.repository_raw_blob(d_watch_id)).lower()
+
+    if 'pypi.python.org' in d_watch or 'pypi.debian.net' in d_watch:
+        violations[project.name].append('Warning: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html')
 
 for pkg, viols in violations.items():
     print(pkg)
