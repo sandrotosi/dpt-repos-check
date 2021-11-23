@@ -54,6 +54,7 @@ for group_project in group_projects:
         violations[project.name].append('ERROR: appears to be an empty repository')
         continue
 
+    # DEP-14 is the recommendation doc for git layout: https://dep-team.pages.debian.net/deps/dep14/
     if not branches.intersection({'master', 'debian/master', 'debian/unstable', 'debian/latest'}):
         if branches.intersection({'sid', 'debian/sid'}):
             violations[project.name].append(f'WARNING: uncommon debian master branch (DEP-14); available branches={branches}')
