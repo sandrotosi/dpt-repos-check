@@ -100,7 +100,7 @@ for group_project in group_projects:
 
     d_watch_id = [d['id'] for d in project.repository_tree(path='debian', all=True) if d['name'] == 'watch']
     if d_watch_id:
-        d_watch = str(project.repository_raw_blob(d_watch_id[0])).lower()
+        d_watch = project.repository_raw_blob(d_watch_id[0]).decode().lower()
 
         if 'pypi.python.org' in d_watch or 'pypi.debian.net' in d_watch:
             violations[project.name].append('WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html')
