@@ -97,11 +97,14 @@ for group_project in group_projects:
 
     # debian/watch checks
 
-    d_watch_id = [d['id'] for d in project.repository_tree(path='debian') if d['name'] == 'watch'][0]
-    d_watch = str(project.repository_raw_blob(d_watch_id)).lower()
+    d_watch_id = [d['id'] for d in project.repository_tree(path='debian', all=True) if d['name'] == 'watch']
+    if d_watch_id:
+        d_watch = str(project.repository_raw_blob(d_watch_id[0])).lower()
 
-    if 'pypi.python.org' in d_watch or 'pypi.debian.net' in d_watch:
-        violations[project.name].append('WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html')
+        if 'pypi.python.org' in d_watch or 'pypi.debian.net' in d_watch:
+            violations[project.name].append('WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html')
+    else:
+        violations[project.name].append('ERROR: debian/watch is missing')
 
 for pkg, viols in violations.items():
     print(pkg)
