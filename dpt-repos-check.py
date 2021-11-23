@@ -3,7 +3,7 @@ from collections import defaultdict
 import gitlab
 from debian.deb822 import Deb822
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 # 9360 is the group_id for python-team/packages subgroup, it could be automatically obtained
 # from https://salsa.debian.org/api/v4/groups/python-team/subgroups/ but meh
@@ -24,7 +24,6 @@ violations = defaultdict(list)
 # TODO: latest upload to archive is in the git repo
 # TODO: check for packages no longer in debian but with repo still in the team
 # TODO: check for packages referring the team in maint/upl but with no repo in the team
-# TODO: check for packages Vcs url not matching the salsa url
 # TODO: packages using pypi (check upstream/metadata if it uses github and suggest to use that)
 # TODO: verify webhooks are set (FIRST: print whhich ones are set, as i guess there's more than kgb or tagpending?) https://salsa.debian.org/python-team/packages/astroid/-/hooks +
 #       https://salsa.debian.org/python-team/packages/sqlmodel/-/hooks
@@ -78,6 +77,10 @@ for group_project in sorted(group_projects, key=lambda p: p.attributes['name']):
     elif 'team+python@tracker.debian.org' not in maints:
         violations[project.name].append('WARNING: still using the old team email address')
 
+    if (vcs_browser := d_control['Vcs-Browser']) != project.web_url:
+        violations[project.name].append(f'ERROR: Vcs-Browser field {vcs_browser} doesnt match the repo url {project.web_url}')
+    if (vcs_git := d_control['Vcs-Git']) != project.http_url_to_repo:
+        violations[project.name].append(f'ERROR: Vcs-Git field {vcs_git} doesnt match the repo url {project.http_url_to_repo}')
 
 for pkg, viols in violations.items():
     print(pkg)
