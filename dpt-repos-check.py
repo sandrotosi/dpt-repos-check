@@ -3,7 +3,7 @@ from collections import defaultdict
 import gitlab
 from debian.deb822 import Deb822
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 # 9360 is the group_id for python-team/packages subgroup, it could be automatically obtained
 # from https://salsa.debian.org/api/v4/groups/python-team/subgroups/ but meh
@@ -25,7 +25,6 @@ violations = defaultdict(list)
 # TODO: check for packages no longer in debian but with repo still in the team
 # TODO: check for packages referring the team in maint/upl but with no repo in the team
 # TODO: check for packages Vcs url not matching the salsa url
-# TODO: packages with repo in dpt org, but with team not in maint/upldrs
 # TODO: packages using pypi (check upstream/metadata if it uses github and suggest to use that)
 # TODO: verify webhooks are set (FIRST: print whhich ones are set, as i guess there's more than kgb or tagpending?) https://salsa.debian.org/python-team/packages/astroid/-/hooks +
 #       https://salsa.debian.org/python-team/packages/sqlmodel/-/hooks
@@ -55,12 +54,29 @@ for group_project in sorted(group_projects, key=lambda p: p.attributes['name']):
     if 'pristine-tar' not in branches:
         violations[project.name].append(f'ERROR: no pristine-tar branch; available branches={branches}')
 
-    # check repo name and source package match
+    # debian/control checks
 
     d_control_id = [d['id'] for d in project.repository_tree(path='debian') if d['name'] == 'control'][0]
     d_control = Deb822(project.repository_raw_blob(d_control_id))
+
     if project.name != d_control["Source"]:
         violations[project.name].append(f'ERROR: repo name "{project.name}" does not match the package source name "{d_control["Source"]}"')
+
+    if 'Uploaders' not in d_control:
+        violations[project.name].append('WARNING: Uploaders is missing from debian/control, that doesnt seem right')
+
+    maints = d_control['Maintainer']+d_control.get('Uploaders', '')
+    if all(
+        x not in maints
+        for x in (
+            'team+python@tracker.debian.org',
+            'python-apps-team@lists.alioth.debian.org',
+            'python-modules-team@lists.alioth.debian.org',
+        )
+    ):
+        violations[project.name].append('ERROR: DPT is not in Maintainer or Uploaders fields')
+    elif 'team+python@tracker.debian.org' not in maints:
+        violations[project.name].append('WARNING: still using the old team email address')
 
 
 for pkg, viols in violations.items():
