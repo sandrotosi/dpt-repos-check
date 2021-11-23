@@ -11,8 +11,8 @@ GROUPID = 9360
 
 salsa = gitlab.Gitlab('https://salsa.debian.org/')
 group = salsa.groups.get(GROUPID)
-# group_projects = group.projects.list(all=True)  TODO: uncomment
-group_projects = group.projects.list(page=1)
+# group_projects = group.projects.list(all=True, order_by='name', sort='asc')  TODO: uncomment
+group_projects = group.projects.list(page=1, order_by='name', sort='asc')
 
 violations = defaultdict(list)
 
@@ -28,7 +28,7 @@ violations = defaultdict(list)
 #       https://salsa.debian.org/python-team/packages/sqlmodel/-/hooks
 #       --> requires auth! project.hooks.list()
 
-for group_project in sorted(group_projects, key=lambda p: p.attributes['name']):
+for group_project in group_projects:
     project = salsa.projects.get(group_project.id)
     print(f"CHECKING {project.name}...")
 
