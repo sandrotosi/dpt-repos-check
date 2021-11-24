@@ -4,10 +4,30 @@ from collections import defaultdict
 from datetime import timedelta
 
 import gitlab
+import requests
 import requests_cache
 from debian.deb822 import Deb822
+from debian.debian_support import Version
 
 __version__ = '0.1.3'
+
+
+def get_sid_version(srcpkg):
+    # get the current version in Sid, from madison
+    # example output:
+    #
+    # https://qa.debian.org/madison.php?package=matplotlib&text=on&s=sid&a=source,all,amd64
+    # matplotlib | 3.5.0-1 | sid | source
+    madison = requests.get(f"https://qa.debian.org/madison.php?package={srcpkg}&text=on&s=sid&a=source,all,amd64")
+    if not madison.text:
+        return None
+
+    try:
+        # rough but gets the job done
+        return Version(madison.text.splitlines()[0].split(' | ')[1])
+    finally:
+        return None
+
 
 logging.basicConfig(format='%(asctime)s %(message)s', stream=sys.stdout, level=logging.DEBUG)
 
@@ -108,6 +128,12 @@ for group_project in group_projects:
             violations[project.name].append('WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html')
     else:
         violations[project.name].append('ERROR: debian/watch is missing')
+
+    # sid version check
+
+    sid_version = get_sid_version(d_control["Source"])
+    if not sid_version:
+        violations[project.name].append('WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?')
 
 for pkg, viols in violations.items():
     print(pkg)

@@ -26,6 +26,7 @@ python-gitlab==2.10.1
     # via -r requirements.in
 requests==2.26.0
     # via
+    #   -r requirements.in
     #   python-gitlab
     #   requests-cache
     #   requests-toolbelt
