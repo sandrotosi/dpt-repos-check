@@ -113,9 +113,13 @@ for group_project in group_projects:
     elif 'team+python@tracker.debian.org' not in maints:
         violations[project.name].append('WARNING: still using the old team email address')
 
-    if (vcs_browser := d_control['Vcs-Browser']) != project.web_url:
+    if not (vcs_browser := d_control.get('Vcs-Browser')):
+        violations[project.name].append(f'ERROR: Vcs-Browser field is missing from debian/control')
+    elif vcs_browser != project.web_url:
         violations[project.name].append(f'ERROR: Vcs-Browser field {vcs_browser} doesnt match the repo url {project.web_url}')
-    if (vcs_git := d_control['Vcs-Git']) != project.http_url_to_repo:
+    if not (vcs_git := d_control.get('Vcs-Git')):
+        violations[project.name].append(f'ERROR: Vcs-Git field is missing from debian/control')
+    elif vcs_git != project.http_url_to_repo:
         violations[project.name].append(f'ERROR: Vcs-Git field {vcs_git} doesnt match the repo url {project.http_url_to_repo}')
 
     # debian/watch checks
