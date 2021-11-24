@@ -91,7 +91,7 @@ for group_project in group_projects:
 
     # debian/control checks
 
-    d_control_id = [d['id'] for d in project.repository_tree(path='debian') if d['name'] == 'control'][0]
+    d_control_id = [d['id'] for d in project.repository_tree(path='debian', all=True) if d['name'] == 'control'][0]
     d_control = Deb822(project.repository_raw_blob(d_control_id))
 
     if project.name != d_control["Source"]:
