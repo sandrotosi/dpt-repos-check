@@ -15,7 +15,9 @@ logging.basicConfig(format='%(asctime)s %(message)s', stream=sys.stdout, level=l
 requests_cache.install_cache(
     'dpt_repos_check_cache',
     cache_control=False,
-    expire_after=timedelta(days=7)
+    expire_after=timedelta(days=15),
+    backend='filesystem',
+    serializer='json',
 )
 
 # 9360 is the group_id for python-team/packages subgroup, it could be automatically obtained
