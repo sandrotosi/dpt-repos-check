@@ -6,6 +6,7 @@ from datetime import timedelta
 import gitlab
 import requests
 import requests_cache
+from debian.changelog import Changelog
 from debian.deb822 import Deb822
 from debian.debian_support import Version
 from debian.watch import WatchFile
@@ -56,8 +57,6 @@ violations = defaultdict(list)
 
 # TODO: pristine-tar: contains .delta for latest upload to archive
 # TODO: pristine-tar: onbtain the tarball and compare with the archive
-# TODO: tags: tags for latest uploaded version in the changelog
-# TODO: latest upload to archive is in the git repo
 # TODO: check for packages no longer in debian but with repo still in the team
 # TODO: check for packages referring the team in maint/upl but with no repo in the team
 # TODO: verify webhooks are set (FIRST: print whhich ones are set, as i guess there's more than kgb or tagpending?) https://salsa.debian.org/python-team/packages/astroid/-/hooks +
@@ -161,6 +160,14 @@ for group_project in group_projects:
 
         if (upstream_tag := f'upstream/{sid_version.upstream_version}') not in tags:
             violations[project.name].append(f"ERROR: there's no tag '{upstream_tag}' in the repo corresponding to the sid version '{sid_version.full_version}'")
+
+        # debian/changelog checks
+
+        d_changelog_id = [d['id'] for d in project.repository_tree(path='debian', all=True) if d['name'] == 'changelog'][0]
+        d_changelog = Changelog(project.repository_raw_blob(d_changelog_id))
+
+        if not any (x.version == sid_version for x in d_changelog._blocks):
+            violations[project.name].append(f"ERROR: debian/changelog doesnt contain an entry for the version in sid, {sid_version}")
 
 for pkg, viols in violations.items():
     print(pkg)
