@@ -8,6 +8,7 @@ import requests
 import requests_cache
 from debian.deb822 import Deb822
 from debian.debian_support import Version
+from debian.watch import WatchFile
 
 __version__ = '0.1.3'
 
@@ -134,8 +135,14 @@ for group_project in group_projects:
     if d_watch_id:
         d_watch = project.repository_raw_blob(d_watch_id[0]).decode().lower()
 
-        if 'pypi.python.org' in d_watch or 'pypi.debian.net' in d_watch:
-            violations[project.name].append('WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html')
+        try:
+            watchfile = WatchFile.from_lines(d_watch.splitlines())
+
+            for w_entry in watchfile.entries:
+                if 'pypi.python.org' in w_entry.url or 'pypi.debian.net' in w_entry.url:
+                    violations[project.name].append('WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html')
+        except:
+            violations[project.name].append('ERROR: unable to parse debian/watch')
     else:
         violations[project.name].append('ERROR: debian/watch is missing')
 
