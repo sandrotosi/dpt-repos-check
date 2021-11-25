@@ -24,8 +24,9 @@ def get_sid_version(srcpkg):
 
     try:
         # rough but gets the job done
-        return Version(madison.text.splitlines()[0].split(' | ')[1])
-    finally:
+        return Version(madison.text.splitlines()[0].split(' | ')[1].strip())
+    except Exception as e:
+        logging.exception(e)
         return None
 
 
