@@ -50,8 +50,7 @@ GROUPID = 9360
 logging.info("Gather DPT projects from Salsa")
 salsa = gitlab.Gitlab('https://salsa.debian.org/')
 group = salsa.groups.get(GROUPID)
-# group_projects = group.projects.list(all=True, order_by='name', sort='asc', as_list=True)  TODO: uncomment
-group_projects = group.projects.list(page=1, order_by='name', sort='asc', as_list=True)
+group_projects = group.projects.list(all=True, order_by='name', sort='asc', as_list=True)
 
 violations = defaultdict(list)
 
