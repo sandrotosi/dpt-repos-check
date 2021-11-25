@@ -90,6 +90,13 @@ for group_project in group_projects:
     if 'pristine-tar' not in branches:
         violations[project.name].append(f'ERROR: no pristine-tar branch; available branches={branches}')
 
+    # debian/ exists check
+
+    debian_directory_exists = any([x['name'] == 'debian' for x in project.repository_tree()])
+    if not debian_directory_exists:
+        violations[project.name].append(f'ERROR: theres no debian/ in the default branch ({project.default_branch}), which should contain a development branch, see DEP-14; all other checks are skipped')
+        continue
+
     # debian/control checks
 
     d_control_id = [d['id'] for d in project.repository_tree(path='debian', all=True) if d['name'] == 'control'][0]
