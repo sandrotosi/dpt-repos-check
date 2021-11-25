@@ -55,9 +55,7 @@ violations = defaultdict(list)
 
 # TODO: pristine-tar: contains .delta for latest upload to archive
 # TODO: pristine-tar: onbtain the tarball and compare with the archive
-# TODO: upstream: verify tag for latest upstream
 # TODO: tags: tags for latest uploaded version in the changelog
-# TODO: tags: latest upstream release
 # TODO: latest upload to archive is in the git repo
 # TODO: check for packages no longer in debian but with repo still in the team
 # TODO: check for packages referring the team in maint/upl but with no repo in the team
@@ -146,6 +144,16 @@ for group_project in group_projects:
     sid_version = get_sid_version(d_control["Source"])
     if not sid_version:
         violations[project.name].append('WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?')
+    else:
+        # tags checks
+
+        tags = [x.name for x in project.tags.list()]
+
+        if (debian_tag := f'debian/{sid_version.full_version}') not in tags:
+            violations[project.name].append(f"ERROR: there's no tag '{debian_tag}' in the repo corresponding to the sid version '{sid_version.full_version}'")
+
+        if (upstream_tag := f'upstream/{sid_version.upstream_version}') not in tags:
+            violations[project.name].append(f"ERROR: there's no tag '{upstream_tag}' in the repo corresponding to the sid version '{sid_version.full_version}'")
 
 for pkg, viols in violations.items():
     print(pkg)
