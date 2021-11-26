@@ -199,7 +199,7 @@ for group_project in group_projects:
         d_changelog_id = [d['id'] for d in project.repository_tree(path='debian', all=True) if d['name'] == 'changelog'][0]
         d_changelog = Changelog(project.repository_raw_blob(d_changelog_id))
 
-        if not any (x.version == sid_version for x in d_changelog._blocks):
+        if not any(x.version == sid_version for x in d_changelog._blocks):
             violations.add(project.name, f"ERROR: debian/changelog doesnt contain an entry for the version in sid", extra_data=f"sid version={sid_version}")
 
 print(f'Total repositories processed: {len(group_projects)}\n')
