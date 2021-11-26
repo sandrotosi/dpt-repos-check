@@ -14,6 +14,39 @@ from debian.watch import WatchFile
 __version__ = '0.1.3'
 
 
+class Violations(object):
+    """
+    Maintain the list of violations in a centralize place
+    """
+
+    def __init__(self):
+        self.per_repo = defaultdict(list)
+        self.per_violation = defaultdict(list)
+
+    def add(self, repo, violation, extra_data=''):
+        # this is a trick to just write `violations` if no `extra_data` is present
+        # and if it's populated, then separate it from `violation` with a semicolon
+        self.per_repo[repo].append(f'{violation}{"; " if extra_data else ""}{extra_data}')
+        self.per_violation[violation].append(repo)
+
+    def print(self):
+        print("Stats:")
+        print(f"    Repos with violations: {len(self.per_repo.keys())}")
+        print(f"    Violations types detected: {len(self.per_violation.keys())}")
+        print(f'    Total violations: {sum(len(x) for x in self.per_repo.values())}')
+        print('\nPer repository violations:')
+        for _repo, _violations in self.per_repo.items():
+            print(_repo)
+            for _violation in _violations:
+                print(f"    {_violation}")
+
+        print('\nPer violation repositories:')
+        for _violation, _repos in self.per_violation.items():
+            print(_violation)
+            for _repo in _repos:
+                print(f"    {_repo}")
+
+
 def get_sid_version(srcpkg):
     # get the current version in Sid, from madison
     # example output:
@@ -52,7 +85,7 @@ salsa = gitlab.Gitlab('https://salsa.debian.org/')
 group = salsa.groups.get(GROUPID)
 group_projects = group.projects.list(all=True, order_by='name', sort='asc', as_list=True)
 
-violations = defaultdict(list)
+violations = Violations()
 
 # TODO: pristine-tar: contains .delta for latest upload to archive
 # TODO: pristine-tar: onbtain the tarball and compare with the archive
@@ -71,27 +104,28 @@ for group_project in group_projects:
     branches = {x.name for x in project.branches.list()}
 
     if not branches:
-        violations[project.name].append('ERROR: appears to be an empty repository')
+        violations.add(project.name, 'ERROR: appears to be an empty repository')
         continue
 
     # DEP-14 is the recommendation doc for git layout: https://dep-team.pages.debian.net/deps/dep14/
     if not branches.intersection({'master', 'debian/master', 'debian/unstable', 'debian/latest'}):
         if branches.intersection({'sid', 'debian/sid'}):
-            violations[project.name].append(f'WARNING: uncommon debian master branch (DEP-14); available branches={branches}')
+            violations.add(project.name, f'WARNING: uncommon debian master branch (DEP-14)', extra_data=f'available branches={branches}')
         else:
-            violations[project.name].append(f'ERROR: no valid Debian master branch; available branches={branches}')
+            violations.add(project.name, f'ERROR: no valid Debian master branch', extra_data=f'available branches={branches}')
 
     if not branches.intersection({'upstream', 'upstream/latest'}):
-        violations[project.name].append(f'ERROR: no upstream branch; available branches={branches}')
+        violations.add(project.name, f'ERROR: no upstream branch', extra_data=f'available branches={branches}')
 
     if 'pristine-tar' not in branches:
-        violations[project.name].append(f'ERROR: no pristine-tar branch; available branches={branches}')
+        violations.add(project.name, f'ERROR: no pristine-tar branch', extra_data=f'available branches={branches}')
 
     # debian/ exists check
 
     debian_directory_exists = any([x['name'] == 'debian' for x in project.repository_tree()])
     if not debian_directory_exists:
-        violations[project.name].append(f'ERROR: theres no debian/ in the default branch ({project.default_branch}), which should contain a development branch, see DEP-14; all other checks are skipped')
+        violations.add(project.name, f'ERROR: theres no debian/ directory in the default branch, which should contain a development branch, see DEP-14; all other checks are skipped',
+                       extra_data=f'default branch={project.default_branch}')
         continue
 
     # debian/control checks
@@ -100,10 +134,10 @@ for group_project in group_projects:
     d_control = Deb822(project.repository_raw_blob(d_control_id))
 
     if project.name != d_control["Source"]:
-        violations[project.name].append(f'ERROR: repo name "{project.name}" does not match the package source name "{d_control["Source"]}"')
+        violations.add(project.name, f'ERROR: repo name does not match the package source name', extra_data=f'repo name={project.name}, src name={d_control["Source"]}')
 
     if 'Uploaders' not in d_control:
-        violations[project.name].append('WARNING: Uploaders is missing from debian/control, that doesnt seem right')
+        violations.add(project.name, 'WARNING: Uploaders is missing from debian/control, that doesnt seem right')
 
     maints = d_control['Maintainer']+d_control.get('Uploaders', '')
     if all(
@@ -114,18 +148,18 @@ for group_project in group_projects:
             'python-modules-team@lists.alioth.debian.org',
         )
     ):
-        violations[project.name].append('ERROR: DPT is not in Maintainer or Uploaders fields')
+        violations.add(project.name, 'ERROR: DPT is not in Maintainer or Uploaders fields')
     elif 'team+python@tracker.debian.org' not in maints:
-        violations[project.name].append('WARNING: still using the old team email address')
+        violations.add(project.name, 'WARNING: still using the old team email address')
 
     if not (vcs_browser := d_control.get('Vcs-Browser')):
-        violations[project.name].append(f'ERROR: Vcs-Browser field is missing from debian/control')
+        violations.add(project.name, f'ERROR: Vcs-Browser field is missing from debian/control')
     elif vcs_browser != project.web_url:
-        violations[project.name].append(f'ERROR: Vcs-Browser field {vcs_browser} doesnt match the repo url {project.web_url}')
+        violations.add(project.name, f'ERROR: Vcs-Browser field doesnt match the repo web URL', extra_data=f'Vcs-Browser={vcs_browser}, repo web URL={project.web_url}')
     if not (vcs_git := d_control.get('Vcs-Git')):
-        violations[project.name].append(f'ERROR: Vcs-Git field is missing from debian/control')
+        violations.add(project.name, f'ERROR: Vcs-Git field is missing from debian/control')
     elif vcs_git != project.http_url_to_repo:
-        violations[project.name].append(f'ERROR: Vcs-Git field {vcs_git} doesnt match the repo url {project.http_url_to_repo}')
+        violations.add(project.name, f'ERROR: Vcs-Git field doesnt match the repo git URL', extra_data=f'Vcs-Git={vcs_git}, repo git URL={project.http_url_to_repo}')
 
     # debian/watch checks
 
@@ -138,27 +172,27 @@ for group_project in group_projects:
 
             for w_entry in watchfile.entries:
                 if 'pypi.python.org' in w_entry.url or 'pypi.debian.net' in w_entry.url:
-                    violations[project.name].append('WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html')
+                    violations.add(project.name, 'WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html')
         except:
-            violations[project.name].append('ERROR: unable to parse debian/watch')
+            violations.add(project.name, 'ERROR: unable to parse debian/watch')
     else:
-        violations[project.name].append('ERROR: debian/watch is missing')
+        violations.add(project.name, 'ERROR: debian/watch is missing')
 
     # sid version check
 
     sid_version = get_sid_version(d_control["Source"])
     if not sid_version:
-        violations[project.name].append('WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?')
+        violations.add(project.name, 'WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?')
     else:
         # tags checks
 
         tags = [x.name for x in project.tags.list()]
 
         if (debian_tag := f'debian/{sid_version.full_version}') not in tags:
-            violations[project.name].append(f"ERROR: there's no tag '{debian_tag}' in the repo corresponding to the sid version '{sid_version.full_version}'")
+            violations.add(project.name, f"ERROR: there's no debian tag in the repo corresponding to the sid version", extra_data=f'sid version={sid_version}, missing tag={debian_tag}')
 
         if (upstream_tag := f'upstream/{sid_version.upstream_version}') not in tags:
-            violations[project.name].append(f"ERROR: there's no tag '{upstream_tag}' in the repo corresponding to the sid version '{sid_version.full_version}'")
+            violations.add(project.name, f"ERROR: there's no upstream tag in the repo corresponding to the sid version", extra_data=f'sid version={sid_version}, missing tag={upstream_tag}')
 
         # debian/changelog checks
 
@@ -166,9 +200,7 @@ for group_project in group_projects:
         d_changelog = Changelog(project.repository_raw_blob(d_changelog_id))
 
         if not any (x.version == sid_version for x in d_changelog._blocks):
-            violations[project.name].append(f"ERROR: debian/changelog doesnt contain an entry for the version in sid, {sid_version}")
+            violations.add(project.name, f"ERROR: debian/changelog doesnt contain an entry for the version in sid", extra_data=f"sid version={sid_version}")
 
-for pkg, viols in violations.items():
-    print(pkg)
-    for viol in viols:
-        print(f"    {viol}")
+print(f'Total repositories processed: {len(group_projects)}\n')
+violations.print()
