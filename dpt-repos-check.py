@@ -1,4 +1,5 @@
 import logging
+import os
 import sys
 from collections import defaultdict
 from datetime import timedelta
@@ -76,12 +77,14 @@ requests_cache.install_cache(
     serializer='json',
 )
 
+SALSA_TOKEN = os.environ.get('SALSA_TOKEN', None)
+
 # 9360 is the group_id for python-team/packages subgroup, it could be automatically obtained
 # from https://salsa.debian.org/api/v4/groups/python-team/subgroups/ but meh
 GROUPID = 9360
 
 logging.info("Gather DPT projects from Salsa")
-salsa = gitlab.Gitlab('https://salsa.debian.org/')
+salsa = gitlab.Gitlab('https://salsa.debian.org/', private_token=SALSA_TOKEN)
 group = salsa.groups.get(GROUPID)
 group_projects = group.projects.list(all=True, order_by='name', sort='asc', as_list=True)
 
@@ -91,9 +94,6 @@ violations = Violations()
 # TODO: pristine-tar: onbtain the tarball and compare with the archive
 # TODO: check for packages no longer in debian but with repo still in the team
 # TODO: check for packages referring the team in maint/upl but with no repo in the team
-# TODO: verify webhooks are set (FIRST: print whhich ones are set, as i guess there's more than kgb or tagpending?) https://salsa.debian.org/python-team/packages/astroid/-/hooks +
-#       https://salsa.debian.org/python-team/packages/sqlmodel/-/hooks
-#       --> requires auth! project.hooks.list()
 
 for group_project in group_projects:
     project = salsa.projects.get(group_project.id)
@@ -201,6 +201,15 @@ for group_project in group_projects:
 
         if not any(x.version == sid_version for x in d_changelog._blocks):
             violations.add(project.name, f"ERROR: debian/changelog doesnt contain an entry for the version in sid", extra_data=f"sid version={sid_version}")
+
+    # webhooks checks
+
+    if SALSA_TOKEN:
+        hooks = project.hooks.list()
+        if not any('tagpending' in x.url for x in hooks):
+            violations.add(project.name, f"WARNING: tagpending webhook missing")
+        if not any('http://kgb.debian.net:9418/' in x.url for x in hooks):
+            violations.add(project.name, f"WARNING: IRC notification (aka KGB) webhook missing")
 
 print(f'Total repositories processed: {len(group_projects)}\n')
 violations.print()
