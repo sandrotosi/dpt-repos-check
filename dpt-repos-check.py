@@ -211,5 +211,15 @@ for group_project in group_projects:
         if not any('http://kgb.debian.net:9418/' in x.url for x in hooks):
             violations.add(project.name, f"WARNING: IRC notification (aka KGB) webhook missing")
 
+    # services (aka integrations) checks
+
+    if SALSA_TOKEN:
+        services = project.services.list()
+        services_titles = [x.title for x in services]
+        if 'Emails on push' not in services_titles:
+            violations.add(project.name, f"WARNING: email on push integration missing")
+        if 'Irker (IRC gateway)' in services_titles:
+            violations.add(project.name, f"WARNING: Irker integration still active, migrate to KGB webhook instead")
+
 print(f'Total repositories processed: {len(group_projects)}\n')
 violations.print()
