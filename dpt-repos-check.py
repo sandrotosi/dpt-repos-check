@@ -1,3 +1,4 @@
+import datetime
 import logging
 import os
 import sys
@@ -12,7 +13,7 @@ from debian.deb822 import Deb822
 from debian.debian_support import Version
 from debian.watch import WatchFile
 
-__version__ = '0.1.3'
+__version__ = '0.2.0'
 
 
 class Violations(object):
@@ -221,5 +222,6 @@ for group_project in group_projects:
         if 'Irker (IRC gateway)' in services_titles:
             violations.add(project.name, f"WARNING: Irker integration still active, migrate to KGB webhook instead")
 
+print(f"Report generated on: {datetime.datetime.now()}")
 print(f'Total repositories processed: {len(group_projects)}\n')
 violations.print()
