@@ -1,10 +1,10 @@
-Report generated on: 2021-11-27 00:00:34.204333
+Report generated on: 2021-11-28 01:44:59.875652
 Total repositories processed: 2601
 
 Stats:
-    Repos with violations: 2558
-    Violations types detected: 24
-    Total violations: 8796
+    Repos with violations: 2563
+    Violations types detected: 26
+    Total violations: 9014
 
 Per repository violations:
 Aiosmtplib
@@ -15,7 +15,7 @@ Aiosmtplib
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 Djongo
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     ERROR: repo name does not match the package source name; repo name=Djongo, src name=djongo
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
@@ -71,9 +71,9 @@ Jc
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 Linkchecker
-    ERROR: no valid Debian master branch; available branches={'debian'}
-    ERROR: no upstream branch; available branches={'debian'}
-    ERROR: no pristine-tar branch; available branches={'debian'}
+    ERROR: no valid Debian master branch; available branches=['debian']
+    ERROR: no upstream branch; available branches=['debian']
+    ERROR: no pristine-tar branch; available branches=['debian']
     ERROR: repo name does not match the package source name; repo name=Linkchecker, src name=linkchecker
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
@@ -95,8 +95,8 @@ Openapi Spec Validator
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 Pinball Table Gnu
-    ERROR: no upstream branch; available branches={'sandbox/rzr/gnu/master', 'init/master', 'debian/master', 'master'}
-    ERROR: no pristine-tar branch; available branches={'sandbox/rzr/gnu/master', 'init/master', 'debian/master', 'master'}
+    ERROR: no upstream branch; available branches=['debian/master', 'init/master', 'master', 'sandbox/rzr/gnu/master']
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'init/master', 'master', 'sandbox/rzr/gnu/master']
     ERROR: repo name does not match the package source name; repo name=Pinball Table Gnu, src name=pinball-table-gnu
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
@@ -140,7 +140,7 @@ Python Openqa Client
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 Python Tr
-    ERROR: no pristine-tar branch; available branches={'debian/master', 'upstream'}
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'upstream']
     ERROR: repo name does not match the package source name; repo name=Python Tr, src name=python-tr
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
@@ -257,8 +257,10 @@ aiorwlock
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: aiorwlock_1.0.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: aiorwlock_1.0.0.orig.tar.*.id
 aiowsgi
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -283,12 +285,14 @@ alembic
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 alienfeed
-    ERROR: no upstream branch; available branches={'debian/master', 'svn'}
-    ERROR: no pristine-tar branch; available branches={'debian/master', 'svn'}
+    ERROR: no upstream branch; available branches=['debian/master', 'svn']
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'svn']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 alot
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.10-1, missing tag=upstream/0.10
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: alot_0.10.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: alot_0.10.orig.tar.*.id
 androguard
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=3.4.0~a1-1, missing tag=debian/3.4.0~a1-1
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=3.4.0~a1-1, missing tag=upstream/3.4.0~a1
@@ -314,7 +318,7 @@ ansi
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 ansicolors
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     ERROR: repo name does not match the package source name; repo name=ansicolors, src name=python-ansicolors
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -382,6 +386,8 @@ astroid
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.16-2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: astroid_0.16.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: astroid_0.16.orig.tar.*.id
 astroid2
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
@@ -425,7 +431,7 @@ automat
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 autopep8
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -434,57 +440,57 @@ autosuspend
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 azure-cli
-    WARNING: uncommon debian master branch (DEP-14); available branches={'upstream', 'debian/sid', 'debian/bullseye-backports', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/bullseye-backports', 'debian/sid', 'pristine-tar', 'upstream']
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=2.30.0-2, missing tag=upstream/2.30.0
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 azure-cosmos-python
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=3.1.1-4, missing tag=upstream/3.1.1
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 azure-cosmos-table-python
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     ERROR: debian/watch is missing
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.0.5+git20191025-5, missing tag=upstream/1.0.5+git20191025
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 azure-data-lake-store-python
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.0.52-1, missing tag=upstream/0.0.52
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 azure-devops-cli-extension
-    WARNING: uncommon debian master branch (DEP-14); available branches={'upstream', 'debian/sid', 'debian/bullseye-backports', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/bullseye-backports', 'debian/sid', 'pristine-tar', 'upstream']
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.22.0-1, missing tag=upstream/0.22.0
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 azure-functions-devops-build
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.0.22-5, missing tag=upstream/0.0.22
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 azure-kusto-python
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/buster-backports', 'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/buster-backports', 'debian/sid', 'pristine-tar', 'upstream']
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.0.3-1, missing tag=upstream/1.0.3
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 azure-multiapi-storage-python
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.7.0-1, missing tag=upstream/0.7.0
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 azure-uamqp-python
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.4.3-1, missing tag=upstream/1.4.3
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -629,7 +635,7 @@ bookletimposer
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 boolean.py
-    ERROR: no pristine-tar branch; available branches={'upstream/latest', 'debian/latest'}
+    ERROR: no pristine-tar branch; available branches=['debian/latest', 'upstream/latest']
     ERROR: repo name does not match the package source name; repo name=boolean.py, src name=python-boolean.py
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -663,6 +669,8 @@ bugz
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.13-2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: bugz_0.13.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: bugz_0.13.orig.tar.*.id
 buildbot
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -672,6 +680,9 @@ bunch
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+bundlewrap
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: bundlewrap_4.11.2.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: bundlewrap_4.11.2.orig.tar.*.id
 cachelib
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
@@ -788,6 +799,8 @@ citeproc-py
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: citeproc-py_0.5.1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: citeproc-py_0.5.1.orig.tar.*.id
 clikit
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -801,13 +814,15 @@ cloudpickle
     WARNING: Irker integration still active, migrate to KGB webhook instead
 clustershell
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: clustershell_1.8.3.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: clustershell_1.8.3.orig.tar.*.id
 cmdtest
     ERROR: debian/watch is missing
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 codespell
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=2.1.0-1, missing tag=debian/2.1.0-1
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -848,8 +863,8 @@ commit-helper
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 commoncode
-    ERROR: no upstream branch; available branches={'debian/master'}
-    ERROR: no pristine-tar branch; available branches={'debian/master'}
+    ERROR: no upstream branch; available branches=['debian/master']
+    ERROR: no pristine-tar branch; available branches=['debian/master']
     ERROR: repo name does not match the package source name; repo name=commoncode, src name=python-commoncode
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
@@ -890,8 +905,8 @@ contextlib2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 converdate
-    ERROR: no upstream branch; available branches={'debian/master'}
-    ERROR: no pristine-tar branch; available branches={'debian/master'}
+    ERROR: no upstream branch; available branches=['debian/master']
+    ERROR: no pristine-tar branch; available branches=['debian/master']
     ERROR: repo name does not match the package source name; repo name=converdate, src name=convertdate
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=2.3.2-1, missing tag=upstream/2.3.2
@@ -902,6 +917,8 @@ convertall
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.8.0-1, missing tag=debian/0.8.0-1
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.8.0-1, missing tag=upstream/0.8.0
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.8.0-1
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: convertall_0.8.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: convertall_0.8.0.orig.tar.*.id
 cookiecutter
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -956,6 +973,9 @@ crochet
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+crudini
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: crudini_0.9.3.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: crudini_0.9.3.orig.tar.*.id
 cssutils
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -1025,6 +1045,8 @@ dateparser
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: dateparser_1.0.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: dateparser_1.0.0.orig.tar.*.id
 db2twitter
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.6-1.1, missing tag=debian/0.6-1.1
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.6-1.1
@@ -1052,7 +1074,7 @@ defusedxml
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 derpconf
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -1061,7 +1083,7 @@ devpi-common
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=3.2.2-1.1, missing tag=debian/3.2.2-1.1
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=3.2.2-1.1
 devpi-server
-    ERROR: no pristine-tar branch; available branches={'debian/master', 'upstream'}
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 diamond
@@ -1087,8 +1109,8 @@ dirtbike
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 discodos
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'upstream'}
-    ERROR: no pristine-tar branch; available branches={'debian/sid', 'upstream'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'upstream']
+    ERROR: no pristine-tar branch; available branches=['debian/sid', 'upstream']
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1.0~rc2-2, missing tag=debian/1.0~rc2-2
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.0~rc2-2, missing tag=upstream/1.0~rc2
     WARNING: tagpending webhook missing
@@ -1139,7 +1161,7 @@ django-auth-ldap
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 django-auto-one-to-one
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -1207,9 +1229,9 @@ django-cleanup
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 django-colorful
-    ERROR: no valid Debian master branch; available branches={'svn'}
-    ERROR: no upstream branch; available branches={'svn'}
-    ERROR: no pristine-tar branch; available branches={'svn'}
+    ERROR: no valid Debian master branch; available branches=['svn']
+    ERROR: no upstream branch; available branches=['svn']
+    ERROR: no pristine-tar branch; available branches=['svn']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
@@ -1267,13 +1289,13 @@ django-fsm-admin
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 django-graphene
-    ERROR: no valid Debian master branch; available branches={'upstream', 'debian/experimental', 'pristine-tar'}
+    ERROR: no valid Debian master branch; available branches=['debian/experimental', 'pristine-tar', 'upstream']
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 django-graphiql-debug-toolbar
-    ERROR: no valid Debian master branch; available branches={'upstream', 'debian/experimental', 'pristine-tar'}
+    ERROR: no valid Debian master branch; available branches=['debian/experimental', 'pristine-tar', 'upstream']
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -1299,8 +1321,10 @@ django-housekeeping
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: django-housekeeping_1.2.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: django-housekeeping_1.2.orig.tar.*.id
 django-html-sanitizer
-    ERROR: no upstream branch; available branches={'unstable', 'upstream-unstable', 'master', 'pristine-tar'}
+    ERROR: no upstream branch; available branches=['master', 'pristine-tar', 'unstable', 'upstream-unstable']
     ERROR: theres no debian/ directory in the default branch, which should contain a development branch, see DEP-14; all other checks are skipped; default branch=master
 django-hvad
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
@@ -1330,7 +1354,7 @@ django-ldapdb
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 django-macaddress
-    ERROR: no valid Debian master branch; available branches={'debian', 'upstream', 'pristine-tar'}
+    ERROR: no valid Debian master branch; available branches=['debian', 'pristine-tar', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -1485,9 +1509,9 @@ django-select2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 django-session-security
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid'}
-    ERROR: no upstream branch; available branches={'debian/sid'}
-    ERROR: no pristine-tar branch; available branches={'debian/sid'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid']
+    ERROR: no upstream branch; available branches=['debian/sid']
+    ERROR: no pristine-tar branch; available branches=['debian/sid']
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=2.6.6+dfsg-1, missing tag=upstream/2.6.6+dfsg
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -1510,7 +1534,7 @@ django-sortedm2m
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 django-stronghold
-    ERROR: no pristine-tar branch; available branches={'upstream', 'dfsg_clean', 'master'}
+    ERROR: no pristine-tar branch; available branches=['dfsg_clean', 'master', 'upstream']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -1676,8 +1700,10 @@ dulwich
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.20.25-1, missing tag=debian/0.20.25-1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: dulwich_0.20.25.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: dulwich_0.20.25.orig.tar.*.id
 easy-ansi
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     ERROR: repo name does not match the package source name; repo name=easy-ansi, src name=python-easy-ansi
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.3-1, missing tag=upstream/0.3
     WARNING: IRC notification (aka KGB) webhook missing
@@ -1711,6 +1737,8 @@ elixir
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.12.2.dfsg-2.1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: elixir_1.12.2.dfsg.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: elixir_1.12.2.dfsg.orig.tar.*.id
 email-validator
     ERROR: repo name does not match the package source name; repo name=email-validator, src name=python-email-validator
     WARNING: tagpending webhook missing
@@ -1758,6 +1786,8 @@ etm-qt
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=3.2.30-1.1, missing tag=debian/3.2.30-1.1
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=3.2.30-1.1, missing tag=upstream/3.2.30
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=3.2.30-1.1
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: etm-qt_3.2.30.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: etm-qt_3.2.30.orig.tar.*.id
 exam
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.10.5-3, missing tag=upstream/0.10.5
@@ -1785,13 +1815,15 @@ extra-data
 fabulous
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: fabulous_0.4.0+dfsg1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: fabulous_0.4.0+dfsg1.orig.tar.*.id
 factory-boy
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=2.11.1-3, missing tag=upstream/2.11.1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 fail2ban
-    ERROR: no pristine-tar branch; available branches={'upstream', 'debian', 'debian-releases/experimental', 'master'}
+    ERROR: no pristine-tar branch; available branches=['debian', 'debian-releases/experimental', 'master', 'upstream']
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.11.2-2, missing tag=upstream/0.11.2
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -1802,6 +1834,8 @@ faker
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.9.3-0.1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: faker_0.9.3.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: faker_0.9.3.orig.tar.*.id
 fakesleep
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -1851,8 +1885,8 @@ fedmsg
 fedora-messaging
     ERROR: appears to be an empty repository
 feed2toot
-    ERROR: no upstream branch; available branches={'buster-backports', 'buster-backport', 'master'}
-    ERROR: no pristine-tar branch; available branches={'buster-backports', 'buster-backport', 'master'}
+    ERROR: no upstream branch; available branches=['buster-backport', 'buster-backports', 'master']
+    ERROR: no pristine-tar branch; available branches=['buster-backport', 'buster-backports', 'master']
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
@@ -1868,7 +1902,7 @@ feedparser
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 filetype.py
-    ERROR: no valid Debian master branch; available branches={'debian/main', 'upstream', 'pristine-tar'}
+    ERROR: no valid Debian master branch; available branches=['debian/main', 'pristine-tar', 'upstream']
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
     WARNING: tagpending webhook missing
@@ -1908,9 +1942,11 @@ flask-api
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.1+dfsg-1.1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: flask-api_1.1+dfsg.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: flask-api_1.1+dfsg.orig.tar.*.id
 flask-assets
-    ERROR: no upstream branch; available branches={'unstable', 'master'}
-    ERROR: no pristine-tar branch; available branches={'unstable', 'master'}
+    ERROR: no upstream branch; available branches=['master', 'unstable']
+    ERROR: no pristine-tar branch; available branches=['master', 'unstable']
     ERROR: debian/watch is missing
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=2.0-1, missing tag=debian/2.0-1
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=2.0-1, missing tag=upstream/2.0
@@ -1922,6 +1958,8 @@ flask-autoindex
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: flask-autoindex_0.6.6.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: flask-autoindex_0.6.6.orig.tar.*.id
 flask-babel
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
@@ -1941,7 +1979,7 @@ flask-bcrypt
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 flask-cache
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     ERROR: debian/watch is missing
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
@@ -1979,6 +2017,8 @@ flask-mail
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.9.1+dfsg1-1.1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: flask-mail_0.9.1+dfsg1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: flask-mail_0.9.1+dfsg1.orig.tar.*.id
 flask-migrate
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -1991,7 +2031,7 @@ flask-multistatic
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 flask-oauthlib
-    ERROR: no pristine-tar branch; available branches={'unstable', 'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'unstable', 'upstream']
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -2023,6 +2063,8 @@ flask-rest-jsonapi
 flask-restful
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: flask-restful_0.3.9.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: flask-restful_0.3.9.orig.tar.*.id
 flask-restless
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
@@ -2121,7 +2163,7 @@ fortran-language-server
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 fparser
-    ERROR: no pristine-tar branch; available branches={'dev-f2015', 'debian/latest', 'dev-python3', 'debian/master', 'upstream'}
+    ERROR: no pristine-tar branch; available branches=['debian/latest', 'debian/master', 'dev-f2015', 'dev-python3', 'upstream']
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.0.13-1, missing tag=debian/0.0.13-1
@@ -2162,6 +2204,8 @@ fusion-icon
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.2.4-5, missing tag=debian/0.2.4-5
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.2.4-5, missing tag=upstream/0.2.4
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.2.4-5
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: fusion-icon_0.2.4.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: fusion-icon_0.2.4.orig.tar.*.id
 fuzzywuzzy
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -2205,7 +2249,7 @@ geventhttpclient
 gextractwinicons
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 ghdiff
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     ERROR: repo name does not match the package source name; repo name=ghdiff, src name=python-ghdiff
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
@@ -2234,10 +2278,12 @@ git-review
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.28.0-2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: git-review_1.28.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: git-review_1.28.0.orig.tar.*.id
 gitinspector
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.4.4+dfsg-10, missing tag=upstream/0.4.4+dfsg
 gitless
-    ERROR: no upstream branch; available branches={'debian/master', 'upstream/master', 'pristine-tar'}
+    ERROR: no upstream branch; available branches=['debian/master', 'pristine-tar', 'upstream/master']
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.8.8-4, missing tag=debian/0.8.8-4
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.8.8-4, missing tag=upstream/0.8.8
     WARNING: tagpending webhook missing
@@ -2258,6 +2304,8 @@ gladtex
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=3.1.0-1, missing tag=upstream/3.1.0
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: gladtex_3.1.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: gladtex_3.1.0.orig.tar.*.id
 glean-parser
     ERROR: Vcs-Browser field doesnt match the repo web URL; Vcs-Browser=https://salsa.debian.org/python-team/packages/glean-parser<, repo web URL=https://salsa.debian.org/python-team/packages/glean-parser
     WARNING: tagpending webhook missing
@@ -2344,13 +2392,13 @@ grapefruit
 graph-tool
     ERROR: appears to be an empty repository
 graphql-core
-    ERROR: no valid Debian master branch; available branches={'upstream', 'debian/experimental', 'pristine-tar'}
+    ERROR: no valid Debian master branch; available branches=['debian/experimental', 'pristine-tar', 'upstream']
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 graphql-relay
-    ERROR: no valid Debian master branch; available branches={'upstream', 'debian/experimental', 'pristine-tar'}
+    ERROR: no valid Debian master branch; available branches=['debian/experimental', 'pristine-tar', 'upstream']
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -2376,7 +2424,7 @@ gtextfsm
 gtg
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 gtimelog
-    ERROR: no pristine-tar branch; available branches={'upstream/master', 'debian/master', 'upstream/latest'}
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'upstream/latest', 'upstream/master']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -2393,8 +2441,8 @@ guessit
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 gunicorn
-    WARNING: uncommon debian master branch (DEP-14); available branches={'upstream/sid', 'debian/sid', 'pristine-tar', 'debian/buster-backports', 'stretch-backports'}
-    ERROR: no upstream branch; available branches={'upstream/sid', 'debian/sid', 'pristine-tar', 'debian/buster-backports', 'stretch-backports'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/buster-backports', 'debian/sid', 'pristine-tar', 'stretch-backports', 'upstream/sid']
+    ERROR: no upstream branch; available branches=['debian/buster-backports', 'debian/sid', 'pristine-tar', 'stretch-backports', 'upstream/sid']
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
     ERROR: Vcs-Browser field doesnt match the repo web URL; Vcs-Browser=https://salsa.debian.org/lamby/pkg-gunicorn, repo web URL=https://salsa.debian.org/python-team/packages/gunicorn
@@ -2412,9 +2460,13 @@ gwakeonlan
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.7.0-2, missing tag=debian/0.7.0-2
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.7.0-2, missing tag=upstream/0.7.0
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.7.0-2
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: gwakeonlan_0.7.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: gwakeonlan_0.7.0.orig.tar.*.id
 hachoir
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: hachoir_3.1.0+dfsg.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: hachoir_3.1.0+dfsg.orig.tar.*.id
 hachoir-metadata
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
@@ -2536,7 +2588,7 @@ importlib
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 importlib-resources
-    ERROR: no valid Debian master branch; available branches={'main', 'upstream', 'pristine-tar'}
+    ERROR: no valid Debian master branch; available branches=['main', 'pristine-tar', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -2594,6 +2646,8 @@ ipython
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=7.27.0-1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: ipython_7.27.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: ipython_7.27.0.orig.tar.*.id
 ipython-genutils
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.2.0-5, missing tag=upstream/0.2.0
     WARNING: IRC notification (aka KGB) webhook missing
@@ -2621,7 +2675,7 @@ itypes
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 j2cli
-    ERROR: no upstream branch; available branches={'debian/master', 'master', 'pristine-tar'}
+    ERROR: no upstream branch; available branches=['debian/master', 'master', 'pristine-tar']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.3.12b-3, missing tag=upstream/0.3.12b
     WARNING: tagpending webhook missing
@@ -2644,8 +2698,8 @@ jaraco.collections
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 jaraco.functools
-    ERROR: no upstream branch; available branches={'debian/master'}
-    ERROR: no pristine-tar branch; available branches={'debian/master'}
+    ERROR: no upstream branch; available branches=['debian/master']
+    ERROR: no pristine-tar branch; available branches=['debian/master']
     ERROR: repo name does not match the package source name; repo name=jaraco.functools, src name=python-jaraco.functools
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
@@ -2698,6 +2752,8 @@ jpy
 jpylyzer
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: jpylyzer_2.0.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: jpylyzer_2.0.0.orig.tar.*.id
 json-tricks
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -2867,9 +2923,12 @@ knack
 kombu
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: Irker integration still active, migrate to KGB webhook instead
+kupfer
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: kupfer_0+v320.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: kupfer_0+v320.orig.tar.*.id
 kyklop
-    ERROR: no upstream branch; available branches={'debian/master', 'svn'}
-    ERROR: no pristine-tar branch; available branches={'debian/master', 'svn'}
+    ERROR: no upstream branch; available branches=['debian/master', 'svn']
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'svn']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 labgrid
@@ -2903,6 +2962,11 @@ lazr.uri
 lazy-object-proxy
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: lazy-object-proxy_1.6.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: lazy-object-proxy_1.6.0.orig.tar.*.id
+lazygal
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: lazygal_0.10.3.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: lazygal_0.10.3.orig.tar.*.id
 ldaptor
     ERROR: debian/watch is missing
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
@@ -2960,7 +3024,7 @@ libthumbor
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 license-expression
-    ERROR: no pristine-tar branch; available branches={'upstream/latest', 'debian/latest'}
+    ERROR: no pristine-tar branch; available branches=['debian/latest', 'upstream/latest']
     ERROR: repo name does not match the package source name; repo name=license-expression, src name=python-license-expression
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
@@ -3028,7 +3092,7 @@ m2ext
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 makefun
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     ERROR: repo name does not match the package source name; repo name=makefun, src name=python-makefun
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -3068,6 +3132,8 @@ mastodon
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-mastodon_1.5.1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-mastodon_1.5.1.orig.tar.*.id
 mathlibtools
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -3114,7 +3180,7 @@ mercurial-keyring
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 merge3
-    ERROR: no pristine-tar branch; available branches={'debian/master', 'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'master', 'upstream']
     ERROR: repo name does not match the package source name; repo name=merge3, src name=python-merge3
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.0.8-1, missing tag=debian/0.0.8-1
@@ -3124,13 +3190,13 @@ merge3
 metaextract
     ERROR: appears to be an empty repository
 microsoft-authentication-extensions-for-python
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.3.0-1, missing tag=upstream/0.3.0
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 microsoft-authentication-library-for-python
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.16.0-1, missing tag=upstream/1.16.0
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -3142,7 +3208,7 @@ miio
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 milksnake
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -3246,7 +3312,7 @@ mu-editor
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 multiplex
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.5.1-3, missing tag=upstream/0.5.1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -3525,8 +3591,8 @@ onetimepass
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 openerp7
-    ERROR: no upstream branch; available branches={'debian/master', 'svn'}
-    ERROR: no pristine-tar branch; available branches={'debian/master', 'svn'}
+    ERROR: no upstream branch; available branches=['debian/master', 'svn']
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'svn']
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 openstv
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
@@ -3632,7 +3698,7 @@ path.py
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 patiencediff
-    ERROR: no pristine-tar branch; available branches={'buster-backports', 'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['buster-backports', 'master', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -3656,6 +3722,8 @@ pdfrw
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.4-2.1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: pdfrw_0.4.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: pdfrw_0.4.orig.tar.*.id
 pdftables
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
@@ -3673,7 +3741,7 @@ pelican
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=4.0.1+dfsg-1.1, missing tag=debian/4.0.1+dfsg-1.1
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=4.0.1+dfsg-1.1
 pem
-    ERROR: no pristine-tar branch; available branches={'buster-backports', 'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['buster-backports', 'master', 'upstream']
     ERROR: repo name does not match the package source name; repo name=pem, src name=python-pem
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
@@ -3689,6 +3757,8 @@ pep8
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.7.1-9, missing tag=upstream/1.7.1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: pep8_1.7.1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: pep8_1.7.1.orig.tar.*.id
 pep8-naming
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -3723,8 +3793,8 @@ piexif
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 pikepdf
-    ERROR: no upstream branch; available branches={'buster', 'master'}
-    ERROR: no pristine-tar branch; available branches={'buster', 'master'}
+    ERROR: no upstream branch; available branches=['buster', 'master']
+    ERROR: no pristine-tar branch; available branches=['buster', 'master']
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=3.2.0+dfsg-2, missing tag=upstream/3.2.0+dfsg
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -3735,8 +3805,8 @@ pilkit
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 pipenv
-    ERROR: no upstream branch; available branches={'debian', 'master'}
-    ERROR: no pristine-tar branch; available branches={'debian', 'master'}
+    ERROR: no upstream branch; available branches=['debian', 'master']
+    ERROR: no pristine-tar branch; available branches=['debian', 'master']
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=11.9.0-1.1, missing tag=debian/11.9.0-1.1
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=11.9.0-1.1, missing tag=upstream/11.9.0
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=11.9.0-1.1
@@ -3767,6 +3837,8 @@ pkgconfig
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.5.5-1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-pkgconfig_1.5.5.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-pkgconfig_1.5.5.orig.tar.*.id
 pkpgcounter
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 plainbox
@@ -3777,8 +3849,8 @@ plainbox
 plainbox-provider-checkbox
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 plainbox-provider-piglit
-    ERROR: no upstream branch; available branches={'debian/master', 'svn'}
-    ERROR: no pristine-tar branch; available branches={'debian/master', 'svn'}
+    ERROR: no upstream branch; available branches=['debian/master', 'svn']
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'svn']
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 plainbox-provider-resource-generic
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
@@ -3843,8 +3915,8 @@ postgresfixture
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
 power
-    ERROR: no upstream branch; available branches={'master'}
-    ERROR: no pristine-tar branch; available branches={'master'}
+    ERROR: no upstream branch; available branches=['master']
+    ERROR: no pristine-tar branch; available branches=['master']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -3918,8 +3990,8 @@ pssh
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 psyclone
-    ERROR: no upstream branch; available branches={'debian/master'}
-    ERROR: no pristine-tar branch; available branches={'debian/master'}
+    ERROR: no upstream branch; available branches=['debian/master']
+    ERROR: no pristine-tar branch; available branches=['debian/master']
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
     ERROR: debian/watch is missing
@@ -3952,6 +4024,8 @@ ptpython
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: ptpython_3.0.20.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: ptpython_3.0.20.orig.tar.*.id
 ptvsd
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
@@ -3983,8 +4057,8 @@ py-macaroon-bakery
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 py-magcode-core
-    ERROR: no upstream branch; available branches={'deb-package', 'deb-package-old', 'master'}
-    ERROR: no pristine-tar branch; available branches={'deb-package', 'deb-package-old', 'master'}
+    ERROR: no upstream branch; available branches=['deb-package', 'deb-package-old', 'master']
+    ERROR: no pristine-tar branch; available branches=['deb-package', 'deb-package-old', 'master']
     ERROR: theres no debian/ directory in the default branch, which should contain a development branch, see DEP-14; all other checks are skipped; default branch=master
 py-postgresql
     WARNING: tagpending webhook missing
@@ -3998,6 +4072,8 @@ py-postgresql-old
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.2.1+git20180803.ef7b9a9-4
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: py-postgresql_1.2.1+git20180803.ef7b9a9.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: py-postgresql_1.2.1+git20180803.ef7b9a9.orig.tar.*.id
 py-radix
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -4043,7 +4119,7 @@ pyagentx
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 pyahocorasick
-    ERROR: no pristine-tar branch; available branches={'debian/master', 'upstream'}
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'upstream']
     ERROR: repo name does not match the package source name; repo name=pyahocorasick, src name=python-pyahocorasick
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
@@ -4167,6 +4243,8 @@ pycxx
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=7.1.4-0.2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: pycxx_7.1.4.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: pycxx_7.1.4.orig.tar.*.id
 pydantic
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -4188,7 +4266,7 @@ pydbus
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 pydenticon
-    ERROR: no pristine-tar branch; available branches={'stretch-backports', 'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'stretch-backports', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -4203,8 +4281,8 @@ pydispatcher
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 pydle
-    ERROR: no upstream branch; available branches={'debian/buster-packports', 'debian/master', 'master'}
-    ERROR: no pristine-tar branch; available branches={'debian/buster-packports', 'debian/master', 'master'}
+    ERROR: no upstream branch; available branches=['debian/buster-packports', 'debian/master', 'master']
+    ERROR: no pristine-tar branch; available branches=['debian/buster-packports', 'debian/master', 'master']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -4501,7 +4579,7 @@ pymediainfo
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 pymeeus
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.4.3+dfsg1-2, missing tag=debian/0.4.3+dfsg1-2
     WARNING: tagpending webhook missing
@@ -4590,11 +4668,15 @@ pyparsing
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: pyparsing_2.4.7.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: pyparsing_2.4.7.orig.tar.*.id
 pypass
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: pypass_0.2.1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: pypass_0.2.1.orig.tar.*.id
 pype
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 pyphen
@@ -4608,6 +4690,8 @@ pyprind
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: pyprind_2.11.2.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: pyprind_2.11.2.orig.tar.*.id
 pypuppetdb
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -4684,19 +4768,21 @@ pyroute2
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: pyroute2_0.6.4.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: pyroute2_0.6.4.orig.tar.*.id
 pyrrd
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 pyrsistent
-    ERROR: no pristine-tar branch; available branches={'buster-backports', 'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['buster-backports', 'master', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 pyrundeck
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -4799,7 +4885,7 @@ pytds
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 pyte
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
@@ -4886,6 +4972,8 @@ pytest-localserver
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: pytest-localserver_0.5.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: pytest-localserver_0.5.0.orig.tar.*.id
 pytest-mock
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -4946,7 +5034,7 @@ pytest-services
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 pytest-skip-markers
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
@@ -4961,6 +5049,8 @@ pytest-testinfra
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: pytest-testinfra_6.4.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: pytest-testinfra_6.4.0.orig.tar.*.id
 pytest-tornado
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -5005,6 +5095,8 @@ python-activipy
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-adal
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-adal_1.2.2.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-adal_1.2.2.orig.tar.*.id
 python-adns
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
@@ -5058,6 +5150,8 @@ python-aioice
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-aioice_0.7.5.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-aioice_0.7.5.orig.tar.*.id
 python-aioinflux
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.9.0-2, missing tag=upstream/0.9.0
@@ -5075,6 +5169,8 @@ python-aiortc
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-aiortc_1.2.1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-aiortc_1.2.1.orig.tar.*.id
 python-aiosmtpd
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -5107,6 +5203,8 @@ python-aniso8601
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-aniso8601_9.0.1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-aniso8601_9.0.1.orig.tar.*.id
 python-anyio
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -5201,9 +5299,9 @@ python-atomicwrites
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-atpublic
-    ERROR: no valid Debian master branch; available branches={'main'}
-    ERROR: no upstream branch; available branches={'main'}
-    ERROR: no pristine-tar branch; available branches={'main'}
+    ERROR: no valid Debian master branch; available branches=['main']
+    ERROR: no upstream branch; available branches=['main']
+    ERROR: no pristine-tar branch; available branches=['main']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
@@ -5360,6 +5458,8 @@ python-bottle-sqlite
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-bottle-sqlite_0.2.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-bottle-sqlite_0.2.0.orig.tar.*.id
 python-box
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
@@ -5517,6 +5617,8 @@ python-cliff
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=3.9.0-2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-cliff_3.9.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-cliff_3.9.0.orig.tar.*.id
 python-clint
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.5.1-3, missing tag=debian/0.5.1-3
@@ -5527,6 +5629,8 @@ python-cloudflare
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-cloudflare_2.8.14.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-cloudflare_2.8.14.orig.tar.*.id
 python-cluster
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -5564,6 +5668,8 @@ python-coloredlogs.git.old
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=7.3-2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-coloredlogs_7.3.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-coloredlogs_7.3.orig.tar.*.id
 python-colorlog
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -5602,6 +5708,8 @@ python-confuse
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-confuse_1.6.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-confuse_1.6.0.orig.tar.*.id
 python-connection-pool
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.0.3-1, missing tag=debian/0.0.3-1
     WARNING: tagpending webhook missing
@@ -5747,12 +5855,14 @@ python-daemonize
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=2.4.7-4
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-daemonize_2.4.7.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-daemonize_2.4.7.orig.tar.*.id
 python-daemonocle
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-daiquiri
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -5771,7 +5881,7 @@ python-dataclasses
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-dateutil
-    WARNING: uncommon debian master branch (DEP-14); available branches={'2.8.1', 'upstream/latest', 'debian/sid', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['2.8.1', 'debian/sid', 'pristine-tar', 'upstream/latest']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -5806,8 +5916,8 @@ python-dbussy
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-debiancontributors
-    ERROR: no upstream branch; available branches={'stretch-backports', 'sid', 'master'}
-    ERROR: no pristine-tar branch; available branches={'stretch-backports', 'sid', 'master'}
+    ERROR: no upstream branch; available branches=['master', 'sid', 'stretch-backports']
+    ERROR: no pristine-tar branch; available branches=['master', 'sid', 'stretch-backports']
     ERROR: repo name does not match the package source name; repo name=python-debiancontributors, src name=debiancontributors
     ERROR: debian/watch is missing
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.7.8-2, missing tag=upstream/0.7.8
@@ -5821,6 +5931,8 @@ python-deepmerge
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-deepmerge_0.0.5.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-deepmerge_0.0.5.orig.tar.*.id
 python-demjson
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -5873,6 +5985,8 @@ python-dicttoxml
 python-digitalocean
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-digitalocean_1.16.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-digitalocean_1.16.0.orig.tar.*.id
 python-discogs-client
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -5881,8 +5995,8 @@ python-distro
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-distutils-extra
-    ERROR: no upstream branch; available branches={'master'}
-    ERROR: no pristine-tar branch; available branches={'master'}
+    ERROR: no upstream branch; available branches=['master']
+    ERROR: no pristine-tar branch; available branches=['master']
     ERROR: debian/watch is missing
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=2.45, missing tag=debian/2.45
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=2.45, missing tag=upstream/2.45
@@ -5890,8 +6004,8 @@ python-distutils-extra
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-django
-    WARNING: uncommon debian master branch (DEP-14); available branches={'patch-queue/debian/jessie', 'debian/jessie-backports', 'debian/squeeze', 'debian/stretch-pu-910240', 'debian/experimental', 'debian/wheezy', 'debian/bullseye-backports', 'debian/stretch', 'debian/buster-backports', 'upstream/1.6.x', 'upstream/1.4.x', 'debian/wheezy-backports', 'debian/sid', 'pristine-tar', 'debian/stretch-backports', 'debian/jessie', 'upstream/1.11.x', 'upstream/1.10.x', 'debian/experimental-next', 'debian/buster'}
-    ERROR: no upstream branch; available branches={'patch-queue/debian/jessie', 'debian/jessie-backports', 'debian/squeeze', 'debian/stretch-pu-910240', 'debian/experimental', 'debian/wheezy', 'debian/bullseye-backports', 'debian/stretch', 'debian/buster-backports', 'upstream/1.6.x', 'upstream/1.4.x', 'debian/wheezy-backports', 'debian/sid', 'pristine-tar', 'debian/stretch-backports', 'debian/jessie', 'upstream/1.11.x', 'upstream/1.10.x', 'debian/experimental-next', 'debian/buster'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/bullseye-backports', 'debian/buster', 'debian/buster-backports', 'debian/experimental', 'debian/experimental-next', 'debian/jessie', 'debian/jessie-backports', 'debian/sid', 'debian/squeeze', 'debian/stretch', 'debian/stretch-backports', 'debian/stretch-pu-910240', 'debian/wheezy', 'debian/wheezy-backports', 'patch-queue/debian/jessie', 'pristine-tar', 'upstream/1.10.x', 'upstream/1.11.x', 'upstream/1.4.x', 'upstream/1.6.x']
+    ERROR: no upstream branch; available branches=['debian/bullseye-backports', 'debian/buster', 'debian/buster-backports', 'debian/experimental', 'debian/experimental-next', 'debian/jessie', 'debian/jessie-backports', 'debian/sid', 'debian/squeeze', 'debian/stretch', 'debian/stretch-backports', 'debian/stretch-pu-910240', 'debian/wheezy', 'debian/wheezy-backports', 'patch-queue/debian/jessie', 'pristine-tar', 'upstream/1.10.x', 'upstream/1.11.x', 'upstream/1.4.x', 'upstream/1.6.x']
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=2:3.2.9-2, missing tag=debian/2:3.2.9-2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -5994,9 +6108,9 @@ python-django-gravatar2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-django-haystack
-    ERROR: no valid Debian master branch; available branches={'svn'}
-    ERROR: no upstream branch; available branches={'svn'}
-    ERROR: no pristine-tar branch; available branches={'svn'}
+    ERROR: no valid Debian master branch; available branches=['svn']
+    ERROR: no upstream branch; available branches=['svn']
+    ERROR: no pristine-tar branch; available branches=['svn']
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -6220,6 +6334,8 @@ python-docker
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=5.0.3-1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-docker_5.0.3.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-docker_5.0.3.orig.tar.*.id
 python-docstring-parser
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
@@ -6257,6 +6373,8 @@ python-drizzle
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.13.3-1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-drizzle_1.13.3.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-drizzle_1.13.3.orig.tar.*.id
 python-dropbox
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -6315,7 +6433,7 @@ python-envisageplugins
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-envparse
-    ERROR: no pristine-tar branch; available branches={'sources', 'debian/master', 'upstream'}
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'sources', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -6351,7 +6469,7 @@ python-evilunit
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-ewmh
-    ERROR: no pristine-tar branch; available branches={'debian/master', 'upstream/latest'}
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'upstream/latest']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -6382,8 +6500,8 @@ python-fakeredis
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-fastbencode
-    ERROR: no valid Debian master branch; available branches={'debian/main', 'upstream'}
-    ERROR: no pristine-tar branch; available branches={'debian/main', 'upstream'}
+    ERROR: no valid Debian master branch; available branches=['debian/main', 'upstream']
+    ERROR: no pristine-tar branch; available branches=['debian/main', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.0.5-1, missing tag=upstream/0.0.5
     WARNING: tagpending webhook missing
@@ -6437,6 +6555,8 @@ python-fixtures
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=3.0.0-4
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-fixtures_3.0.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-fixtures_3.0.0.orig.tar.*.id
 python-flake8
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -6512,7 +6632,7 @@ python-funcy
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-furo
-    ERROR: no valid Debian master branch; available branches={'upstream', 'pristine-tar'}
+    ERROR: no valid Debian master branch; available branches=['pristine-tar', 'upstream']
     ERROR: theres no debian/ directory in the default branch, which should contain a development branch, see DEP-14; all other checks are skipped; default branch=upstream
 python-future
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
@@ -6522,6 +6642,8 @@ python-gammu
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-gammu_3.2.4.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-gammu_3.2.4.orig.tar.*.id
 python-gasp
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
@@ -6587,6 +6709,8 @@ python-getdns
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.0.0~b1-2, missing tag=upstream/1.0.0~b1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-getdns_1.0.0~b1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-getdns_1.0.0~b1.orig.tar.*.id
 python-gevent
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -6716,7 +6840,7 @@ python-h2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-halo
-    ERROR: no upstream branch; available branches={'debian/sid', 'master', 'pristine-tar'}
+    ERROR: no upstream branch; available branches=['debian/sid', 'master', 'pristine-tar']
     ERROR: debian/watch is missing
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
@@ -6780,6 +6904,8 @@ python-humanize
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-humanize_3.12.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-humanize_3.12.0.orig.tar.*.id
 python-hupper
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -6848,8 +6974,8 @@ python-iniconfig
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-injector
-    ERROR: no upstream branch; available branches={'master'}
-    ERROR: no pristine-tar branch; available branches={'master'}
+    ERROR: no upstream branch; available branches=['master']
+    ERROR: no pristine-tar branch; available branches=['master']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -6860,8 +6986,8 @@ python-installer
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-intbitset
-    ERROR: no upstream branch; available branches={'debian/master'}
-    ERROR: no pristine-tar branch; available branches={'debian/master'}
+    ERROR: no upstream branch; available branches=['debian/master']
+    ERROR: no pristine-tar branch; available branches=['debian/master']
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=2.3.0-3.1, missing tag=debian/2.3.0-3.1
@@ -6869,9 +6995,9 @@ python-intbitset
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-internetarchive
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'debian/stretch'}
-    ERROR: no upstream branch; available branches={'debian/sid', 'debian/stretch'}
-    ERROR: no pristine-tar branch; available branches={'debian/sid', 'debian/stretch'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'debian/stretch']
+    ERROR: no upstream branch; available branches=['debian/sid', 'debian/stretch']
+    ERROR: no pristine-tar branch; available branches=['debian/sid', 'debian/stretch']
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
@@ -6885,6 +7011,11 @@ python-intervaltree
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=3.0.2-1.1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-intervaltree_3.0.2.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-intervaltree_3.0.2.orig.tar.*.id
+python-invoke
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-invoke_1.4.1+ds.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-invoke_1.4.1+ds.orig.tar.*.id
 python-ipaddr
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -6961,6 +7092,8 @@ python-jellyfish
 python-jira
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-jira_3.1.1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-jira_3.1.1.orig.tar.*.id
 python-jmespath
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -6983,6 +7116,8 @@ python-json-patch
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.32-2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-json-patch_1.32.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-json-patch_1.32.orig.tar.*.id
 python-json5
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -7116,6 +7251,8 @@ python-leather.git.old
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.3.4-1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-leather_0.3.4.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-leather_0.3.4.orig.tar.*.id
 python-levenshtein
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -7135,8 +7272,8 @@ python-libconf
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-libguess
-    ERROR: no upstream branch; available branches={'master'}
-    ERROR: no pristine-tar branch; available branches={'master'}
+    ERROR: no upstream branch; available branches=['master']
+    ERROR: no pristine-tar branch; available branches=['master']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -7170,7 +7307,7 @@ python-llfuse
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-log-symbols
-    ERROR: no upstream branch; available branches={'debian/sid', 'master', 'pristine-tar'}
+    ERROR: no upstream branch; available branches=['debian/sid', 'master', 'pristine-tar']
     ERROR: theres no debian/ directory in the default branch, which should contain a development branch, see DEP-14; all other checks are skipped; default branch=master
 python-logfury
     WARNING: IRC notification (aka KGB) webhook missing
@@ -7227,8 +7364,8 @@ python-ly
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-lz4
-    ERROR: no upstream branch; available branches={'master'}
-    ERROR: no pristine-tar branch; available branches={'master'}
+    ERROR: no upstream branch; available branches=['master']
+    ERROR: no pristine-tar branch; available branches=['master']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=3.1.3+dfsg-1, missing tag=upstream/3.1.3+dfsg
@@ -7279,6 +7416,8 @@ python-marshmallow
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=3.13.0-1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-marshmallow_3.13.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-marshmallow_3.13.0.orig.tar.*.id
 python-marshmallow-enum
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -7339,6 +7478,8 @@ python-memcache
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.59-5
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-memcache_1.59.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-memcache_1.59.orig.tar.*.id
 python-memoized-property
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
@@ -7382,7 +7523,7 @@ python-mock
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-mockito
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -7398,6 +7539,8 @@ python-model-mommy
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-model-mommy_1.6.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-model-mommy_1.6.0.orig.tar.*.id
 python-molotov
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -7425,6 +7568,8 @@ python-mpd
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=3.0.4-1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-mpd_3.0.4.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-mpd_3.0.4.orig.tar.*.id
 python-mpegdash
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -7517,6 +7662,8 @@ python-neovim
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.4.2-1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-pynvim_0.4.2.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-pynvim_0.4.2.orig.tar.*.id
 python-neovim-gui
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
@@ -7590,7 +7737,7 @@ python-ntlm-auth
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-nubia
-    ERROR: no upstream branch; available branches={'debian/sid', 'master', 'pristine-tar'}
+    ERROR: no upstream branch; available branches=['debian/sid', 'master', 'pristine-tar']
     ERROR: theres no debian/ directory in the default branch, which should contain a development branch, see DEP-14; all other checks are skipped; default branch=master
 python-nudatus
     WARNING: tagpending webhook missing
@@ -7600,6 +7747,8 @@ python-num2words
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.5.10-1, missing tag=debian/0.5.10-1
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.5.10-1, missing tag=upstream/0.5.10
     WARNING: IRC notification (aka KGB) webhook missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-num2words_0.5.10.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-num2words_0.5.10.orig.tar.*.id
 python-numpy
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
@@ -7633,8 +7782,8 @@ python-oerplib
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-offtrac
-    ERROR: no upstream branch; available branches={'master'}
-    ERROR: no pristine-tar branch; available branches={'master'}
+    ERROR: no upstream branch; available branches=['master']
+    ERROR: no pristine-tar branch; available branches=['master']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.1.0-2.1, missing tag=debian/0.1.0-2.1
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.1.0-2.1
@@ -7652,6 +7801,8 @@ python-olefile
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.46-2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-olefile_0.46.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-olefile_0.46.orig.tar.*.id
 python-onewire
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -7684,6 +7835,8 @@ python-opentracing
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-opentracing_2.4.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-opentracing_2.4.0.orig.tar.*.id
 python-opentype-sanitizer
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -7786,7 +7939,7 @@ python-pathspec
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-pathtools
-    ERROR: no pristine-tar branch; available branches={'debian/master', 'upstream'}
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -7796,8 +7949,8 @@ python-paypal
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-pcl
-    ERROR: no upstream branch; available branches={'upstream-dfsg', 'master'}
-    ERROR: no pristine-tar branch; available branches={'upstream-dfsg', 'master'}
+    ERROR: no upstream branch; available branches=['master', 'upstream-dfsg']
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream-dfsg']
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.3.0~rc1+dfsg-11, missing tag=debian/0.3.0~rc1+dfsg-11
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.3.0~rc1+dfsg-11, missing tag=upstream/0.3.0~rc1+dfsg
     WARNING: tagpending webhook missing
@@ -7826,9 +7979,9 @@ python-periphery
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-perl
-    ERROR: no valid Debian master branch; available branches={'develop', 'debian'}
-    ERROR: no upstream branch; available branches={'develop', 'debian'}
-    ERROR: no pristine-tar branch; available branches={'develop', 'debian'}
+    ERROR: no valid Debian master branch; available branches=['debian', 'develop']
+    ERROR: no upstream branch; available branches=['debian', 'develop']
+    ERROR: no pristine-tar branch; available branches=['debian', 'develop']
     ERROR: DPT is not in Maintainer or Uploaders fields
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
@@ -7846,14 +7999,16 @@ python-persistent
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=4.6.4-0.2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-persistent_4.6.4.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-persistent_4.6.4.orig.tar.*.id
 python-persisting-theory
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-petit
-    ERROR: no upstream branch; available branches={'master'}
-    ERROR: no pristine-tar branch; available branches={'master'}
+    ERROR: no upstream branch; available branches=['master']
+    ERROR: no pristine-tar branch; available branches=['master']
     ERROR: repo name does not match the package source name; repo name=python-petit, src name=petit
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
@@ -7890,7 +8045,7 @@ python-phabricator
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-phonenumbers
-    ERROR: no pristine-tar branch; available branches={'pristine-lfs', 'debian/master', 'upstream/latest'}
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'pristine-lfs', 'upstream/latest']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -7930,6 +8085,8 @@ python-pipx
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-pipx_0.16.5.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-pipx_0.16.5.orig.tar.*.id
 python-pkgconfig
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -7945,10 +8102,10 @@ python-plac
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-plaster
-    ERROR: no pristine-tar branch; available branches={'debian/master', 'upstream'}
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
 python-plaster-pastedeploy
-    ERROR: no pristine-tar branch; available branches={'debian/master', 'upstream'}
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
 python-plone.testing
     ERROR: appears to be an empty repository
@@ -7991,6 +8148,8 @@ python-poppler-qt5
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-poppler-qt5_0.75.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-poppler-qt5_0.75.0.orig.tar.*.id
 python-portend
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -8022,6 +8181,8 @@ python-precis-i18n
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-precis-i18n_1.0.2.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-precis-i18n_1.0.2.orig.tar.*.id
 python-preshed
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=3.0.2-1, missing tag=debian/3.0.2-1
     WARNING: tagpending webhook missing
@@ -8365,6 +8526,8 @@ python-qtconsole
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-qtconsole_5.1.1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-qtconsole_5.1.1.orig.tar.*.id
 python-qtpy
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -8407,14 +8570,14 @@ python-recaptcha
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-reconfigure
-    ERROR: no upstream branch; available branches={'master'}
-    ERROR: no pristine-tar branch; available branches={'master'}
+    ERROR: no upstream branch; available branches=['master']
+    ERROR: no pristine-tar branch; available branches=['master']
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-redis
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/squeeze-backports', 'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'debian/squeeze-backports', 'pristine-tar', 'upstream']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -8446,6 +8609,8 @@ python-repoze.sphinx.autointerface
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.8-0.2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-repoze.sphinx.autointerface_0.8.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-repoze.sphinx.autointerface_0.8.orig.tar.*.id
 python-repoze.tm2
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -8470,7 +8635,7 @@ python-requests-cache
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-requests-ntlm
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1.1.0-1.1, missing tag=debian/1.1.0-1.1
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.1.0-1.1
@@ -8489,6 +8654,8 @@ python-requestsexceptions
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.4.0-3
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-requestsexceptions_1.4.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-requestsexceptions_1.4.0.orig.tar.*.id
 python-requirements-detector
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -8505,7 +8672,7 @@ python-restless
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-retry
-    ERROR: no upstream branch; available branches={'debian/master', 'master', 'pristine-tar'}
+    ERROR: no upstream branch; available branches=['debian/master', 'master', 'pristine-tar']
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
     ERROR: debian/watch is missing
@@ -8533,14 +8700,16 @@ python-ripe-atlas-cousteau
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.4.2-3
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: ripe-atlas-cousteau_1.4.2.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: ripe-atlas-cousteau_1.4.2.orig.tar.*.id
 python-robotframework-selenium2library
     ERROR: appears to be an empty repository
 python-robotsuite
     ERROR: appears to be an empty repository
 python-rocksdb
-    WARNING: uncommon debian master branch (DEP-14); available branches={'upstream/iFA88', 'debian/sid', 'upstream/twmht/master', 'upstream/main', 'upstream/twmht/pybind11', 'upstream/martyanov'}
-    ERROR: no upstream branch; available branches={'upstream/iFA88', 'debian/sid', 'upstream/twmht/master', 'upstream/main', 'upstream/twmht/pybind11', 'upstream/martyanov'}
-    ERROR: no pristine-tar branch; available branches={'upstream/iFA88', 'debian/sid', 'upstream/twmht/master', 'upstream/main', 'upstream/twmht/pybind11', 'upstream/martyanov'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'upstream/iFA88', 'upstream/main', 'upstream/martyanov', 'upstream/twmht/master', 'upstream/twmht/pybind11']
+    ERROR: no upstream branch; available branches=['debian/sid', 'upstream/iFA88', 'upstream/main', 'upstream/martyanov', 'upstream/twmht/master', 'upstream/twmht/pybind11']
+    ERROR: no pristine-tar branch; available branches=['debian/sid', 'upstream/iFA88', 'upstream/main', 'upstream/martyanov', 'upstream/twmht/master', 'upstream/twmht/pybind11']
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.8.0~rc3-2, missing tag=debian/0.8.0~rc3-2
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.8.0~rc3-2, missing tag=upstream/0.8.0~rc3
     WARNING: tagpending webhook missing
@@ -8575,6 +8744,8 @@ python-rt
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-rt_2.0.1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-rt_2.0.1.orig.tar.*.id
 python-rx
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -8647,6 +8818,8 @@ python-sentinels
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.0.0-5
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-sentinels_1.0.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-sentinels_1.0.0.orig.tar.*.id
 python-serializable
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.2.1+ds-2, missing tag=upstream/0.2.1+ds
@@ -8661,6 +8834,8 @@ python-service-identity
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-service-identity_18.1.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-service-identity_18.1.0.orig.tar.*.id
 python-setoptconf
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -8718,9 +8893,9 @@ python-simpy3
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-sk1libs
-    ERROR: no valid Debian master branch; available branches={'svn'}
-    ERROR: no upstream branch; available branches={'svn'}
-    ERROR: no pristine-tar branch; available branches={'svn'}
+    ERROR: no valid Debian master branch; available branches=['svn']
+    ERROR: no upstream branch; available branches=['svn']
+    ERROR: no pristine-tar branch; available branches=['svn']
     ERROR: repo name does not match the package source name; repo name=python-sk1libs, src name=sk1libs
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
@@ -8774,8 +8949,8 @@ python-softlayer
 python-sounddevice
     ERROR: appears to be an empty repository
 python-spake2
-    ERROR: no upstream branch; available branches={'master'}
-    ERROR: no pristine-tar branch; available branches={'master'}
+    ERROR: no upstream branch; available branches=['master']
+    ERROR: no pristine-tar branch; available branches=['master']
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
@@ -8807,7 +8982,7 @@ python-sphinx-issues
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-spinners
-    ERROR: no upstream branch; available branches={'debian/sid', 'master', 'pristine-tar'}
+    ERROR: no upstream branch; available branches=['debian/sid', 'master', 'pristine-tar']
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
     ERROR: Vcs-Browser field is missing from debian/control
@@ -8930,6 +9105,8 @@ python-tblib
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.7.0-1, missing tag=upstream/1.7.0
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-tblib_1.7.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-tblib_1.7.0.orig.tar.*.id
 python-tempita
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -8974,6 +9151,8 @@ python-testtools
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=2.5.0-2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-testtools_2.5.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-testtools_2.5.0.orig.tar.*.id
 python-text-unidecode
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -9087,8 +9266,10 @@ python-translitcodec
 python-transliterate
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-transliterate_1.10.2.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-transliterate_1.10.2.orig.tar.*.id
 python-trappy
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -9162,6 +9343,8 @@ python-tz
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-tz_2020.4.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-tz_2020.4.orig.tar.*.id
 python-tzlocal
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -9208,7 +9391,7 @@ python-urllib3
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-urlobject
-    ERROR: no pristine-tar branch; available branches={'debian/master', 'upstream/latest'}
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'upstream/latest']
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=2.4.3-3, missing tag=debian/2.4.3-3
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=2.4.3-3
     WARNING: tagpending webhook missing
@@ -9305,13 +9488,13 @@ python-watchgod
 python-wcmatch
     ERROR: appears to be an empty repository
 python-webargs
-    ERROR: no upstream branch; available branches={'debian/master'}
-    ERROR: no pristine-tar branch; available branches={'debian/master'}
+    ERROR: no upstream branch; available branches=['debian/master']
+    ERROR: no pristine-tar branch; available branches=['debian/master']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-webdavclient
-    WARNING: uncommon debian master branch (DEP-14); available branches={'debian/sid', 'upstream', 'pristine-tar'}
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=3.14.5-2, missing tag=upstream/3.14.5
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -9355,8 +9538,8 @@ python-wget
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-wheezy.template
-    ERROR: no upstream branch; available branches={'master'}
-    ERROR: no pristine-tar branch; available branches={'master'}
+    ERROR: no upstream branch; available branches=['master']
+    ERROR: no pristine-tar branch; available branches=['master']
     ERROR: debian/watch is missing
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.1.167-2, missing tag=upstream/0.1.167
     WARNING: tagpending webhook missing
@@ -9369,6 +9552,8 @@ python-whisper
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.1.4-2.1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-whisper_1.1.4.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-whisper_1.1.4.orig.tar.*.id
 python-whitenoise
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -9383,7 +9568,7 @@ python-wikipedia
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-winrm
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     ERROR: repo name does not match the package source name; repo name=python-winrm, src name=pywinrm
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
@@ -9415,8 +9600,8 @@ python-xapian-haystack
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-xdo
-    ERROR: no upstream branch; available branches={'debian', 'master'}
-    ERROR: no pristine-tar branch; available branches={'debian', 'master'}
+    ERROR: no upstream branch; available branches=['debian', 'master']
+    ERROR: no pristine-tar branch; available branches=['debian', 'master']
     ERROR: debian/watch is missing
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.5-1, missing tag=debian/0.5-1
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.5-1, missing tag=upstream/0.5
@@ -9500,6 +9685,8 @@ python2-flask-marshmallow
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.10.1-4
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-flask-marshmallow_0.10.1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-flask-marshmallow_0.10.1.orig.tar.*.id
 python3-antlr4
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
@@ -9511,15 +9698,19 @@ python3-chardet
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=4.0.0-1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python3-chardet_4.0.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python3-chardet_4.0.0.orig.tar.*.id
 python3-dateutil
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=2.8.1-6, missing tag=debian/2.8.1-6
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=2.8.1-6, missing tag=upstream/2.8.1
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=2.8.1-6
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python3-dateutil_2.8.1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python3-dateutil_2.8.1.orig.tar.*.id
 python3-flask-caching
-    ERROR: no upstream branch; available branches={'master'}
-    ERROR: no pristine-tar branch; available branches={'master'}
+    ERROR: no upstream branch; available branches=['master']
+    ERROR: no pristine-tar branch; available branches=['master']
     ERROR: repo name does not match the package source name; repo name=python3-flask-caching, src name=flask-caching
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -9537,7 +9728,7 @@ python3-protobuf3
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python3-simpletal
-    ERROR: no upstream branch; available branches={'master', 'pristine-tar'}
+    ERROR: no upstream branch; available branches=['master', 'pristine-tar']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -9552,6 +9743,8 @@ python3-zeroconf
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python3-zeroconf_0.37.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python3-zeroconf_0.37.0.orig.tar.*.id
 pythoncad
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 pythondialog
@@ -9563,7 +9756,7 @@ pythonmagick
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 pythonqt
-    ERROR: no upstream branch; available branches={'patched-pristine-tar', 'master', 'pristine-tar'}
+    ERROR: no upstream branch; available branches=['master', 'patched-pristine-tar', 'pristine-tar']
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -9651,6 +9844,8 @@ pywinrm
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.3.0-2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: pywinrm_0.3.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: pywinrm_0.3.0.orig.tar.*.id
 pyxb
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
@@ -9708,6 +9903,8 @@ quart
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: quart_0.14.1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: quart_0.14.1.orig.tar.*.id
 quixote
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
@@ -9762,6 +9959,8 @@ readlike
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: readlike_0.1.3.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: readlike_0.1.3.orig.tar.*.id
 recommonmark
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -9837,6 +10036,8 @@ rnc2rng
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: rnc2rng_2.6.4.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: rnc2rng_2.6.4.orig.tar.*.id
 robot-detection
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.4.0-2, missing tag=upstream/0.4.0
     WARNING: IRC notification (aka KGB) webhook missing
@@ -9889,15 +10090,15 @@ ruamel.yaml.clib
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 s-tui
-    ERROR: no upstream branch; available branches={'master'}
-    ERROR: no pristine-tar branch; available branches={'master'}
+    ERROR: no upstream branch; available branches=['master']
+    ERROR: no pristine-tar branch; available branches=['master']
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 s3ql
-    ERROR: no pristine-tar branch; available branches={'patch-queue/stretch-backports', 'buster-backports', 'patch-queue/master', 'jessie-backports', 'master', 'upstream', 'stretch-backports', 'test-uscan'}
+    ERROR: no pristine-tar branch; available branches=['buster-backports', 'jessie-backports', 'master', 'patch-queue/master', 'patch-queue/stretch-backports', 'stretch-backports', 'test-uscan', 'upstream']
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=3.7.3+dfsg-1, missing tag=upstream/3.7.3+dfsg
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -9908,7 +10109,7 @@ safe
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 saneyaml
-    ERROR: no pristine-tar branch; available branches={'debian/master', 'upstream'}
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'upstream']
     ERROR: repo name does not match the package source name; repo name=saneyaml, src name=python-saneyaml
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
@@ -9922,8 +10123,8 @@ scalene
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 scancode-toolkit
-    ERROR: no upstream branch; available branches={'debian/master'}
-    ERROR: no pristine-tar branch; available branches={'debian/master'}
+    ERROR: no upstream branch; available branches=['debian/master']
+    ERROR: no pristine-tar branch; available branches=['debian/master']
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
@@ -9936,6 +10137,8 @@ scapy
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=2.4.4-4
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: scapy_2.4.4.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: scapy_2.4.4.orig.tar.*.id
 scikit-build
     ERROR: Vcs-Browser field doesnt match the repo web URL; Vcs-Browser=https://salsa.debian.org/debian/scikit-build, repo web URL=https://salsa.debian.org/python-team/packages/scikit-build
     ERROR: Vcs-Git field doesnt match the repo git URL; Vcs-Git=https://salsa.debian.org/debian/scikit-build.git, repo git URL=https://salsa.debian.org/python-team/packages/scikit-build.git
@@ -9945,7 +10148,7 @@ scikit-build
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 scikit-misc
-    ERROR: no valid Debian master branch; available branches={'debian/main', 'upstream', 'pristine-tar'}
+    ERROR: no valid Debian master branch; available branches=['debian/main', 'pristine-tar', 'upstream']
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
@@ -9985,6 +10188,8 @@ sen
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: sen_0.6.1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: sen_0.6.1.orig.tar.*.id
 send2trash
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1.6.0~b1+git20210122.2eb3242-1, missing tag=debian/1.6.0~b1+git20210122.2eb3242-1
@@ -9999,9 +10204,9 @@ sentry-python
 series60-remote
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 setuptools-rust
-    ERROR: no valid Debian master branch; available branches={'debian/main'}
-    ERROR: no upstream branch; available branches={'debian/main'}
-    ERROR: no pristine-tar branch; available branches={'debian/main'}
+    ERROR: no valid Debian master branch; available branches=['debian/main']
+    ERROR: no upstream branch; available branches=['debian/main']
+    ERROR: no pristine-tar branch; available branches=['debian/main']
     ERROR: repo name does not match the package source name; repo name=setuptools-rust, src name=python-setuptools-rust
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.12.1-1, missing tag=debian/0.12.1-1
     WARNING: tagpending webhook missing
@@ -10060,6 +10265,8 @@ sinntp
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1.6-1.2, missing tag=debian/1.6-1.2
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.6-1.2
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: sinntp_1.6.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: sinntp_1.6.orig.tar.*.id
 sip4
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -10073,9 +10280,9 @@ sip6
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 sireader
-    ERROR: no valid Debian master branch; available branches={'debian'}
-    ERROR: no upstream branch; available branches={'debian'}
-    ERROR: no pristine-tar branch; available branches={'debian'}
+    ERROR: no valid Debian master branch; available branches=['debian']
+    ERROR: no upstream branch; available branches=['debian']
+    ERROR: no pristine-tar branch; available branches=['debian']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.1.1-2, missing tag=upstream/1.1.1
     WARNING: IRC notification (aka KGB) webhook missing
@@ -10085,6 +10292,8 @@ six
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.16.0-2, missing tag=upstream/1.16.0
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: six_1.16.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: six_1.16.0.orig.tar.*.id
 slapos.core
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
@@ -10134,6 +10343,8 @@ sonata
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1.7.0-1, missing tag=debian/1.7.0-1
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.7.0-1, missing tag=upstream/1.7.0
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.7.0-1
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: sonata_1.7.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: sonata_1.7.0.orig.tar.*.id
 sorl-thumbnail
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -10143,6 +10354,8 @@ sortedcollections
 sortedcontainers
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: sortedcontainers_2.1.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: sortedcontainers_2.1.0.orig.tar.*.id
 soupsieve
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -10170,6 +10383,8 @@ sparqlwrapper
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.8.5-1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: sparql-wrapper-python_1.8.5.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: sparql-wrapper-python_1.8.5.orig.tar.*.id
 spe
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 speaklater
@@ -10187,6 +10402,8 @@ speechrecognition-python
 speedtest-cli
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: speedtest-cli_2.1.3.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: speedtest-cli_2.1.3.orig.tar.*.id
 spf-engine
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -10245,7 +10462,7 @@ sphinx-gallery
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 sphinx-intl
-    ERROR: no upstream branch; available branches={'patch-queue/debian/sid', 'debian/sid', 'master', 'pristine-tar'}
+    ERROR: no upstream branch; available branches=['debian/sid', 'master', 'patch-queue/debian/sid', 'pristine-tar']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=2.0.1-2, missing tag=upstream/2.0.1
     WARNING: tagpending webhook missing
@@ -10366,7 +10583,7 @@ spyne
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 sqlacodegen
-    ERROR: no upstream branch; available branches={'master', 'pristine-tar'}
+    ERROR: no upstream branch; available branches=['master', 'pristine-tar']
     ERROR: debian/watch is missing
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.1.6-4, missing tag=upstream/1.1.6
     WARNING: tagpending webhook missing
@@ -10382,8 +10599,8 @@ sqlalchemy-i18n
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 sqlite-fts4
-    ERROR: no upstream branch; available branches={'debian/master'}
-    ERROR: no pristine-tar branch; available branches={'debian/master'}
+    ERROR: no upstream branch; available branches=['debian/master']
+    ERROR: no pristine-tar branch; available branches=['debian/master']
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1.0.1-1, missing tag=debian/1.0.1-1
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.0.1-1, missing tag=upstream/1.0.1
     WARNING: tagpending webhook missing
@@ -10413,7 +10630,7 @@ sshtunnel
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 stardicter
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -10456,14 +10673,14 @@ subliminal
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 subvertpy
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.11.0~git20191228+2423bf1-3, missing tag=debian/0.11.0~git20191228+2423bf1-3
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.11.0~git20191228+2423bf1-3, missing tag=upstream/0.11.0~git20191228+2423bf1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 suds
-    ERROR: no valid Debian master branch; available branches={'debian', 'upstream', 'pristine-tar'}
+    ERROR: no valid Debian master branch; available branches=['debian', 'pristine-tar', 'upstream']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -10532,8 +10749,8 @@ templayer
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 tempora
-    ERROR: no upstream branch; available branches={'debian/master'}
-    ERROR: no pristine-tar branch; available branches={'debian/master'}
+    ERROR: no upstream branch; available branches=['debian/master']
+    ERROR: no pristine-tar branch; available branches=['debian/master']
     ERROR: repo name does not match the package source name; repo name=tempora, src name=python-tempora
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
@@ -10592,7 +10809,7 @@ thumbor
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 thunarx-python
-    ERROR: no pristine-tar branch; available branches={'pristine-lfs', 'debian/master', 'upstream/latest'}
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'pristine-lfs', 'upstream/latest']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -10654,8 +10871,8 @@ toolz
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 toot
-    ERROR: no upstream branch; available branches={'master'}
-    ERROR: no pristine-tar branch; available branches={'master'}
+    ERROR: no upstream branch; available branches=['master']
+    ERROR: no pristine-tar branch; available branches=['master']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -10764,8 +10981,8 @@ trac-subtickets
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 trac-tags
-    ERROR: no upstream branch; available branches={'master', 'debian/stretch-backports', 'debian/master', 'debian/experimental'}
-    ERROR: no pristine-tar branch; available branches={'master', 'debian/stretch-backports', 'debian/master', 'debian/experimental'}
+    ERROR: no upstream branch; available branches=['debian/experimental', 'debian/master', 'debian/stretch-backports', 'master']
+    ERROR: no pristine-tar branch; available branches=['debian/experimental', 'debian/master', 'debian/stretch-backports', 'master']
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
@@ -10848,8 +11065,8 @@ turnin-ng
 turses
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 tvb-data
-    ERROR: no upstream branch; available branches={'master'}
-    ERROR: no pristine-tar branch; available branches={'master'}
+    ERROR: no upstream branch; available branches=['master']
+    ERROR: no pristine-tar branch; available branches=['master']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
@@ -10858,8 +11075,8 @@ tvb-data
 tvb-framework
     ERROR: appears to be an empty repository
 tvb-geodesic
-    ERROR: no upstream branch; available branches={'master'}
-    ERROR: no pristine-tar branch; available branches={'master'}
+    ERROR: no upstream branch; available branches=['master']
+    ERROR: no pristine-tar branch; available branches=['master']
     ERROR: repo name does not match the package source name; repo name=tvb-geodesic, src name=tvb-gdist
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
@@ -10867,8 +11084,8 @@ tvb-geodesic
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 tvb-library
-    ERROR: no upstream branch; available branches={'master'}
-    ERROR: no pristine-tar branch; available branches={'master'}
+    ERROR: no upstream branch; available branches=['master']
+    ERROR: no pristine-tar branch; available branches=['master']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
@@ -10990,7 +11207,7 @@ urwid
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 usagestats
-    ERROR: no pristine-tar branch; available branches={'debian/master', 'upstream', 'debian/latest'}
+    ERROR: no pristine-tar branch; available branches=['debian/latest', 'debian/master', 'upstream']
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
@@ -11035,7 +11252,7 @@ vf1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 vim-autopep8
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -11049,7 +11266,7 @@ visualequation
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 vmdk-stream-converter
-    ERROR: no upstream branch; available branches={'patch-queue/debian/sid', 'debian/sid', 'master', 'pristine-tar'}
+    ERROR: no upstream branch; available branches=['debian/sid', 'master', 'patch-queue/debian/sid', 'pristine-tar']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -11066,6 +11283,8 @@ vobject
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-vobject_0.9.6.1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-vobject_0.9.6.1.orig.tar.*.id
 volatildap
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -11102,7 +11321,7 @@ vulture
 wader
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 waitress
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -11141,6 +11360,8 @@ webpy
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1:0.61-1, missing tag=upstream/0.61
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: webpy_0.61.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: webpy_0.61.orig.tar.*.id
 websocket-client
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -11212,7 +11433,7 @@ writetype
     ERROR: debian/watch is missing
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 wsgiproxy2
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     ERROR: debian/watch is missing
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.4.5-1.1, missing tag=debian/0.4.5-1.1
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.4.5-1.1
@@ -11279,7 +11500,7 @@ yamlordereddictloader
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 yanc
-    ERROR: no pristine-tar branch; available branches={'upstream', 'master'}
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -11296,8 +11517,8 @@ yattag
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 yg.lockfile
-    ERROR: no upstream branch; available branches={'debian/master', 'master'}
-    ERROR: no pristine-tar branch; available branches={'debian/master', 'master'}
+    ERROR: no upstream branch; available branches=['debian/master', 'master']
+    ERROR: no pristine-tar branch; available branches=['debian/master', 'master']
     ERROR: repo name does not match the package source name; repo name=yg.lockfile, src name=python-yg.lockfile
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
@@ -11327,6 +11548,8 @@ zict
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=2.0.0-1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: zict_2.0.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: zict_2.0.0.orig.tar.*.id
 zine
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 zktop
@@ -20088,6 +20311,226 @@ ERROR: debian/watch is missing
     whyteboard
     writetype
     wsgiproxy2
+ERROR: pristine-tar branch doesnt contain .delta for the current version
+    aiorwlock
+    alot
+    astroid
+    bugz
+    bundlewrap
+    citeproc-py
+    clustershell
+    convertall
+    crudini
+    dateparser
+    django-housekeeping
+    dulwich
+    elixir
+    etm-qt
+    fabulous
+    faker
+    flask-api
+    flask-autoindex
+    flask-mail
+    flask-restful
+    fusion-icon
+    git-review
+    gladtex
+    gwakeonlan
+    hachoir
+    ipython
+    jpylyzer
+    kupfer
+    lazy-object-proxy
+    lazygal
+    mastodon
+    pdfrw
+    pep8
+    pkgconfig
+    ptpython
+    py-postgresql-old
+    pycxx
+    pyparsing
+    pypass
+    pyprind
+    pyroute2
+    pytest-localserver
+    pytest-testinfra
+    python-adal
+    python-aioice
+    python-aiortc
+    python-aniso8601
+    python-bottle-sqlite
+    python-cliff
+    python-cloudflare
+    python-coloredlogs.git.old
+    python-confuse
+    python-daemonize
+    python-deepmerge
+    python-digitalocean
+    python-docker
+    python-drizzle
+    python-fixtures
+    python-gammu
+    python-getdns
+    python-humanize
+    python-intervaltree
+    python-invoke
+    python-jira
+    python-json-patch
+    python-leather.git.old
+    python-marshmallow
+    python-memcache
+    python-model-mommy
+    python-mpd
+    python-neovim
+    python-num2words
+    python-olefile
+    python-opentracing
+    python-persistent
+    python-pipx
+    python-poppler-qt5
+    python-precis-i18n
+    python-qtconsole
+    python-repoze.sphinx.autointerface
+    python-requestsexceptions
+    python-ripe-atlas-cousteau
+    python-rt
+    python-sentinels
+    python-service-identity
+    python-tblib
+    python-testtools
+    python-transliterate
+    python-tz
+    python-whisper
+    python2-flask-marshmallow
+    python3-chardet
+    python3-dateutil
+    python3-zeroconf
+    pywinrm
+    quart
+    readlike
+    rnc2rng
+    scapy
+    sen
+    sinntp
+    six
+    sonata
+    sortedcontainers
+    sparqlwrapper
+    speedtest-cli
+    vobject
+    webpy
+    zict
+ERROR: pristine-tar branch doesnt contain .id for the current version
+    aiorwlock
+    alot
+    astroid
+    bugz
+    bundlewrap
+    citeproc-py
+    clustershell
+    convertall
+    crudini
+    dateparser
+    django-housekeeping
+    dulwich
+    elixir
+    etm-qt
+    fabulous
+    faker
+    flask-api
+    flask-autoindex
+    flask-mail
+    flask-restful
+    fusion-icon
+    git-review
+    gladtex
+    gwakeonlan
+    hachoir
+    ipython
+    jpylyzer
+    kupfer
+    lazy-object-proxy
+    lazygal
+    mastodon
+    pdfrw
+    pep8
+    pkgconfig
+    ptpython
+    py-postgresql-old
+    pycxx
+    pyparsing
+    pypass
+    pyprind
+    pyroute2
+    pytest-localserver
+    pytest-testinfra
+    python-adal
+    python-aioice
+    python-aiortc
+    python-aniso8601
+    python-bottle-sqlite
+    python-cliff
+    python-cloudflare
+    python-coloredlogs.git.old
+    python-confuse
+    python-daemonize
+    python-deepmerge
+    python-digitalocean
+    python-docker
+    python-drizzle
+    python-fixtures
+    python-gammu
+    python-getdns
+    python-humanize
+    python-intervaltree
+    python-invoke
+    python-jira
+    python-json-patch
+    python-leather.git.old
+    python-marshmallow
+    python-memcache
+    python-model-mommy
+    python-mpd
+    python-neovim
+    python-num2words
+    python-olefile
+    python-opentracing
+    python-persistent
+    python-pipx
+    python-poppler-qt5
+    python-precis-i18n
+    python-qtconsole
+    python-repoze.sphinx.autointerface
+    python-requestsexceptions
+    python-ripe-atlas-cousteau
+    python-rt
+    python-sentinels
+    python-service-identity
+    python-tblib
+    python-testtools
+    python-transliterate
+    python-tz
+    python-whisper
+    python2-flask-marshmallow
+    python3-chardet
+    python3-dateutil
+    python3-zeroconf
+    pywinrm
+    quart
+    readlike
+    rnc2rng
+    scapy
+    sen
+    sinntp
+    six
+    sonata
+    sortedcontainers
+    sparqlwrapper
+    speedtest-cli
+    vobject
+    webpy
+    zict
 WARNING: uncommon debian master branch (DEP-14)
     ansicolors
     azure-cli
