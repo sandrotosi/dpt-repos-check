@@ -1,6 +1,7 @@
 import datetime
 import logging
 import os
+import re
 import sys
 from collections import defaultdict
 from datetime import timedelta
@@ -13,7 +14,7 @@ from debian.deb822 import Deb822
 from debian.debian_support import Version
 from debian.watch import WatchFile
 
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 
 
 class Violations(object):
@@ -91,7 +92,6 @@ group_projects = group.projects.list(all=True, order_by='name', sort='asc', as_l
 
 violations = Violations()
 
-# TODO: pristine-tar: contains .delta for latest upload to archive
 # TODO: pristine-tar: onbtain the tarball and compare with the archive
 # TODO: check for packages no longer in debian but with repo still in the team
 # TODO: check for packages referring the team in maint/upl but with no repo in the team
@@ -221,6 +221,19 @@ for group_project in group_projects:
             violations.add(project.name, f"WARNING: email on push integration missing")
         if 'Irker (IRC gateway)' in services_titles:
             violations.add(project.name, f"WARNING: Irker integration still active, migrate to KGB webhook instead")
+
+    # pristine-tar checks
+
+    if sid_version and 'pristine-tar' in branches:
+        pristine_fnames = [x['name'] for x in project.repository_tree(ref='pristine-tar', all=True)]
+        # expected files: 'SRC_VERSION.orig.tar.EXT.delta'
+        if not list(filter(lambda v: re.match(f'{d_control["Source"]}_{re.escape(sid_version.upstream_version)}\.orig\.tar\.[^\.]+\.delta', v), pristine_fnames)):
+            violations.add(project.name, f"ERROR: pristine-tar branch doesnt contain .delta for the current version",
+                           extra_data=f'expected: {d_control["Source"]}_{sid_version.upstream_version}.orig.tar.*.delta')
+        # expected files: 'SRC_VERSION.orig.tar.EXT.id'
+        if not list(filter(lambda v: re.match(f'{d_control["Source"]}_{re.escape(sid_version.upstream_version)}\.orig\.tar\.[^\.]+\.id', v), pristine_fnames)):
+            violations.add(project.name, f"ERROR: pristine-tar branch doesnt contain .id for the current version",
+                           extra_data=f'expected: {d_control["Source"]}_{sid_version.upstream_version}.orig.tar.*.id')
 
 print(f"Report generated on: {datetime.datetime.now()}")
 print(f'Total repositories processed: {len(group_projects)}\n')
