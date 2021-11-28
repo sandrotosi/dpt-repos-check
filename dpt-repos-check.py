@@ -111,15 +111,15 @@ for group_project in group_projects:
     # DEP-14 is the recommendation doc for git layout: https://dep-team.pages.debian.net/deps/dep14/
     if not branches.intersection({'master', 'debian/master', 'debian/unstable', 'debian/latest'}):
         if branches.intersection({'sid', 'debian/sid'}):
-            violations.add(project.name, f'WARNING: uncommon debian master branch (DEP-14)', extra_data=f'available branches={branches}')
+            violations.add(project.name, f'WARNING: uncommon debian master branch (DEP-14)', extra_data=f'available branches={sorted(branches)}')
         else:
-            violations.add(project.name, f'ERROR: no valid Debian master branch', extra_data=f'available branches={branches}')
+            violations.add(project.name, f'ERROR: no valid Debian master branch', extra_data=f'available branches={sorted(branches)}')
 
     if not branches.intersection({'upstream', 'upstream/latest'}):
-        violations.add(project.name, f'ERROR: no upstream branch', extra_data=f'available branches={branches}')
+        violations.add(project.name, f'ERROR: no upstream branch', extra_data=f'available branches={sorted(branches)}')
 
     if 'pristine-tar' not in branches:
-        violations.add(project.name, f'ERROR: no pristine-tar branch', extra_data=f'available branches={branches}')
+        violations.add(project.name, f'ERROR: no pristine-tar branch', extra_data=f'available branches={sorted(branches)}')
 
     # debian/ exists check
 
