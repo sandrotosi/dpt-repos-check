@@ -35,7 +35,7 @@ class Violations(object):
     def get_violations(self):
         _data = [
             'Stats:',
-            f"    Repos with violations: {len(self.per_repo.keys())}",
+            f"    Repositories with violations: {len(self.per_repo.keys())}",
             f"    Violations types detected: {len(self.per_violation.keys())}",
             f'    Total violations: {sum(len(x) for x in self.per_repo.values())}',
             '',
@@ -43,13 +43,13 @@ class Violations(object):
             '',
         ]
         for _repo, _violations in self.per_repo.items():
-            _data.append(_repo)
+            _data.append(f"{_repo}  ({len(_violations)})")
             for _violation in _violations:
                 _data.append(f"    {_violation}")
 
         _data.append('\nPer violation repositories:')
         for _violation, _repos in self.per_violation.items():
-            _data.append(_violation)
+            _data.append(f"{_violation}  ({len(_repos)})")
             for _repo in _repos:
                 _data.append(f"    {_repo}")
 
