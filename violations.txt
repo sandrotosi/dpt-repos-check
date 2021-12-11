@@ -1,16 +1,16 @@
-Report generated on: 2021-11-28 01:44:59.875652
-Total repositories processed: 2601
+Report generated on: 2021-12-11 14:33:37.259061
+Total repositories processed: 2625
 
 Stats:
-    Repos with violations: 2563
+    Repos with violations: 2581
     Violations types detected: 26
-    Total violations: 9014
+    Total violations: 9078
 
 Per repository violations:
+
 Aiosmtplib
     ERROR: repo name does not match the package source name; repo name=Aiosmtplib, src name=aiosmtplib
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
-    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.1.4-2, missing tag=upstream/1.1.4
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -29,21 +29,29 @@ Easydict
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+Flake8 Blind Except
+    ERROR: repo name does not match the package source name; repo name=Flake8 Blind Except, src name=flake8-blind-except
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 Flake8 Deprecated
     ERROR: repo name does not match the package source name; repo name=Flake8 Deprecated, src name=flake8-deprecated
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1.3-3, missing tag=debian/1.3-3
+    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.3-3
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 Flake8 Import Order
     ERROR: repo name does not match the package source name; repo name=Flake8 Import Order, src name=flake8-import-order
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.18.1-2, missing tag=debian/0.18.1-2
+    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.18.1-2
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 Flake8 Quotes
     ERROR: repo name does not match the package source name; repo name=Flake8 Quotes, src name=flake8-quotes
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=3.3.1-2, missing tag=debian/3.3.1-2
+    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=3.3.1-2
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -150,9 +158,15 @@ Python Tr
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+Qtsass
+    ERROR: no valid Debian master branch; available branches=['debian/main', 'pristine-tar', 'upstream']
+    ERROR: repo name does not match the package source name; repo name=Qtsass, src name=qtsass
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 Transforms3d
     ERROR: repo name does not match the package source name; repo name=Transforms3d, src name=transforms3d
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -259,6 +273,11 @@ aiorwlock
     WARNING: email on push integration missing
     ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: aiorwlock_1.0.0.orig.tar.*.delta
     ERROR: pristine-tar branch doesnt contain .id for the current version; expected: aiorwlock_1.0.0.orig.tar.*.id
+aiosignal
+    WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 aiowsgi
     ERROR: no pristine-tar branch; available branches=['master', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
@@ -321,6 +340,7 @@ ansicolors
     WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     ERROR: repo name does not match the package source name; repo name=ansicolors, src name=python-ansicolors
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1.1.8-4, missing tag=debian/1.1.8-4
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 antlr4-python3-runtime
@@ -440,8 +460,8 @@ autosuspend
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 azure-cli
-    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/bullseye-backports', 'debian/sid', 'pristine-tar', 'upstream']
-    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=2.30.0-2, missing tag=upstream/2.30.0
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/bullseye-backports', 'debian/sid', 'newver', 'pristine-tar', 'upstream']
+    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=2.31.0-1, missing tag=upstream/2.31.0
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -554,7 +574,6 @@ beets
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
 behave
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1.2.6-3, missing tag=debian/1.2.6-3
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 belier
@@ -654,10 +673,6 @@ breadability
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
-breathe
-    WARNING: tagpending webhook missing
-    WARNING: IRC notification (aka KGB) webhook missing
-    WARNING: email on push integration missing
 btchip-python
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.1.31-1.1, missing tag=debian/0.1.31-1.1
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.1.31-1.1
@@ -684,7 +699,6 @@ bundlewrap
     ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: bundlewrap_4.11.2.orig.tar.*.delta
     ERROR: pristine-tar branch doesnt contain .id for the current version; expected: bundlewrap_4.11.2.orig.tar.*.id
 cachelib
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -727,11 +741,13 @@ celery
     WARNING: Irker integration still active, migrate to KGB webhook instead
 celery-batches
     ERROR: debian/watch is missing
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 celery-haystack
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 celery-haystack-ng
@@ -1002,6 +1018,12 @@ dacite
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+dasbus
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 dask
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -1018,7 +1040,6 @@ dask-sphinx-theme
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 dask.distributed
-    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=2021.09.1+ds.1-2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 dataclasses-json
@@ -1041,12 +1062,12 @@ datanommer.models
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 dateparser
-    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.0.0-1, missing tag=upstream/1.0.0
+    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.1.0-1, missing tag=upstream/1.1.0
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
-    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: dateparser_1.0.0.orig.tar.*.delta
-    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: dateparser_1.0.0.orig.tar.*.id
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: dateparser_1.1.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: dateparser_1.1.0.orig.tar.*.id
 db2twitter
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.6-1.1, missing tag=debian/0.6-1.1
     ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.6-1.1
@@ -1193,7 +1214,6 @@ django-cache-memoize
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 django-cacheops
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -1425,7 +1445,6 @@ django-paintstore
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 django-pglocks
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -1490,6 +1509,7 @@ django-rq
     WARNING: email on push integration missing
 django-rules
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -1662,6 +1682,7 @@ dominate
 dot2tex
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
 doublex
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 dpath-python
@@ -1705,7 +1726,8 @@ dulwich
 easy-ansi
     WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     ERROR: repo name does not match the package source name; repo name=easy-ansi, src name=python-easy-ansi
-    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.3-1, missing tag=upstream/0.3
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.3-4, missing tag=debian/0.3-4
+    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.3-4, missing tag=upstream/0.3
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 easyprocess
@@ -1748,6 +1770,14 @@ emesene
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 emma
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+empy
+    ERROR: Vcs-Browser field doesnt match the repo web URL; Vcs-Browser=https://salsa.debian.org/jrivero-guest/empy, repo web URL=https://salsa.debian.org/python-team/packages/empy
+    ERROR: Vcs-Git field doesnt match the repo git URL; Vcs-Git=https://salsa.debian.org/jrivero-guest/empy.git, repo git URL=https://salsa.debian.org/python-team/packages/empy.git
+    WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=3.3.4-2, missing tag=debian/3.3.4-2
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 entrypoints
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -1797,10 +1827,6 @@ execnet
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
-exhale
-    WARNING: tagpending webhook missing
-    WARNING: IRC notification (aka KGB) webhook missing
-    WARNING: email on push integration missing
 extension-helpers
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
@@ -1912,16 +1938,24 @@ firmware-microbit-micropython
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+flake8-builtins
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 flake8-class-newline
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1.6.0-2, missing tag=debian/1.6.0-2
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 flake8-comprehensions
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=3.7.0-1, missing tag=debian/3.7.0-1
+    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=3.7.0-1, missing tag=upstream/3.7.0
+    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=3.7.0-1
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: flake8-comprehensions_3.7.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: flake8-comprehensions_3.7.0.orig.tar.*.id
 flake8-docstrings
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -1948,9 +1982,7 @@ flask-assets
     ERROR: no upstream branch; available branches=['master', 'unstable']
     ERROR: no pristine-tar branch; available branches=['master', 'unstable']
     ERROR: debian/watch is missing
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=2.0-1, missing tag=debian/2.0-1
-    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=2.0-1, missing tag=upstream/2.0
-    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=2.0-1
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -2038,7 +2070,6 @@ flask-oauthlib
     WARNING: email on push integration missing
 flask-openid
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1.2.5+dfsg-5, missing tag=debian/1.2.5+dfsg-5
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -2193,6 +2224,16 @@ freetype-py
     WARNING: Irker integration still active, migrate to KGB webhook instead
 freevial
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+frozenlist
+    WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
+fsspec
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.8.4-1, missing tag=debian/0.8.4-1
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 ftputil
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
@@ -2273,13 +2314,13 @@ git-repo-updater
     WARNING: email on push integration missing
 git-review
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1.28.0-2, missing tag=debian/1.28.0-2
-    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.28.0-2, missing tag=upstream/1.28.0
-    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.28.0-2
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=2.2.0-1, missing tag=debian/2.2.0-1
+    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=2.2.0-1, missing tag=upstream/2.2.0
+    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=2.2.0-1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
-    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: git-review_1.28.0.orig.tar.*.delta
-    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: git-review_1.28.0.orig.tar.*.id
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: git-review_2.2.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: git-review_2.2.0.orig.tar.*.id
 gitinspector
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.4.4+dfsg-10, missing tag=upstream/0.4.4+dfsg
 gitless
@@ -2520,10 +2561,6 @@ helpdev
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
-hg-git
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.10.3-1, missing tag=debian/0.10.3-1
-    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.10.3-1, missing tag=upstream/0.10.3
-    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.10.3-1
 hotssh
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 hovercraft
@@ -2671,7 +2708,6 @@ isodate
 isort
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
 itypes
-    WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 j2cli
@@ -2729,10 +2765,6 @@ jeepney
     WARNING: Irker integration still active, migrate to KGB webhook instead
 jeepyb
     ERROR: debian/watch is missing
-jello
-    WARNING: tagpending webhook missing
-    WARNING: IRC notification (aka KGB) webhook missing
-    WARNING: email on push integration missing
 jinja2
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -2793,6 +2825,11 @@ jupyter-console
 jupyter-core
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+jupyter-kernel-test
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 jupyter-notebook
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -2801,6 +2838,11 @@ jupyter-packaging
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 jupyter-server
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
+jupyter-server-mathjax
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -2821,7 +2863,6 @@ jupyter-telemetry
     WARNING: email on push integration missing
 jupyterhub
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -2892,6 +2933,7 @@ khal
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1:0.10.4~ds-2, missing tag=debian/1:0.10.4~ds-2
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1:0.10.4~ds-2, missing tag=upstream/0.10.4~ds
 khard
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.17.0-3, missing tag=debian/0.17.0-3
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -3005,7 +3047,6 @@ libapache2-mod-python
     WARNING: Irker integration still active, migrate to KGB webhook instead
 libcloud
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=3.2.0-2, missing tag=debian/3.2.0-2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 liblarch
@@ -3026,7 +3067,6 @@ libthumbor
 license-expression
     ERROR: no pristine-tar branch; available branches=['debian/latest', 'upstream/latest']
     ERROR: repo name does not match the package source name; repo name=license-expression, src name=python-license-expression
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -3049,7 +3089,6 @@ locket
     WARNING: Irker integration still active, migrate to KGB webhook instead
 locust
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -3163,6 +3202,11 @@ mdit-py-plugins
     WARNING: email on push integration missing
 membernator
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.1.0-3, missing tag=upstream/1.1.0
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
+memory-allocator
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -3303,7 +3347,6 @@ mrtparse
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 mssql-django
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -3436,6 +3479,11 @@ nb2plots
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+nbclassic
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 nbclient
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -3444,7 +3492,12 @@ nbconvert
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 nbdime
-    ERROR: theres no debian/ directory in the default branch, which should contain a development branch, see DEP-14; all other checks are skipped; default branch=debian/master
+    WARNING: Uploaders is missing from debian/control, that doesnt seem right
+    ERROR: DPT is not in Maintainer or Uploaders fields
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 nbformat
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -3517,7 +3570,7 @@ ntplib
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 numpy
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1:1.19.5-1, missing tag=debian/1:1.19.5-1
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1:1.21.4-2, missing tag=debian/1:1.21.4-2
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -3680,8 +3733,6 @@ pastedeploy
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 pastel
-    WARNING: Uploaders is missing from debian/control, that doesnt seem right
-    ERROR: DPT is not in Maintainer or Uploaders fields
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -3737,9 +3788,6 @@ pebl
 peewee
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
-pelican
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=4.0.1+dfsg-1.1, missing tag=debian/4.0.1+dfsg-1.1
-    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=4.0.1+dfsg-1.1
 pem
     ERROR: no pristine-tar branch; available branches=['buster-backports', 'master', 'upstream']
     ERROR: repo name does not match the package source name; repo name=pem, src name=python-pem
@@ -3874,7 +3922,6 @@ ply
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 poetry
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -3894,7 +3941,6 @@ polib
 policyd-rate-limit
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
 polyline
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -3963,8 +4009,13 @@ proglog
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 prompt-toolkit
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=3.0.23-1, missing tag=debian/3.0.23-1
+    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=3.0.23-1, missing tag=upstream/3.0.23
+    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=3.0.23-1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: prompt-toolkit_3.0.23.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: prompt-toolkit_3.0.23.orig.tar.*.id
 prospector
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -4550,10 +4601,14 @@ pyls-black
 pyls-mypy
     ERROR: appears to be an empty repository
 pyls-spyder
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.3.0-3, missing tag=debian/0.3.0-3
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.4.0-1, missing tag=debian/0.4.0-1
+    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.4.0-1, missing tag=upstream/0.4.0
+    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.4.0-1
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: pyls-spyder_0.4.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: pyls-spyder_0.4.0.orig.tar.*.id
 pylzss
     ERROR: debian/watch is missing
     WARNING: tagpending webhook missing
@@ -4623,7 +4678,6 @@ pynliner
     WARNING: Irker integration still active, migrate to KGB webhook instead
 pynput
     ERROR: unable to parse debian/watch
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -4853,7 +4907,12 @@ pyssim
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 pystache
-    ERROR: appears to be an empty repository
+    ERROR: no pristine-tar branch; available branches=['master', 'upstream']
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.6.0-1, missing tag=debian/0.6.0-1
+    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.6.0-1, missing tag=upstream/0.6.0
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 pystaticconfiguration
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -4870,6 +4929,7 @@ pysubnettree
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 pysvn
+    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.9.15-1, missing tag=upstream/1.9.15
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 pysword
@@ -5015,7 +5075,6 @@ pytest-remotedata
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 pytest-repeat
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -5036,7 +5095,6 @@ pytest-services
 pytest-skip-markers
     WARNING: uncommon debian master branch (DEP-14); available branches=['debian/sid', 'pristine-tar', 'upstream']
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -5049,11 +5107,14 @@ pytest-testinfra
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
-    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: pytest-testinfra_6.4.0.orig.tar.*.delta
-    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: pytest-testinfra_6.4.0.orig.tar.*.id
 pytest-tornado
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+pytest-tornasync
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 pytest-twisted
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
@@ -5281,14 +5342,10 @@ python-async
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-async-timeout
-    WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=3.0.1-1.1, missing tag=debian/3.0.1-1.1
-    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=3.0.1-1.1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-asyncio-mqtt
     ERROR: debian/watch is missing
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -5444,6 +5501,8 @@ python-blosc
 python-boltons
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+python-bonsai
+    ERROR: theres no debian/ directory in the default branch, which should contain a development branch, see DEP-14; all other checks are skipped; default branch=debian/master
 python-bottle-beaker
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.1.3-4, missing tag=upstream/0.1.3
@@ -5546,7 +5605,6 @@ python-channels-redis
     WARNING: email on push integration missing
 python-charset-normalizer
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -5700,7 +5758,6 @@ python-conditional
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-confluent-kafka
-    WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-confuse
@@ -5708,8 +5765,6 @@ python-confuse
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
-    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-confuse_1.6.0.orig.tar.*.delta
-    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-confuse_1.6.0.orig.tar.*.id
 python-connection-pool
     ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.0.3-1, missing tag=debian/0.0.3-1
     WARNING: tagpending webhook missing
@@ -5824,9 +5879,6 @@ python-cups
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-cx-oracle
-    WARNING: Uploaders is missing from debian/control, that doesnt seem right
-    ERROR: DPT is not in Maintainer or Uploaders fields
-    ERROR: debian/watch is missing
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -5948,6 +6000,7 @@ python-deprecation
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-dexml
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-dhm
@@ -6004,9 +6057,9 @@ python-distutils-extra
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-django
-    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/bullseye-backports', 'debian/buster', 'debian/buster-backports', 'debian/experimental', 'debian/experimental-next', 'debian/jessie', 'debian/jessie-backports', 'debian/sid', 'debian/squeeze', 'debian/stretch', 'debian/stretch-backports', 'debian/stretch-pu-910240', 'debian/wheezy', 'debian/wheezy-backports', 'patch-queue/debian/jessie', 'pristine-tar', 'upstream/1.10.x', 'upstream/1.11.x', 'upstream/1.4.x', 'upstream/1.6.x']
-    ERROR: no upstream branch; available branches=['debian/bullseye-backports', 'debian/buster', 'debian/buster-backports', 'debian/experimental', 'debian/experimental-next', 'debian/jessie', 'debian/jessie-backports', 'debian/sid', 'debian/squeeze', 'debian/stretch', 'debian/stretch-backports', 'debian/stretch-pu-910240', 'debian/wheezy', 'debian/wheezy-backports', 'patch-queue/debian/jessie', 'pristine-tar', 'upstream/1.10.x', 'upstream/1.11.x', 'upstream/1.4.x', 'upstream/1.6.x']
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=2:3.2.9-2, missing tag=debian/2:3.2.9-2
+    WARNING: uncommon debian master branch (DEP-14); available branches=['debian/bullseye', 'debian/bullseye-backports', 'debian/buster', 'debian/buster-backports', 'debian/experimental', 'debian/experimental-next', 'debian/jessie', 'debian/jessie-backports', 'debian/sid', 'debian/squeeze', 'debian/stretch', 'debian/stretch-backports', 'debian/stretch-pu-910240', 'debian/wheezy', 'debian/wheezy-backports', 'patch-queue/debian/jessie', 'pristine-tar', 'upstream/1.10.x', 'upstream/1.11.x', 'upstream/1.4.x']
+    ERROR: no upstream branch; available branches=['debian/bullseye', 'debian/bullseye-backports', 'debian/buster', 'debian/buster-backports', 'debian/experimental', 'debian/experimental-next', 'debian/jessie', 'debian/jessie-backports', 'debian/sid', 'debian/squeeze', 'debian/stretch', 'debian/stretch-backports', 'debian/stretch-pu-910240', 'debian/wheezy', 'debian/wheezy-backports', 'patch-queue/debian/jessie', 'pristine-tar', 'upstream/1.10.x', 'upstream/1.11.x', 'upstream/1.4.x']
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=2:3.2.10-2, missing tag=debian/2:3.2.10-2
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-django-adminsortable
@@ -6045,7 +6098,6 @@ python-django-channels
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-django-colorfield
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.4.5+ds1-1, missing tag=debian/0.4.5+ds1-1
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -6191,7 +6243,6 @@ python-django-piston
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-django-postgres-extra
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -6414,6 +6465,7 @@ python-emoji
     WARNING: email on push integration missing
 python-enable
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-enthoughtbase
@@ -6509,6 +6561,8 @@ python-fastbencode
     WARNING: email on push integration missing
 python-fastimport
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.9.14-1, missing tag=debian/0.9.14-1
+    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.9.14-1, missing tag=upstream/0.9.14
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-fastjsonschema
@@ -6574,7 +6628,8 @@ python-flask-cors
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-flask-jwt-extended
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=3.24.1-2, missing tag=debian/3.24.1-2
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=4.3.1-2, missing tag=debian/4.3.1-2
+    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=4.3.1-2
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -6612,12 +6667,6 @@ python-formencode
 python-fs
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
-python-fsspec
-    ERROR: repo name does not match the package source name; repo name=python-fsspec, src name=fsspec
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.8.4-1, missing tag=debian/0.8.4-1
-    WARNING: tagpending webhook missing
-    WARNING: IRC notification (aka KGB) webhook missing
-    WARNING: email on push integration missing
 python-ftputil
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
@@ -6758,6 +6807,7 @@ python-gmusicapi
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-gntp
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -6842,7 +6892,8 @@ python-h2
 python-halo
     ERROR: no upstream branch; available branches=['debian/sid', 'master', 'pristine-tar']
     ERROR: debian/watch is missing
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.0.31-2, missing tag=debian/0.0.31-2
+    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.0.31-2, missing tag=upstream/0.0.31
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -6902,10 +6953,11 @@ python-httptools
     WARNING: email on push integration missing
 python-humanize
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
+    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=3.13.1-1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
-    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-humanize_3.12.0.orig.tar.*.delta
-    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-humanize_3.12.0.orig.tar.*.id
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-humanize_3.13.1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-humanize_3.13.1.orig.tar.*.id
 python-hupper
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -6981,7 +7033,6 @@ python-injector
     WARNING: email on push integration missing
 python-installer
     ERROR: Vcs-Browser field doesnt match the repo web URL; Vcs-Browser=https://salsa.debian.org/python-team/packages/python-installer/, repo web URL=https://salsa.debian.org/python-team/packages/python-installer
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -6990,8 +7041,7 @@ python-intbitset
     ERROR: no pristine-tar branch; available branches=['debian/master']
     WARNING: Uploaders is missing from debian/control, that doesnt seem right
     ERROR: DPT is not in Maintainer or Uploaders fields
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=2.3.0-3.1, missing tag=debian/2.3.0-3.1
-    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=2.3.0-3.1, missing tag=upstream/2.3.0
+    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=2.3.0-3.2, missing tag=upstream/2.3.0
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-internetarchive
@@ -7195,8 +7245,6 @@ python-keyczar
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-keyring
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=18.0.1-2, missing tag=debian/18.0.1-2
-    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=18.0.1-2, missing tag=upstream/18.0.1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-kinterbasdb
@@ -7267,7 +7315,6 @@ python-libais
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-libconf
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=2.0.1-4, missing tag=debian/2.0.1-4
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -7774,6 +7821,8 @@ python-oauthlib
 python-odf
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-odf_1.4.2.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-odf_1.4.2.orig.tar.*.id
 python-odoorpc
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -7796,13 +7845,9 @@ python-ofxclient
     WARNING: email on push integration missing
 python-olefile
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.46-2, missing tag=debian/0.46-2
-    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.46-2, missing tag=upstream/0.46
-    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.46-2
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
-    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-olefile_0.46.orig.tar.*.delta
-    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-olefile_0.46.orig.tar.*.id
 python-onewire
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -7878,8 +7923,13 @@ python-pamqp
     WARNING: email on push integration missing
 python-pandocfilters
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1.5.0-1, missing tag=debian/1.5.0-1
+    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.5.0-1, missing tag=upstream/1.5.0
+    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.5.0-1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-pandocfilters_1.5.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-pandocfilters_1.5.0.orig.tar.*.id
 python-parameterized
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
@@ -8096,8 +8146,6 @@ python-pkginfo
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-plac
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.9.6-1.1, missing tag=debian/0.9.6-1.1
-    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.9.6-1.1
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -8551,7 +8599,6 @@ python-ratelimiter
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-rdata
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -8631,7 +8678,6 @@ python-repoze.who-plugins
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-requests-cache
-    WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-requests-ntlm
@@ -8843,6 +8889,11 @@ python-setoptconf
 python-setproctitle
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+python-setuptools-rust
+    ERROR: no valid Debian master branch; available branches=['debian/main', 'pristine-tar', 'upstream']
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 python-sexpdata
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
@@ -8983,13 +9034,9 @@ python-sphinx-issues
     WARNING: email on push integration missing
 python-spinners
     ERROR: no upstream branch; available branches=['debian/sid', 'master', 'pristine-tar']
-    WARNING: Uploaders is missing from debian/control, that doesnt seem right
-    ERROR: DPT is not in Maintainer or Uploaders fields
-    ERROR: Vcs-Browser field is missing from debian/control
-    ERROR: Vcs-Git field is missing from debian/control
     ERROR: debian/watch is missing
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.0~git20200220.a73d561-1.1, missing tag=debian/0.0~git20200220.a73d561-1.1
-    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.0~git20200220.a73d561-1.1, missing tag=upstream/0.0~git20200220.a73d561
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.0~git20200220.a73d561-2, missing tag=debian/0.0~git20200220.a73d561-2
+    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.0~git20200220.a73d561-2, missing tag=upstream/0.0~git20200220.a73d561
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -9100,6 +9147,13 @@ python-tablib
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+python-tabulate
+    WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.8.9-1, missing tag=debian/0.8.9-1
+    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.8.9-1, missing tag=upstream/0.8.9
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 python-tblib
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=1.7.0-1, missing tag=upstream/1.7.0
@@ -9158,7 +9212,7 @@ python-text-unidecode
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-textile
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1:4.0.1-3, missing tag=debian/1:4.0.1-3
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1:4.0.2-1, missing tag=debian/1:4.0.2-1
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 python-tgext.admin
@@ -9213,6 +9267,10 @@ python-toml
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 python-tomli
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
+python-tomli-w
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -9338,13 +9396,14 @@ python-typing-inspect
     WARNING: email on push integration missing
 python-tz
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=2020.4-1, missing tag=debian/2020.4-1
-    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=2020.4-1
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=2021.3-1, missing tag=debian/2021.3-1
+    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=2021.3-1, missing tag=upstream/2021.3
+    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=2021.3-1
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
-    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-tz_2020.4.orig.tar.*.delta
-    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-tz_2020.4.orig.tar.*.id
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-tz_2021.3.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-tz_2021.3.orig.tar.*.id
 python-tzlocal
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -9669,6 +9728,11 @@ python-zipp
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+python-zipstream-ng
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 python-zstd
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: tagpending webhook missing
@@ -9813,6 +9877,16 @@ pyvisa
 pyvisa-py
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+pyvisa-zeroconf
+    ERROR: repo name does not match the package source name; repo name=pyvisa-zeroconf, src name=python-zeroconf
+    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.37.0-1, missing tag=debian/0.37.0-1
+    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.37.0-1, missing tag=upstream/0.37.0
+    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=0.37.0-1
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: python-zeroconf_0.37.0.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: python-zeroconf_0.37.0.orig.tar.*.id
 pyvorbis
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
@@ -9888,9 +9962,14 @@ qdarkstyle
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 qscintilla2
-    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=2.11.5+dfsg-3, missing tag=upstream/2.11.5+dfsg
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+qstylizer
+    ERROR: no valid Debian master branch; available branches=['debian/main', 'pristine-tar', 'upstream']
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 quark-sphinx-theme
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.5.1-2, missing tag=upstream/0.5.1
@@ -10030,14 +10109,9 @@ ripe-atlas-sagan
     WARNING: Irker integration still active, migrate to KGB webhook instead
 rnc2rng
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=2.6.4-1, missing tag=debian/2.6.4-1
-    ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=2.6.4-1, missing tag=upstream/2.6.4
-    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=2.6.4-1
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
-    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: rnc2rng_2.6.4.orig.tar.*.delta
-    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: rnc2rng_2.6.4.orig.tar.*.id
 robot-detection
     ERROR: there's no upstream tag in the repo corresponding to the sid version; sid version=0.4.0-2, missing tag=upstream/0.4.0
     WARNING: IRC notification (aka KGB) webhook missing
@@ -10172,6 +10246,12 @@ screeninfo
     WARNING: email on push integration missing
 screenlets
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+sdkmanager
+    WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 searx-admin
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
@@ -10203,15 +10283,6 @@ sentry-python
     WARNING: email on push integration missing
 series60-remote
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
-setuptools-rust
-    ERROR: no valid Debian master branch; available branches=['debian/main']
-    ERROR: no upstream branch; available branches=['debian/main']
-    ERROR: no pristine-tar branch; available branches=['debian/main']
-    ERROR: repo name does not match the package source name; repo name=setuptools-rust, src name=python-setuptools-rust
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.12.1-1, missing tag=debian/0.12.1-1
-    WARNING: tagpending webhook missing
-    WARNING: IRC notification (aka KGB) webhook missing
-    WARNING: email on push integration missing
 setuptools-scm
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
@@ -10412,6 +10483,8 @@ sphinx
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+    ERROR: pristine-tar branch doesnt contain .delta for the current version; expected: sphinx_4.3.1.orig.tar.*.delta
+    ERROR: pristine-tar branch doesnt contain .id for the current version; expected: sphinx_4.3.1.orig.tar.*.id
 sphinx-a4doc
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -10420,8 +10493,6 @@ sphinx-argparse
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 sphinx-autoapi
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=1.5.1-2, missing tag=debian/1.5.1-2
-    ERROR: debian/changelog doesnt contain an entry for the version in sid; sid version=1.5.1-2
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -10440,7 +10511,6 @@ sphinx-autorun
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 sphinx-book-theme
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: email on push integration missing
 sphinx-bootstrap-theme
@@ -10477,7 +10547,6 @@ sphinx-markdown-tables
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
 sphinx-panels
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: email on push integration missing
 sphinx-paramlinks
@@ -10537,6 +10606,10 @@ sphinxcontrib-log-cabinet
     WARNING: email on push integration missing
 sphinxcontrib-qthelp
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
+sphinxcontrib-restbuilder
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -10607,7 +10680,6 @@ sqlite-fts4
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 sqlmodel
-    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
     WARNING: email on push integration missing
 sqlobject
@@ -10655,6 +10727,12 @@ storm
 straight.plugin
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
+streamdeck-ui
+    WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
+    WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 structa
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: tagpending webhook missing
@@ -11097,7 +11175,6 @@ tvdb-api
 tvnamer
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
 tweepy
-    WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 twill
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
@@ -11199,6 +11276,8 @@ upnp-inspector
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
 upstream-ontologist
     ERROR: appears to be an empty repository
+url-normalize
+    ERROR: appears to be an empty repository
 urlgrabber
     WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     WARNING: IRC notification (aka KGB) webhook missing
@@ -11244,9 +11323,6 @@ vcr.py
 vcversioner
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
-vdirsyncer
-    WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.16.8-3, missing tag=debian/0.16.8-3
 vf1
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
@@ -11452,6 +11528,10 @@ wurlitzer
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
+xcffib
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
 xdot
     WARNING: debian/watch still uses PyPI to track new releases, https://lists.debian.org/debian-python/2021/06/msg00026.html
 xhtml2pdf
@@ -11476,7 +11556,6 @@ xmlmarshaller
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: Irker integration still active, migrate to KGB webhook instead
 xmodem
-    ERROR: there's no debian tag in the repo corresponding to the sid version; sid version=0.4.6+dfsg-3, missing tag=debian/0.4.6+dfsg-3
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -11485,6 +11564,10 @@ xonsh
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
 xphyle
+    WARNING: tagpending webhook missing
+    WARNING: IRC notification (aka KGB) webhook missing
+    WARNING: email on push integration missing
+yamllint
     WARNING: tagpending webhook missing
     WARNING: IRC notification (aka KGB) webhook missing
     WARNING: email on push integration missing
@@ -11590,6 +11673,7 @@ ERROR: repo name does not match the package source name
     Aiosmtplib
     Djongo
     Easydict
+    Flake8 Blind Except
     Flake8 Deprecated
     Flake8 Import Order
     Flake8 Quotes
@@ -11607,6 +11691,7 @@ ERROR: repo name does not match the package source name
     Python Language Server
     Python Openqa Client
     Python Tr
+    Qtsass
     Transforms3d
     airr
     ansicolors
@@ -11643,7 +11728,6 @@ ERROR: repo name does not match the package source name
     python-deprecated
     python-django-localflavor
     python-django-measurement
-    python-fsspec
     python-leather.git.old
     python-lexicon
     python-neovim
@@ -11658,9 +11742,9 @@ ERROR: repo name does not match the package source name
     python-winrm
     python2-flask-marshmallow
     python3-flask-caching
+    pyvisa-zeroconf
     raven
     saneyaml
-    setuptools-rust
     sparqlwrapper
     tempora
     tomlkit
@@ -11687,6 +11771,7 @@ WARNING: debian/watch still uses PyPI to track new releases, https://lists.debia
     aiohttp-mako
     aiopg
     aioredis
+    aiosignal
     aiowsgi
     aioxmlrpc
     aiozmq
@@ -11857,6 +11942,7 @@ WARNING: debian/watch still uses PyPI to track new releases, https://lists.debia
     dulwich
     eliot
     elixir
+    empy
     enum34
     enzyme
     epsilon
@@ -11909,6 +11995,7 @@ WARNING: debian/watch still uses PyPI to track new releases, https://lists.debia
     flufl.testing
     fookebox
     fpconst
+    frozenlist
     fuzzywuzzy
     geopy
     gevent-websocket
@@ -11945,7 +12032,6 @@ WARNING: debian/watch still uses PyPI to track new releases, https://lists.debia
     influxdb-python
     isodate
     isort
-    itypes
     j2cli
     jaraco.itertools
     jeepney
@@ -12201,7 +12287,6 @@ WARNING: debian/watch still uses PyPI to track new releases, https://lists.debia
     python-astor
     python-asttokens
     python-async
-    python-async-timeout
     python-atpublic
     python-authkit
     python-aws-requests-auth
@@ -12241,7 +12326,6 @@ WARNING: debian/watch still uses PyPI to track new releases, https://lists.debia
     python-colour
     python-commentjson
     python-conditional
-    python-confluent-kafka
     python-confuse
     python-consul2
     python-cookies
@@ -12518,7 +12602,6 @@ WARNING: debian/watch still uses PyPI to track new releases, https://lists.debia
     python-repoze.sphinx.autointerface
     python-repoze.tm2
     python-repoze.what
-    python-requests-cache
     python-requests-ntlm
     python-requests-toolbelt
     python-requestsexceptions
@@ -12561,6 +12644,7 @@ WARNING: debian/watch still uses PyPI to track new releases, https://lists.debia
     python-subprocess32
     python-sunlight
     python-svg.path
+    python-tabulate
     python-tblib
     python-tempita
     python-tenacity
@@ -12659,6 +12743,7 @@ WARNING: debian/watch still uses PyPI to track new releases, https://lists.debia
     safe
     saneyaml
     scalene
+    sdkmanager
     sen
     send2trash
     sgmllib3k
@@ -12704,6 +12789,7 @@ WARNING: debian/watch still uses PyPI to track new releases, https://lists.debia
     starlette
     stdeb
     stomper
+    streamdeck-ui
     stsci.distutils
     subliminal
     subvertpy
@@ -12752,7 +12838,6 @@ WARNING: debian/watch still uses PyPI to track new releases, https://lists.debia
     usagestats
     uvloop
     valinor
-    vdirsyncer
     volatildap
     voltron
     voluptuous
@@ -12789,231 +12874,11 @@ WARNING: debian/watch still uses PyPI to track new releases, https://lists.debia
     zope.deprecation
     zope.proxy
     zzzeeksphinx
-ERROR: there's no upstream tag in the repo corresponding to the sid version
-    Aiosmtplib
-    Linkchecker
-    aiomysql
-    aiopg
-    aiorwlock
-    alot
-    androguard
-    astral
-    astroid
-    azure-cli
-    azure-cosmos-python
-    azure-cosmos-table-python
-    azure-data-lake-store-python
-    azure-devops-cli-extension
-    azure-functions-devops-build
-    azure-kusto-python
-    azure-multiapi-storage-python
-    azure-uamqp-python
-    bdist-nsi
-    bugz
-    commonmark
-    commonmark-bkrs
-    converdate
-    convertall
-    cppy
-    dateparser
-    discodos
-    django-paintstore
-    django-session-security
-    django-websocket-redis
-    easy-ansi
-    elasticsearch-curator
-    elixir
-    etm-qt
-    exam
-    factory-boy
-    fail2ban
-    faker
-    flask-assets
-    flufl.testing
-    fparser
-    fusion-icon
-    gerritlib
-    git-repo-updater
-    git-review
-    gitinspector
-    gitless
-    gladtex
-    gp-saml-gui
-    grapefruit
-    gwakeonlan
-    haproxy-log-analysis
-    hg-git
-    importmagic
-    ipyparallel
-    ipython
-    ipython-genutils
-    j2cli
-    jaraco.functools
-    javaproperties
-    khal
-    knack
-    legacy-api-wrap
-    membernator
-    mercurial
-    mercurial-extension-utils
-    mercurial-keyring
-    microsoft-authentication-extensions-for-python
-    microsoft-authentication-library-for-python
-    multiplex
-    nb2plots
-    networkx
-    offlineimap3
-    pandoc-plantuml-filter
-    pdfrw
-    pep8
-    pikepdf
-    pilkit
-    pipenv
-    pkgconfig
-    pprintpp
-    ptpython
-    py-postgresql-old
-    pyahocorasick
-    pyannotate
-    pycxx
-    pyfuse3
-    pyqwt3d
-    pyroute2
-    pysrs
-    python-aioice
-    python-aioinflux
-    python-aiortc
-    python-altair
-    python-applicationinsights
-    python-bottle-beaker
-    python-bottle-cork
-    python-btrees
-    python-can
-    python-canmatrix
-    python-cement
-    python-cliff
-    python-coloredlogs.git.old
-    python-daemonize
-    python-debiancontributors
-    python-dicttoxml
-    python-distutils-extra
-    python-django-dbconn-retry
-    python-django-etcd-settings
-    python-django-push-notifications
-    python-django-registration
-    python-django-split-settings
-    python-docker
-    python-drizzle
-    python-ecdsa
-    python-expiringdict
-    python-fastbencode
-    python-fixtures
-    python-flask-seeder
-    python-getdns
-    python-glob2
-    python-gmpy2
-    python-intbitset
-    python-internetarchive
-    python-intervaltree
-    python-ipfix
-    python-json-patch
-    python-jsonrpc
-    python-keyring
-    python-leather.git.old
-    python-lunardate
-    python-lz4
-    python-marshmallow
-    python-memcache
-    python-mimeparse
-    python-mpd
-    python-neovim
-    python-num2words
-    python-olefile
-    python-opentimestamps
-    python-pamqp
-    python-parse-type
-    python-pcl
-    python-persistent
-    python-priority
-    python-pyscss
-    python-repoze.sphinx.autointerface
-    python-requestsexceptions
-    python-rfc6555
-    python-ripe-atlas-cousteau
-    python-rocksdb
-    python-scrapy-djangoitem
-    python-scruffy
-    python-sentinels
-    python-serializable
-    python-sparse
-    python-sphinx-issues
-    python-spinners
-    python-statsd
-    python-stopit
-    python-svg.path
-    python-svglib
-    python-tblib
-    python-testtools
-    python-tidylib
-    python-tinycss
-    python-twitter
-    python-typing-inspect
-    python-unicodecsv
-    python-vega-datasets
-    python-webdavclient
-    python-wget
-    python-wheezy.template
-    python-whisper
-    python-xdo
-    python-zc.customdoctests
-    python-zxcvbn
-    python2-flask-marshmallow
-    python3-chardet
-    python3-dateutil
-    python3-zeroconf
-    pythonmagick
-    pywinrm
-    qscintilla2
-    quark-sphinx-theme
-    quart
-    readlike
-    reparser
-    restrictedpython
-    rnc2rng
-    robot-detection
-    s3ql
-    scapy
-    scikit-build
-    sen
-    send2trash
-    sireader
-    six
-    sonata
-    sparql-wrapper-python
-    sparqlwrapper
-    sphinx-intl
-    sphinxcontrib-log-cabinet
-    sphinxcontrib-rubydomain
-    sqlacodegen
-    sqlite-fts4
-    storm
-    subvertpy
-    supysonic
-    tempora
-    tuna
-    typeshed
-    u-msgpack-python
-    usagestats
-    vobject
-    voluptuous-serialize
-    vsts-cd-manager
-    webpy
-    yamlordereddictloader
-    zict
 WARNING: tagpending webhook missing
     Aiosmtplib
     Djongo
     Easydict
+    Flake8 Blind Except
     Flake8 Deprecated
     Flake8 Import Order
     Flake8 Quotes
@@ -13030,6 +12895,7 @@ WARNING: tagpending webhook missing
     Python Language Server
     Python Openqa Client
     Python Tr
+    Qtsass
     Transforms3d
     abydos
     aiodns
@@ -13044,6 +12910,7 @@ WARNING: tagpending webhook missing
     aionotify
     aiorpcx
     aiorwlock
+    aiosignal
     aiowsgi
     airr
     annexremote
@@ -13077,7 +12944,6 @@ WARNING: tagpending webhook missing
     bookletimposer
     boolean.py
     braceexpand
-    breathe
     buildbot
     cachelib
     cachy
@@ -13106,6 +12972,7 @@ WARNING: tagpending webhook missing
     crochet
     ctop
     dacite
+    dasbus
     dask-jobqueue
     dask-sphinx-theme
     dataclasses-json
@@ -13164,10 +13031,10 @@ WARNING: tagpending webhook missing
     droidlysis
     eliot
     email-validator
+    empy
     errbot
     escapism
     execnet
-    exhale
     extension-helpers
     extra-data
     fail2ban
@@ -13180,6 +13047,7 @@ WARNING: tagpending webhook missing
     feed2toot
     filetype.py
     firmware-microbit-micropython
+    flake8-builtins
     flake8-class-newline
     flake8-comprehensions
     flask-assets
@@ -13194,6 +13062,8 @@ WARNING: tagpending webhook missing
     flower
     fortran-language-server
     freeart
+    frozenlist
+    fsspec
     geoalchemy2
     getmail6
     gevent-websocket
@@ -13240,13 +13110,14 @@ WARNING: tagpending webhook missing
     jaraco.text
     javaproperties
     jeepney
-    jello
     joypy
     jpy
     jsx-lexer
     junitparser
+    jupyter-kernel-test
     jupyter-packaging
     jupyter-server
+    jupyter-server-mathjax
     jupyter-sphinx
     jupyter-telemetry
     jupyterhub
@@ -13285,6 +13156,7 @@ WARNING: tagpending webhook missing
     mbed-test-wrapper
     mdit-py-plugins
     membernator
+    memory-allocator
     mercurial-extension-utils
     merge3
     microsoft-authentication-extensions-for-python
@@ -13308,7 +13180,9 @@ WARNING: tagpending webhook missing
     namecheap
     natsort
     nb2plots
+    nbclassic
     nbclient
+    nbdime
     nbgitpuller
     nbsphinx0.3
     netifaces
@@ -13424,6 +13298,7 @@ WARNING: tagpending webhook missing
     pysendfile
     pyserial-asyncio
     pyssim
+    pystache
     pystemd
     pyte
     pytest-arraydiff
@@ -13445,6 +13320,7 @@ WARNING: tagpending webhook missing
     pytest-skip-markers
     pytest-sugar
     pytest-testinfra
+    pytest-tornasync
     pytest-twisted
     pytest-vcr
     python-a38
@@ -13572,7 +13448,6 @@ WARNING: tagpending webhook missing
     python-flask-seeder
     python-flor
     python-fluent-logger
-    python-fsspec
     python-ftputil
     python-funcy
     python-gast
@@ -13756,6 +13631,7 @@ WARNING: tagpending webhook missing
     python-scrypt
     python-serializable
     python-serverfiles
+    python-setuptools-rust
     python-sexpdata
     python-shelxfile
     python-shodan
@@ -13777,6 +13653,7 @@ WARNING: tagpending webhook missing
     python-swagger-ui-bundle
     python-sybil
     python-tablib
+    python-tabulate
     python-tempora
     python-tesserocr
     python-test-server
@@ -13787,6 +13664,7 @@ WARNING: tagpending webhook missing
     python-tldextract
     python-toml
     python-tomli
+    python-tomli-w
     python-types-toml
     python-types-typed-ast
     python-typing-extensions
@@ -13821,6 +13699,7 @@ WARNING: tagpending webhook missing
     python-yaswfp
     python-yubiotp
     python-zipp
+    python-zipstream-ng
     python-zstd
     python3-antlr4
     python3-flask-caching
@@ -13829,10 +13708,12 @@ WARNING: tagpending webhook missing
     pythran
     pytmx
     pyupgrade
+    pyvisa-zeroconf
     pyvows
     pyxdameraulevenshtein
     pyzbar
     qdarkstyle
+    qstylizer
     quart
     quodlibet
     r4d
@@ -13856,12 +13737,12 @@ WARNING: tagpending webhook missing
     scikit-build
     scikit-misc
     screeninfo
+    sdkmanager
     searx-admin
     segno
     sen
     send2trash
     sentry-python
-    setuptools-rust
     setuptools-scm-git-archive
     sgmllib3k
     shellingham
@@ -13890,6 +13771,7 @@ WARNING: tagpending webhook missing
     sphinxcontrib-jsmath
     sphinxcontrib-log-cabinet
     sphinxcontrib-qthelp
+    sphinxcontrib-restbuilder
     sphinxcontrib-rubydomain
     sphinxext-opengraph
     sphinxtesters
@@ -13900,6 +13782,7 @@ WARNING: tagpending webhook missing
     sqlmodel
     sshtunnel
     starlette
+    streamdeck-ui
     structa
     sublime-music
     suds
@@ -13972,10 +13855,12 @@ WARNING: tagpending webhook missing
     wokkel
     wsgiproxy2
     wurlitzer
+    xcffib
     xmlelements
     xmodem
     xonsh
     xphyle
+    yamllint
     yamlordereddictloader
     yanc
     yapf
@@ -13991,6 +13876,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     Aiosmtplib
     Djongo
     Easydict
+    Flake8 Blind Except
     Flake8 Deprecated
     Flake8 Import Order
     Flake8 Quotes
@@ -14008,6 +13894,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     Python Language Server
     Python Openqa Client
     Python Tr
+    Qtsass
     Transforms3d
     aafigure
     abydos
@@ -14031,6 +13918,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     aioredis
     aiorpcx
     aiorwlock
+    aiosignal
     aiowsgi
     aioxmlrpc
     aiozmq
@@ -14104,7 +13992,6 @@ WARNING: IRC notification (aka KGB) webhook missing
     bottleneck
     braceexpand
     breadability
-    breathe
     btchip-python
     bugz
     buildbot
@@ -14171,6 +14058,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     cysignals
     d2to1
     dacite
+    dasbus
     dask
     dask-jobqueue
     dask-sphinx-theme
@@ -14329,6 +14217,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     eliot
     elixir
     email-validator
+    empy
     entrypoints
     enum34
     enzyme
@@ -14337,7 +14226,6 @@ WARNING: IRC notification (aka KGB) webhook missing
     escapism
     exam
     execnet
-    exhale
     extension-helpers
     extra-data
     fabulous
@@ -14359,6 +14247,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     feedparser
     filetype.py
     firmware-microbit-micropython
+    flake8-builtins
     flake8-class-newline
     flake8-comprehensions
     flake8-docstrings
@@ -14414,6 +14303,8 @@ WARNING: IRC notification (aka KGB) webhook missing
     fpylll
     freeart
     freetype-py
+    frozenlist
+    fsspec
     ftputil
     fuzzywuzzy
     gamera
@@ -14512,7 +14403,6 @@ WARNING: IRC notification (aka KGB) webhook missing
     jaraco.text
     javaproperties
     jeepney
-    jello
     jinja2
     jinja2-time
     joypy
@@ -14528,9 +14418,11 @@ WARNING: IRC notification (aka KGB) webhook missing
     jupyter-client
     jupyter-console
     jupyter-core
+    jupyter-kernel-test
     jupyter-notebook
     jupyter-packaging
     jupyter-server
+    jupyter-server-mathjax
     jupyter-sphinx
     jupyter-sphinx-theme
     jupyter-telemetry
@@ -14603,6 +14495,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     mbed-test-wrapper
     mdit-py-plugins
     membernator
+    memory-allocator
     mercurial-extension-utils
     mercurial-keyring
     merge3
@@ -14658,8 +14551,10 @@ WARNING: IRC notification (aka KGB) webhook missing
     natsort
     nautilus-pastebin
     nb2plots
+    nbclassic
     nbclient
     nbconvert
+    nbdime
     nbformat
     nbgitpuller
     nbsphinx
@@ -14950,6 +14845,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     pysrs
     pysrt
     pyssim
+    pystache
     pystaticconfiguration
     pystemd
     pystemmer
@@ -14994,6 +14890,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     pytest-sugar
     pytest-testinfra
     pytest-tornado
+    pytest-tornasync
     pytest-twisted
     pytest-vcr
     pytest-xdist
@@ -15324,7 +15221,6 @@ WARNING: IRC notification (aka KGB) webhook missing
     python-fluent-logger
     python-formencode
     python-fs
-    python-fsspec
     python-ftputil
     python-fudge
     python-funcy
@@ -15791,6 +15687,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     python-service-identity
     python-setoptconf
     python-setproctitle
+    python-setuptools-rust
     python-sexpdata
     python-sh
     python-shade
@@ -15844,6 +15741,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     python-swagger-ui-bundle
     python-sybil
     python-tablib
+    python-tabulate
     python-tblib
     python-tempita
     python-tempora
@@ -15869,6 +15767,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     python-tmdbsimple
     python-toml
     python-tomli
+    python-tomli-w
     python-tornado
     python-tornadorpc
     python-toscawidgets
@@ -15966,6 +15865,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     python-zenoss
     python-zeroconf
     python-zipp
+    python-zipstream-ng
     python-zstd
     python-zxcvbn
     python2-flask-marshmallow
@@ -15994,6 +15894,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     pyvirtualdisplay
     pyvisa
     pyvisa-py
+    pyvisa-zeroconf
     pyvorbis
     pyvows
     pyvtk
@@ -16011,6 +15912,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     pyzmq
     qdarkstyle
     qscintilla2
+    qstylizer
     quark-sphinx-theme
     quart
     quixote
@@ -16063,12 +15965,12 @@ WARNING: IRC notification (aka KGB) webhook missing
     scitools
     sclapp
     screeninfo
+    sdkmanager
     searx-admin
     segno
     sen
     send2trash
     sentry-python
-    setuptools-rust
     setuptools-scm
     setuptools-scm-git-archive
     sgmllib3k
@@ -16133,6 +16035,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     sphinxcontrib-jsmath
     sphinxcontrib-log-cabinet
     sphinxcontrib-qthelp
+    sphinxcontrib-restbuilder
     sphinxcontrib-rubydomain
     sphinxcontrib-serializinghtml
     sphinxcontrib-spelling
@@ -16156,6 +16059,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     stomper
     storm
     straight.plugin
+    streamdeck-ui
     structa
     stsci.distutils
     sublime-music
@@ -16235,7 +16139,6 @@ WARNING: IRC notification (aka KGB) webhook missing
     tvb-geodesic
     tvb-library
     tvdb-api
-    tweepy
     twill
     twistar
     twisted
@@ -16305,6 +16208,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     wtf-peewee
     wtforms
     wurlitzer
+    xcffib
     xhtml2pdf
     xlsxwriter
     xlwt
@@ -16313,6 +16217,7 @@ WARNING: IRC notification (aka KGB) webhook missing
     xmodem
     xonsh
     xphyle
+    yamllint
     yamlordereddictloader
     yanc
     yapf
@@ -17757,6 +17662,7 @@ ERROR: no pristine-tar branch
     pymeeus
     pyrsistent
     pyrundeck
+    pystache
     pyte
     python-atpublic
     python-debiancontributors
@@ -17795,7 +17701,6 @@ ERROR: no pristine-tar branch
     s3ql
     saneyaml
     scancode-toolkit
-    setuptools-rust
     sireader
     sqlite-fts4
     stardicter
@@ -17815,13 +17720,10 @@ ERROR: no pristine-tar branch
     yg.lockfile
 WARNING: unable to find a version in Sid: is this still in NEW/experimental-only?
     Djongo
-    Flake8 Deprecated
-    Flake8 Import Order
-    Flake8 Quotes
     Geojson2vt
     Openapi Spec Validator
     Python Asyncache
-    Transforms3d
+    Qtsass
     aafigure
     adapt-parser
     aiohttp-debugtoolbar
@@ -17853,9 +17755,10 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     bond
     breadability
     bunch
-    cachelib
     canto
     catwalk
+    celery-batches
+    celery-haystack
     cf-python
     checkbox-ng
     checkbox-support
@@ -17865,6 +17768,7 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     cppimport
     creoleparser
     cubictemp
+    dasbus
     dask-jobqueue
     datanommer.commands
     datanommer.consumer
@@ -17879,7 +17783,6 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     django-app-plugins
     django-background-tasks
     django-cache-memoize
-    django-cacheops
     django-celery
     django-celery-transactions
     django-colorful
@@ -17891,8 +17794,8 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     django-hijack
     django-material
     django-openid-auth
-    django-pglocks
     django-ranged-fileresponse
+    django-rules
     django-threaded-multihost
     django-tinymce
     djangocms-admin-style
@@ -17900,6 +17803,7 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     djvusmooth
     dnspython3
     doconce
+    doublex
     drf-fsm-transitions
     drf-yasg-nonfree
     driconf
@@ -17915,8 +17819,7 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     faulthandler
     fbtftp
     fedmsg
-    flake8-class-newline
-    flake8-comprehensions
+    flask-assets
     flask-cache
     flask-oauthlib
     flask-restless
@@ -17961,7 +17864,8 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     inotifyx
     jabberbot
     jsx-lexer
-    jupyterhub
+    jupyter-kernel-test
+    jupyter-server-mathjax
     kabikaboo
     karabo-data
     kconfiglib
@@ -17975,10 +17879,8 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     lg-gpio
     liblarch
     liblarch-gtk
-    license-expression
     lightblue
     llvm-py
-    locust
     logilab-astng
     lottanzb
     louie
@@ -17988,6 +17890,7 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     maptransfer
     matplotlib2
     mdit-py-plugins
+    memory-allocator
     mimms
     moap
     mocker
@@ -17996,7 +17899,6 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     moosic
     moviepy
     mpdris
-    mssql-django
     mwoauth
     myghty
     myghtyutils
@@ -18010,6 +17912,8 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     napalm-iosxr
     napalm-junos
     nautilus-pastebin
+    nbclassic
+    nbdime
     nbgitpuller
     nbsphinx0.3
     nevow
@@ -18043,8 +17947,6 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     plainbox-provider-piglit
     plainbox-provider-resource-generic
     planet-venus
-    poetry
-    polyline
     premailer
     preprocess
     protonvpn-cli
@@ -18093,7 +17995,6 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     pylons
     pyme
     pynagram
-    pynput
     pyogg
     pyomo
     pyout
@@ -18111,8 +18012,7 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     pytagsfs
     pytest-catchlog
     pytest-ordering
-    pytest-repeat
-    pytest-skip-markers
+    pytest-tornasync
     pyth
     python-adns
     python-afl
@@ -18122,7 +18022,6 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     python-asgi-redis
     python-aspects
     python-async
-    python-asyncio-mqtt
     python-atpublic
     python-authkit
     python-avc
@@ -18139,7 +18038,6 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     python-buzhug
     python-byteplay
     python-chaco
-    python-charset-normalizer
     python-cherrypy
     python-cjson
     python-cl
@@ -18163,6 +18061,7 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     python-dateutils
     python-dawg
     python-deprecated
+    python-dexml
     python-dhm
     python-dictknife
     python-django-audit-log
@@ -18174,7 +18073,6 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     python-django-localflavor
     python-django-parler
     python-django-piston
-    python-django-postgres-extra
     python-django-rosetta
     python-django-shorturls
     python-django-social-auth
@@ -18187,6 +18085,7 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     python-docstring-parser
     python-docx
     python-docxcompose
+    python-enable
     python-enthoughtbase
     python-envisagecore
     python-envisageplugins
@@ -18206,6 +18105,7 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     python-github3.py
     python-gmpy
     python-gmusicapi
+    python-gntp
     python-gnutls
     python-goopy
     python-gpyconf
@@ -18214,12 +18114,10 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     python-grpcio
     python-guacamole
     python-gvgen
-    python-halo
     python-htmltmpl
     python-ifcfg
     python-immutabledict
     python-immutables
-    python-installer
     python-irclib
     python-iso8583
     python-jose
@@ -18251,6 +18149,7 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     python-numpy
     python-oauthenticator
     python-oerplib
+    python-olefile
     python-openid
     python-ordered-set
     python-osd
@@ -18290,7 +18189,6 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     python-pytz
     python-qt4
     python-ramlfications
-    python-rdata
     python-recaptcha
     python-reconfigure
     python-repoze.what
@@ -18336,6 +18234,7 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     python-xmltv
     python-xsdata
     python-zenoss
+    python-zipstream-ng
     python3-protobuf3
     pythoncad
     pythonqt
@@ -18351,6 +18250,7 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     pyxb
     pyxine
     pyxmpp
+    qstylizer
     quixote
     rabbyt
     raven
@@ -18367,6 +18267,7 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     scitools
     sclapp
     screenlets
+    sdkmanager
     searx-admin
     series60-remote
     shiboken
@@ -18384,12 +18285,10 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
     spe
     speechrecognition
     speechrecognition-python
-    sphinx-book-theme
     sphinx-issuetracker
-    sphinx-panels
     springpython
     sprox
-    sqlmodel
+    streamdeck-ui
     structa
     swagger-marshmallow-codegen
     swiginac
@@ -18472,6 +18371,7 @@ WARNING: unable to find a version in Sid: is this still in NEW/experimental-only
 WARNING: email on push integration missing
     Djongo
     Easydict
+    Flake8 Blind Except
     Flake8 Deprecated
     Flake8 Import Order
     Flake8 Quotes
@@ -18488,6 +18388,7 @@ WARNING: email on push integration missing
     Python Language Server
     Python Openqa Client
     Python Tr
+    Qtsass
     Transforms3d
     abydos
     aiodns
@@ -18502,6 +18403,7 @@ WARNING: email on push integration missing
     aionotify
     aiorpcx
     aiorwlock
+    aiosignal
     aiowsgi
     airr
     annexremote
@@ -18536,7 +18438,6 @@ WARNING: email on push integration missing
     bookletimposer
     boolean.py
     braceexpand
-    breathe
     buildbot
     cachelib
     cachy
@@ -18565,6 +18466,7 @@ WARNING: email on push integration missing
     crochet
     ctop
     dacite
+    dasbus
     dask-jobqueue
     dask-sphinx-theme
     dataclasses-json
@@ -18624,9 +18526,9 @@ WARNING: email on push integration missing
     easy-ansi
     eliot
     email-validator
+    empy
     errbot
     escapism
-    exhale
     extension-helpers
     extra-data
     fail2ban
@@ -18638,6 +18540,7 @@ WARNING: email on push integration missing
     fdroidserver
     feed2toot
     filetype.py
+    flake8-builtins
     flake8-class-newline
     flake8-comprehensions
     flask-assets
@@ -18652,6 +18555,8 @@ WARNING: email on push integration missing
     flower
     fortran-language-server
     freeart
+    frozenlist
+    fsspec
     geoalchemy2
     getmail6
     gevent-websocket
@@ -18698,14 +18603,15 @@ WARNING: email on push integration missing
     jaraco.collections
     jaraco.text
     javaproperties
-    jello
     joypy
     jpy
     jsonhyperschema-codec
     jsx-lexer
     junitparser
+    jupyter-kernel-test
     jupyter-packaging
     jupyter-server
+    jupyter-server-mathjax
     jupyter-sphinx
     jupyter-telemetry
     jupyterhub
@@ -18743,6 +18649,7 @@ WARNING: email on push integration missing
     matplotlib2
     mdit-py-plugins
     membernator
+    memory-allocator
     mercurial-extension-utils
     merge3
     microsoft-authentication-extensions-for-python
@@ -18767,7 +18674,9 @@ WARNING: email on push integration missing
     namecheap
     natsort
     nb2plots
+    nbclassic
     nbclient
+    nbdime
     nbgitpuller
     nbsphinx0.3
     netifaces
@@ -18882,6 +18791,7 @@ WARNING: email on push integration missing
     pysendfile
     pyserial-asyncio
     pyssim
+    pystache
     pystemd
     pyte
     pytest-arraydiff
@@ -18901,6 +18811,7 @@ WARNING: email on push integration missing
     pytest-skip-markers
     pytest-sugar
     pytest-testinfra
+    pytest-tornasync
     pytest-twisted
     python-a38
     python-absl
@@ -19030,7 +18941,6 @@ WARNING: email on push integration missing
     python-flask-seeder
     python-flor
     python-fluent-logger
-    python-fsspec
     python-ftputil
     python-funcy
     python-gast
@@ -19210,6 +19120,7 @@ WARNING: email on push integration missing
     python-scrypt
     python-serializable
     python-serverfiles
+    python-setuptools-rust
     python-sexpdata
     python-shelxfile
     python-shodan
@@ -19231,6 +19142,7 @@ WARNING: email on push integration missing
     python-swagger-ui-bundle
     python-sybil
     python-tablib
+    python-tabulate
     python-tempora
     python-tesserocr
     python-test-server
@@ -19241,6 +19153,7 @@ WARNING: email on push integration missing
     python-tldextract
     python-toml
     python-tomli
+    python-tomli-w
     python-types-toml
     python-types-typed-ast
     python-typing-extensions
@@ -19274,6 +19187,7 @@ WARNING: email on push integration missing
     python-yaswfp
     python-yubiotp
     python-zipp
+    python-zipstream-ng
     python-zstd
     python3-antlr4
     python3-flask-caching
@@ -19283,10 +19197,12 @@ WARNING: email on push integration missing
     pytmx
     pytrainer
     pyupgrade
+    pyvisa-zeroconf
     pyvows
     pyxdameraulevenshtein
     pyzbar
     qdarkstyle
+    qstylizer
     quart
     quodlibet
     r4d
@@ -19311,11 +19227,11 @@ WARNING: email on push integration missing
     scikit-build
     scikit-misc
     screeninfo
+    sdkmanager
     searx-admin
     sen
     send2trash
     sentry-python
-    setuptools-rust
     setuptools-scm-git-archive
     sgmllib3k
     shellingham
@@ -19342,6 +19258,7 @@ WARNING: email on push integration missing
     sphinxcontrib-jsmath
     sphinxcontrib-log-cabinet
     sphinxcontrib-qthelp
+    sphinxcontrib-restbuilder
     sphinxcontrib-rubydomain
     sphinxext-opengraph
     sphinxtesters
@@ -19352,6 +19269,7 @@ WARNING: email on push integration missing
     sqlmodel
     sshtunnel
     starlette
+    streamdeck-ui
     structa
     sublime-music
     suds
@@ -19424,10 +19342,12 @@ WARNING: email on push integration missing
     wokkel
     wsgiproxy2
     wurlitzer
+    xcffib
     xmlelements
     xmodem
     xonsh
     xphyle
+    yamllint
     yamlordereddictloader
     yanc
     yapf
@@ -19439,6 +19359,9 @@ WARNING: email on push integration missing
     zope.proxy
 ERROR: there's no debian tag in the repo corresponding to the sid version
     Easydict
+    Flake8 Deprecated
+    Flake8 Import Order
+    Flake8 Quotes
     Flask Oidc
     Metakernel
     Pinball Table Gnu
@@ -19449,10 +19372,10 @@ ERROR: there's no debian tag in the repo corresponding to the sid version
     androguard
     annexremote
     anosql
+    ansicolors
     archmage
     astroid
     beaker
-    behave
     btchip-python
     bugz
     celery-haystack-ng
@@ -19476,18 +19399,21 @@ ERROR: there's no debian tag in the repo corresponding to the sid version
     django-widget-tweaks
     dnsdiag
     dulwich
+    easy-ansi
     elixir
+    empy
     etm
     etm-qt
     faker
+    flake8-class-newline
+    flake8-comprehensions
     flask-api
-    flask-assets
     flask-ldapconn
     flask-mail
-    flask-openid
     flask-paranoid
     fparser
     freealchemist
+    fsspec
     fusion-icon
     git-review
     gitless
@@ -19498,7 +19424,6 @@ ERROR: there's no debian tag in the repo corresponding to the sid version
     gwakeonlan
     haproxy-log-analysis
     hatop
-    hg-git
     importmagic
     ipy
     ipython
@@ -19506,7 +19431,7 @@ ERROR: there's no debian tag in the repo corresponding to the sid version
     jupyter-sphinx-theme
     kanboard-cli
     khal
-    libcloud
+    khard
     merge3
     mockldap
     muttdown
@@ -19517,10 +19442,10 @@ ERROR: there's no debian tag in the repo corresponding to the sid version
     panoramisk
     parsedatetime
     pdfrw
-    pelican
     pipenv
     pipsi
     pkgconfig
+    prompt-toolkit
     ptpython
     py-postgresql-old
     pybik
@@ -19533,6 +19458,7 @@ ERROR: there's no debian tag in the repo corresponding to the sid version
     pymeeus
     pyramid-jinja2
     pyroute2
+    pystache
     pytest-doctestplus
     pytest-runner
     python-a38
@@ -19540,7 +19466,6 @@ ERROR: there's no debian tag in the repo corresponding to the sid version
     python-aiortc
     python-altair
     python-apptools
-    python-async-timeout
     python-augeas
     python-base58
     python-calendarweek
@@ -19555,7 +19480,6 @@ ERROR: there's no debian tag in the repo corresponding to the sid version
     python-dbussy
     python-distutils-extra
     python-django
-    python-django-colorfield
     python-django-dbconn-retry
     python-django-debug-toolbar
     python-django-push-notifications
@@ -19567,24 +19491,22 @@ ERROR: there's no debian tag in the repo corresponding to the sid version
     python-ecdsa
     python-envs
     python-expiringdict
+    python-fastimport
     python-fissix
     python-fixtures
     python-flask-jwt-extended
     python-flask-seeder
-    python-fsspec
     python-getdns
     python-gmpy2
+    python-halo
     python-hbmqtt
-    python-intbitset
     python-intervaltree
     python-javaobj
     python-json-patch
     python-jsonrpc
     python-kanboard
-    python-keyring
     python-ldapdomaindump
     python-leather.git.old
-    python-libconf
     python-linux-procfs
     python-marshmallow
     python-mechanize
@@ -19595,14 +19517,13 @@ ERROR: there's no debian tag in the repo corresponding to the sid version
     python-neovim
     python-num2words
     python-offtrac
-    python-olefile
     python-openidc-client
+    python-pandocfilters
     python-pcl
     python-persistent
     python-pex
     python-phabricator
     python-phpserialize
-    python-plac
     python-pluggy
     python-preshed
     python-protobix
@@ -19625,6 +19546,7 @@ ERROR: there's no debian tag in the repo corresponding to the sid version
     python-sparse
     python-spinners
     python-svg.path
+    python-tabulate
     python-testtools
     python-textile
     python-tidylib
@@ -19642,6 +19564,7 @@ ERROR: there's no debian tag in the repo corresponding to the sid version
     python3-chardet
     python3-dateutil
     python3-zeroconf
+    pyvisa-zeroconf
     pywinrm
     pyzbar
     pyzor
@@ -19651,13 +19574,11 @@ ERROR: there's no debian tag in the repo corresponding to the sid version
     reparser
     restrictedpython
     retweet
-    rnc2rng
     rss2email
     scapy
     scikit-build
     sen
     send2trash
-    setuptools-rust
     sgmllib3k
     shellingham
     sinntp
@@ -19666,7 +19587,6 @@ ERROR: there's no debian tag in the repo corresponding to the sid version
     social-auth-core
     sonata
     sparqlwrapper
-    sphinx-autoapi
     sphinx-autorun
     sphinxcontrib-log-cabinet
     sphinxcontrib-rubydomain
@@ -19677,15 +19597,16 @@ ERROR: there's no debian tag in the repo corresponding to the sid version
     typeshed
     typogrify
     usagestats
-    vdirsyncer
     vobject
     webpy
     wsgiproxy2
-    xmodem
     yamlordereddictloader
     zict
 ERROR: debian/changelog doesnt contain an entry for the version in sid
     Easydict
+    Flake8 Deprecated
+    Flake8 Import Order
+    Flake8 Quotes
     Metakernel
     Pinball Table Gnu
     Python Tr
@@ -19698,7 +19619,6 @@ ERROR: debian/changelog doesnt contain an entry for the version in sid
     colorclass
     convertall
     ctop
-    dask.distributed
     db2twitter
     dbf
     devpi-common
@@ -19711,8 +19631,8 @@ ERROR: debian/changelog doesnt contain an entry for the version in sid
     etm
     etm-qt
     faker
+    flake8-comprehensions
     flask-api
-    flask-assets
     flask-ldapconn
     flask-mail
     flask-paranoid
@@ -19725,27 +19645,26 @@ ERROR: debian/changelog doesnt contain an entry for the version in sid
     gunicorn
     gwakeonlan
     hatop
-    hg-git
     ipython
     jaraco.functools
     kanboard-cli
     pdfrw
-    pelican
     pipenv
     pipsi
     pkgconfig
+    prompt-toolkit
     ptpython
     py-postgresql-old
     pybik
     pycallgraph
     pycxx
     pyiosxr
+    pyls-spyder
     pyramid-jinja2
     pyroute2
     pytest-runner
     python-aioice
     python-aiortc
-    python-async-timeout
     python-augeas
     python-base58
     python-cliff
@@ -19759,7 +19678,9 @@ ERROR: debian/changelog doesnt contain an entry for the version in sid
     python-drizzle
     python-envs
     python-fixtures
+    python-flask-jwt-extended
     python-hbmqtt
+    python-humanize
     python-intervaltree
     python-json-patch
     python-kanboard
@@ -19770,13 +19691,12 @@ ERROR: debian/changelog doesnt contain an entry for the version in sid
     python-mpd
     python-neovim
     python-offtrac
-    python-olefile
     python-openidc-client
+    python-pandocfilters
     python-persistent
     python-pex
     python-phabricator
     python-phpserialize
-    python-plac
     python-pluggy
     python-py-zipkin
     python-pygtrie
@@ -19799,6 +19719,7 @@ ERROR: debian/changelog doesnt contain an entry for the version in sid
     python3-chardet
     python3-dateutil
     python3-zeroconf
+    pyvisa-zeroconf
     pywinrm
     pyzbar
     pyzor
@@ -19806,7 +19727,6 @@ ERROR: debian/changelog doesnt contain an entry for the version in sid
     rdflib
     readlike
     retweet
-    rnc2rng
     scapy
     sen
     shellingham
@@ -19816,7 +19736,6 @@ ERROR: debian/changelog doesnt contain an entry for the version in sid
     social-auth-core
     sonata
     sparqlwrapper
-    sphinx-autoapi
     sphinx-autorun
     sshpubkeys
     tempora
@@ -19827,6 +19746,7 @@ ERROR: debian/changelog doesnt contain an entry for the version in sid
     zict
 ERROR: no valid Debian master branch
     Linkchecker
+    Qtsass
     django-colorful
     django-graphene
     django-graphiql-debug-toolbar
@@ -19840,9 +19760,10 @@ ERROR: no valid Debian master branch
     python-fastbencode
     python-furo
     python-perl
+    python-setuptools-rust
     python-sk1libs
+    qstylizer
     scikit-misc
-    setuptools-rust
     sireader
     suds
 ERROR: no upstream branch
@@ -19900,7 +19821,6 @@ ERROR: no upstream branch
     pythonqt
     s-tui
     scancode-toolkit
-    setuptools-rust
     sireader
     sphinx-intl
     sqlacodegen
@@ -19957,9 +19877,9 @@ WARNING: Uploaders is missing from debian/control, that doesnt seem right
     louie
     more-itertools
     namecheap
+    nbdime
     nose2-cov
     ocrodjvu
-    pastel
     psphere
     psyclone
     psycopg3
@@ -19985,7 +19905,6 @@ WARNING: Uploaders is missing from debian/control, that doesnt seem right
     python-contract
     python-couchdb
     python-crayons
-    python-cx-oracle
     python-dateutils
     python-django-adminsortable
     python-django-js-asset
@@ -20024,7 +19943,6 @@ WARNING: Uploaders is missing from debian/control, that doesnt seem right
     python-simplification
     python-sk1libs
     python-spake2
-    python-spinners
     python-suntime
     python-svg.path
     python-tgext.admin
@@ -20096,8 +20014,8 @@ ERROR: DPT is not in Maintainer or Uploaders fields
     louie
     myhdl
     namecheap
+    nbdime
     ocrodjvu
-    pastel
     psphere
     psyclone
     psycopg3
@@ -20117,7 +20035,6 @@ ERROR: DPT is not in Maintainer or Uploaders fields
     python-contract
     python-couchdb
     python-crayons
-    python-cx-oracle
     python-cymem
     python-dateutils
     python-django-adminsortable
@@ -20159,7 +20076,6 @@ ERROR: DPT is not in Maintainer or Uploaders fields
     python-simplification
     python-sk1libs
     python-spake2
-    python-spinners
     python-suntime
     python-svg.path
     python-testtools
@@ -20188,8 +20104,234 @@ ERROR: DPT is not in Maintainer or Uploaders fields
     yamlordereddictloader
     yg.lockfile
     zope.proxy
+ERROR: there's no upstream tag in the repo corresponding to the sid version
+    Linkchecker
+    aiomysql
+    aiopg
+    aiorwlock
+    alot
+    androguard
+    astral
+    astroid
+    azure-cli
+    azure-cosmos-python
+    azure-cosmos-table-python
+    azure-data-lake-store-python
+    azure-devops-cli-extension
+    azure-functions-devops-build
+    azure-kusto-python
+    azure-multiapi-storage-python
+    azure-uamqp-python
+    bdist-nsi
+    bugz
+    commonmark
+    commonmark-bkrs
+    converdate
+    convertall
+    cppy
+    dateparser
+    discodos
+    django-paintstore
+    django-session-security
+    django-websocket-redis
+    easy-ansi
+    elasticsearch-curator
+    elixir
+    etm-qt
+    exam
+    factory-boy
+    fail2ban
+    faker
+    flake8-comprehensions
+    flufl.testing
+    fparser
+    fusion-icon
+    gerritlib
+    git-repo-updater
+    git-review
+    gitinspector
+    gitless
+    gladtex
+    gp-saml-gui
+    grapefruit
+    gwakeonlan
+    haproxy-log-analysis
+    importmagic
+    ipyparallel
+    ipython
+    ipython-genutils
+    j2cli
+    jaraco.functools
+    javaproperties
+    khal
+    knack
+    legacy-api-wrap
+    membernator
+    mercurial
+    mercurial-extension-utils
+    mercurial-keyring
+    microsoft-authentication-extensions-for-python
+    microsoft-authentication-library-for-python
+    multiplex
+    nb2plots
+    networkx
+    offlineimap3
+    pandoc-plantuml-filter
+    pdfrw
+    pep8
+    pikepdf
+    pilkit
+    pipenv
+    pkgconfig
+    pprintpp
+    prompt-toolkit
+    ptpython
+    py-postgresql-old
+    pyahocorasick
+    pyannotate
+    pycxx
+    pyfuse3
+    pyls-spyder
+    pyqwt3d
+    pyroute2
+    pysrs
+    pystache
+    pysvn
+    python-aioice
+    python-aioinflux
+    python-aiortc
+    python-altair
+    python-applicationinsights
+    python-bottle-beaker
+    python-bottle-cork
+    python-btrees
+    python-can
+    python-canmatrix
+    python-cement
+    python-cliff
+    python-coloredlogs.git.old
+    python-daemonize
+    python-debiancontributors
+    python-dicttoxml
+    python-distutils-extra
+    python-django-dbconn-retry
+    python-django-etcd-settings
+    python-django-push-notifications
+    python-django-registration
+    python-django-split-settings
+    python-docker
+    python-drizzle
+    python-ecdsa
+    python-expiringdict
+    python-fastbencode
+    python-fastimport
+    python-fixtures
+    python-flask-seeder
+    python-getdns
+    python-glob2
+    python-gmpy2
+    python-halo
+    python-intbitset
+    python-internetarchive
+    python-intervaltree
+    python-ipfix
+    python-json-patch
+    python-jsonrpc
+    python-leather.git.old
+    python-lunardate
+    python-lz4
+    python-marshmallow
+    python-memcache
+    python-mimeparse
+    python-mpd
+    python-neovim
+    python-num2words
+    python-opentimestamps
+    python-pamqp
+    python-pandocfilters
+    python-parse-type
+    python-pcl
+    python-persistent
+    python-priority
+    python-pyscss
+    python-repoze.sphinx.autointerface
+    python-requestsexceptions
+    python-rfc6555
+    python-ripe-atlas-cousteau
+    python-rocksdb
+    python-scrapy-djangoitem
+    python-scruffy
+    python-sentinels
+    python-serializable
+    python-sparse
+    python-sphinx-issues
+    python-spinners
+    python-statsd
+    python-stopit
+    python-svg.path
+    python-svglib
+    python-tabulate
+    python-tblib
+    python-testtools
+    python-tidylib
+    python-tinycss
+    python-twitter
+    python-typing-inspect
+    python-tz
+    python-unicodecsv
+    python-vega-datasets
+    python-webdavclient
+    python-wget
+    python-wheezy.template
+    python-whisper
+    python-xdo
+    python-zc.customdoctests
+    python-zxcvbn
+    python2-flask-marshmallow
+    python3-chardet
+    python3-dateutil
+    python3-zeroconf
+    pythonmagick
+    pyvisa-zeroconf
+    pywinrm
+    quark-sphinx-theme
+    quart
+    readlike
+    reparser
+    restrictedpython
+    robot-detection
+    s3ql
+    scapy
+    scikit-build
+    sen
+    send2trash
+    sireader
+    six
+    sonata
+    sparql-wrapper-python
+    sparqlwrapper
+    sphinx-intl
+    sphinxcontrib-log-cabinet
+    sphinxcontrib-rubydomain
+    sqlacodegen
+    sqlite-fts4
+    storm
+    subvertpy
+    supysonic
+    tempora
+    tuna
+    typeshed
+    u-msgpack-python
+    usagestats
+    vobject
+    voluptuous-serialize
+    vsts-cd-manager
+    webpy
+    yamlordereddictloader
+    zict
 ERROR: Vcs-Browser field doesnt match the repo web URL
     Pinball Table Gnu
+    empy
     flask-principal
     glean-parser
     gp-saml-gui
@@ -20214,6 +20356,7 @@ ERROR: Vcs-Git field doesnt match the repo git URL
     Pinball Table Gnu
     dirtbike
     dkimpy-milter
+    empy
     flask-principal
     flit
     gunicorn
@@ -20264,7 +20407,6 @@ ERROR: debian/watch is missing
     python-bitbucket
     python-commodity
     python-ctypeslib
-    python-cx-oracle
     python-debiancontributors
     python-dictknife
     python-distutils-extra
@@ -20328,6 +20470,7 @@ ERROR: pristine-tar branch doesnt contain .delta for the current version
     etm-qt
     fabulous
     faker
+    flake8-comprehensions
     flask-api
     flask-autoindex
     flask-mail
@@ -20346,15 +20489,16 @@ ERROR: pristine-tar branch doesnt contain .delta for the current version
     pdfrw
     pep8
     pkgconfig
+    prompt-toolkit
     ptpython
     py-postgresql-old
     pycxx
+    pyls-spyder
     pyparsing
     pypass
     pyprind
     pyroute2
     pytest-localserver
-    pytest-testinfra
     python-adal
     python-aioice
     python-aiortc
@@ -20363,7 +20507,6 @@ ERROR: pristine-tar branch doesnt contain .delta for the current version
     python-cliff
     python-cloudflare
     python-coloredlogs.git.old
-    python-confuse
     python-daemonize
     python-deepmerge
     python-digitalocean
@@ -20384,8 +20527,9 @@ ERROR: pristine-tar branch doesnt contain .delta for the current version
     python-mpd
     python-neovim
     python-num2words
-    python-olefile
+    python-odf
     python-opentracing
+    python-pandocfilters
     python-persistent
     python-pipx
     python-poppler-qt5
@@ -20406,10 +20550,10 @@ ERROR: pristine-tar branch doesnt contain .delta for the current version
     python3-chardet
     python3-dateutil
     python3-zeroconf
+    pyvisa-zeroconf
     pywinrm
     quart
     readlike
-    rnc2rng
     scapy
     sen
     sinntp
@@ -20418,6 +20562,7 @@ ERROR: pristine-tar branch doesnt contain .delta for the current version
     sortedcontainers
     sparqlwrapper
     speedtest-cli
+    sphinx
     vobject
     webpy
     zict
@@ -20438,6 +20583,7 @@ ERROR: pristine-tar branch doesnt contain .id for the current version
     etm-qt
     fabulous
     faker
+    flake8-comprehensions
     flask-api
     flask-autoindex
     flask-mail
@@ -20456,15 +20602,16 @@ ERROR: pristine-tar branch doesnt contain .id for the current version
     pdfrw
     pep8
     pkgconfig
+    prompt-toolkit
     ptpython
     py-postgresql-old
     pycxx
+    pyls-spyder
     pyparsing
     pypass
     pyprind
     pyroute2
     pytest-localserver
-    pytest-testinfra
     python-adal
     python-aioice
     python-aiortc
@@ -20473,7 +20620,6 @@ ERROR: pristine-tar branch doesnt contain .id for the current version
     python-cliff
     python-cloudflare
     python-coloredlogs.git.old
-    python-confuse
     python-daemonize
     python-deepmerge
     python-digitalocean
@@ -20494,8 +20640,9 @@ ERROR: pristine-tar branch doesnt contain .id for the current version
     python-mpd
     python-neovim
     python-num2words
-    python-olefile
+    python-odf
     python-opentracing
+    python-pandocfilters
     python-persistent
     python-pipx
     python-poppler-qt5
@@ -20516,10 +20663,10 @@ ERROR: pristine-tar branch doesnt contain .id for the current version
     python3-chardet
     python3-dateutil
     python3-zeroconf
+    pyvisa-zeroconf
     pywinrm
     quart
     readlike
-    rnc2rng
     scapy
     sen
     sinntp
@@ -20528,6 +20675,7 @@ ERROR: pristine-tar branch doesnt contain .id for the current version
     sortedcontainers
     sparqlwrapper
     speedtest-cli
+    sphinx
     vobject
     webpy
     zict
@@ -20542,6 +20690,7 @@ WARNING: uncommon debian master branch (DEP-14)
     azure-kusto-python
     azure-multiapi-storage-python
     azure-uamqp-python
+    dasbus
     discodos
     django-auto-one-to-one
     django-session-security
@@ -20578,7 +20727,6 @@ ERROR: appears to be an empty repository
     orange3
     pyarranger
     pyls-mypy
-    pystache
     python-bracex
     python-django-dynamic-scraper
     python-ezcolor
@@ -20595,28 +20743,27 @@ ERROR: appears to be an empty repository
     stashy
     tvb-framework
     upstream-ontologist
+    url-normalize
 ERROR: Vcs-Browser field is missing from debian/control
     backoff
     escapism
     karabo-data
     mwoauth
     nbgitpuller
-    python-spinners
 ERROR: Vcs-Git field is missing from debian/control
     backoff
     escapism
     karabo-data
     mwoauth
     nbgitpuller
-    python-spinners
 ERROR: theres no debian/ directory in the default branch, which should contain a development branch, see DEP-14; all other checks are skipped
     django-html-sanitizer
     lightgbm
-    nbdime
     py-magcode-core
     python-aiohttp-session-ws
     python-aiohttp-swagger
     python-av
+    python-bonsai
     python-cerberus
     python-furo
     python-log-symbols

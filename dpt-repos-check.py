@@ -14,7 +14,7 @@ from debian.deb822 import Deb822
 from debian.debian_support import Version
 from debian.watch import WatchFile
 
-__version__ = '0.2.1'
+__version__ = '0.2.2'
 
 
 class Violations(object):
@@ -32,22 +32,28 @@ class Violations(object):
         self.per_repo[repo].append(f'{violation}{"; " if extra_data else ""}{extra_data}')
         self.per_violation[violation].append(repo)
 
-    def print(self):
-        print("Stats:")
-        print(f"    Repos with violations: {len(self.per_repo.keys())}")
-        print(f"    Violations types detected: {len(self.per_violation.keys())}")
-        print(f'    Total violations: {sum(len(x) for x in self.per_repo.values())}')
-        print('\nPer repository violations:')
+    def get_violations(self):
+        _data = [
+            'Stats:',
+            f"    Repos with violations: {len(self.per_repo.keys())}",
+            f"    Violations types detected: {len(self.per_violation.keys())}",
+            f'    Total violations: {sum(len(x) for x in self.per_repo.values())}',
+            '',
+            'Per repository violations:',
+            '',
+        ]
         for _repo, _violations in self.per_repo.items():
-            print(_repo)
+            _data.append(_repo)
             for _violation in _violations:
-                print(f"    {_violation}")
+                _data.append(f"    {_violation}")
 
-        print('\nPer violation repositories:')
+        _data.append('\nPer violation repositories:')
         for _violation, _repos in self.per_violation.items():
-            print(_violation)
+            _data.append(_violation)
             for _repo in _repos:
-                print(f"    {_repo}")
+                _data.append(f"    {_repo}")
+
+        return '\n'.join(_data)
 
 
 def get_sid_version(srcpkg):
@@ -235,6 +241,8 @@ for group_project in group_projects:
             violations.add(project.name, f"ERROR: pristine-tar branch doesnt contain .id for the current version",
                            extra_data=f'expected: {d_control["Source"]}_{sid_version.upstream_version}.orig.tar.*.id')
 
-print(f"Report generated on: {datetime.datetime.now()}")
-print(f'Total repositories processed: {len(group_projects)}\n')
-violations.print()
+# Write violationas report
+with open('violations.txt', 'w') as f:
+    f.write(f"Report generated on: {datetime.datetime.now()}\n")
+    f.write(f'Total repositories processed: {len(group_projects)}\n\n')
+    f.write(violations.get_violations())
