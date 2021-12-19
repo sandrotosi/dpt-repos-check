@@ -14,7 +14,7 @@ from debian.deb822 import Deb822
 from debian.debian_support import Version
 from debian.watch import WatchFile
 
-__version__ = '0.2.2'
+__version__ = '0.3.0'
 
 
 class Violations(object):
@@ -98,9 +98,10 @@ group_projects = group.projects.list(all=True, order_by='name', sort='asc', as_l
 
 violations = Violations()
 
-# TODO: pristine-tar: onbtain the tarball and compare with the archive
+# TODO: pristine-tar: obtain the tarball and compare with the archive
 # TODO: check for packages no longer in debian but with repo still in the team
 # TODO: check for packages referring the team in maint/upl but with no repo in the team
+# TODO: check for packages removed from debian
 
 for group_project in group_projects:
     project = salsa.projects.get(group_project.id)
@@ -241,7 +242,13 @@ for group_project in group_projects:
             violations.add(project.name, f"ERROR: pristine-tar branch doesnt contain .id for the current version",
                            extra_data=f'expected: {d_control["Source"]}_{sid_version.upstream_version}.orig.tar.*.id')
 
-# Write violationas report
+    # PEP 517
+
+    pyproject_toml_exists = any([x['name'] == 'pyproject.toml' for x in project.repository_tree()])
+    if pyproject_toml_exists and not 'dh-python-pep517' in d_control['Build-Depends']:
+        violations.add(project.name, f"WARNING: pyproject.toml detected, but package not build via PEP517 tools")
+
+# Write violations report
 with open('violations.txt', 'w') as f:
     f.write(f"Report generated on: {datetime.datetime.now()}\n")
     f.write(f'Total repositories processed: {len(group_projects)}\n\n')
