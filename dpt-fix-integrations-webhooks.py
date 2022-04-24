@@ -29,7 +29,8 @@ stats = {
     'tagpending': 0,
     'kgb': 0,
     'emails-on-push': 0,
-    'irker': 0
+    'irker': 0,
+    'exception': 0,
 }
 
 for group_project in group_projects:
@@ -37,55 +38,59 @@ for group_project in group_projects:
     logging.info(f'Processing {project.name}')
 
     # gather details
+    try:
 
-    set_tagpending = True
-    set_kgb = True
+        set_tagpending = True
+        set_kgb = True
 
-    for hook in project.hooks.list():
-        if hook.url.startswith('https://webhook.salsa.debian.org/tagpending/'):
-            set_tagpending = False
-            continue
-        if hook.url.startswith('http://kgb.debian.net:9418'):
-            # See https://salsa.debian.org/kgb-team/kgb/-/wikis/usage for details on the default arguments
-            if hook.url == 'http://kgb.debian.net:9418/webhook/?channel=debian-python-changes':
-                set_kgb = False
+        for hook in project.hooks.list():
+            if hook.url.startswith('https://webhook.salsa.debian.org/tagpending/'):
+                set_tagpending = False
+                continue
+            if hook.url.startswith('http://kgb.debian.net:9418'):
+                # See https://salsa.debian.org/kgb-team/kgb/-/wikis/usage for details on the default arguments
+                if hook.url == 'http://kgb.debian.net:9418/webhook/?channel=debian-python-changes':
+                    set_kgb = False
+                else:
+                    project.hooks.delete(id=hook.id)
+                    logging.info('  removed old-format KBG webhook')
+
+        set_email = True
+
+        for service in project.services.list():
+            if service.title == 'Emails on push':
+                set_email = False
+                continue
+            if service.title == 'Irker (IRC gateway)':
+                project.services.delete(id=service.slug)
+                logging.info('  removed integration: Irker')
+                stats['irker'] += 1
+
+        # make changes
+
+        if set_tagpending:
+            if any(x['name'] == 'debian' for x in project.repository_tree()):
+                d_control_id = [d['id'] for d in project.repository_tree(path='debian', all=True) if d['name'] == 'control'][0]
+                d_control = Deb822(project.repository_raw_blob(d_control_id))
+
+                project.hooks.create({'url': f'https://webhook.salsa.debian.org/tagpending/{d_control["Source"]}'})
+                logging.info('  added webhook: tagpending')
+                stats['tagpending'] += 1
             else:
-                project.hooks.delete(id=hook.id)
-                logging.info('  removed old-format KBG webhook')
+                logging.error('  unable to determine the source package name')
 
-    set_email = True
+        if set_kgb:
+            project.hooks.create({'url': 'http://kgb.debian.net:9418/webhook/?channel=debian-python-changes'})
+            logging.info('  added webhook: KGB')
+            stats['kgb'] += 1
 
-    for service in project.services.list():
-        if service.title == 'Emails on push':
-            set_email = False
-            continue
-        if service.title == 'Irker (IRC gateway)':
-            project.services.delete(id=service.slug)
-            logging.info('  removed integration: Irker')
-            stats['irker'] += 1
-
-    # make changes
-
-    if set_tagpending:
-        if any(x['name'] == 'debian' for x in project.repository_tree()):
-            d_control_id = [d['id'] for d in project.repository_tree(path='debian', all=True) if d['name'] == 'control'][0]
-            d_control = Deb822(project.repository_raw_blob(d_control_id))
-
-            project.hooks.create({'url': f'https://webhook.salsa.debian.org/tagpending/{d_control["Source"]}'})
-            logging.info('  added webhook: tagpending')
-            stats['tagpending'] += 1
-        else:
-            logging.error('  unable to determine the source package name')
-
-    if set_kgb:
-        project.hooks.create({'url': 'http://kgb.debian.net:9418/webhook/?channel=debian-python-changes'})
-        logging.info('  added webhook: KGB')
-        stats['kgb'] += 1
-
-    if set_email:
-        project.services.update('emails-on-push', {'recipients': 'dispatch@tracker.debian.org'})
-        logging.info('  added integration: email-on-push')
-        stats['emails-on-push'] += 1
+        if set_email:
+            project.services.update('emails-on-push', {'recipients': 'dispatch@tracker.debian.org'})
+            logging.info('  added integration: email-on-push')
+            stats['emails-on-push'] += 1
+    except Exception as e:
+        logging.exception(e)
+        stats['exception'] += 1
 
 logging.info('')
 logging.info('Execution recap:')
