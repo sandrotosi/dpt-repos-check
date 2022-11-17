@@ -1,4 +1,4 @@
 python-gitlab==2.10.1
 python-debian==0.1.42
-requests-cache==0.8.1
+requests-cache==0.9.7
 requests==2.26.0
