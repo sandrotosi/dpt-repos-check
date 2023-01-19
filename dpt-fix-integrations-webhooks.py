@@ -58,12 +58,12 @@ for group_project in group_projects:
         set_email = True
 
         for service in project.services.list():
-            if service.title == 'Emails on push':
+            if service.title.lower() == 'emails on push':
                 set_email = False
                 continue
-            if service.title == 'Irker (IRC gateway)':
+            if service.title.lower() == 'irker (irc gateway)':
                 project.services.delete(id=service.slug)
-                logging.info('  removed integration: Irker')
+                logging.info('  removed integration: irker')
                 stats['irker'] += 1
 
         # make changes
